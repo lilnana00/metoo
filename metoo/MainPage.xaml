@@ -9,7 +9,7 @@
         <StackLayout Margin="0, 20">
             <Button x:Name="vhod_button" WidthRequest="360" HeightRequest="6" ImageSource="Group113.png"/>
             <Button x:Name="reg_button" WidthRequest="360" HeightRequest="62" ImageSource="Group97.png"/>
-            <Button x:Name="vhod_button" WidthRequest="340" HeightRequest="37" ImageSource="Group43.png"/>
+            <Button x:Name="vhod1_button" WidthRequest="340" HeightRequest="37" ImageSource="just_cont.png"/>
         </StackLayout>
 
     </StackLayout>
