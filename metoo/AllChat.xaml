@@ -1,12 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="metoo.All_chat">
+             x:Class="metoo.AllChat">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Background="#FFF26A">
+            <StackLayout Orientation="Horizontal" Padding="7" >
+            <FlexLayout>
+                <Image Source="Ellipse3.png" WidthRequest="60" HeightRequest="60"/>
+            </FlexLayout>
+                <FlexLayout Direction="Column" AlignContent="SpaceBetween">
+                    <Label Text="НАЗВАНИЕ ЧАТА" FontSize="20"/>
+                    <Label Text="ПОСЛЕДНЕЕ СООБЩЕНИЕ ЧАТА" FontSize="20" />
+                </FlexLayout>
+            </StackLayout>
+            <Image Source="Line1.png"/>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

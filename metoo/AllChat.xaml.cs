@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace metoo
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class All_chat : ContentPage
+    public partial class AllChat : ContentPage
     {
-        public All_chat()
+        public AllChat()
         {
             InitializeComponent();
         }
