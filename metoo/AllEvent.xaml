@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="metoo.allevent">
+    <ContentPage.Content>
+        <StackLayout Padding="5, 5, 5, 5" BackgroundColor="#FFF26A">
+            <BoxView BackgroundColor="Gray" CornerRadius="5" WidthRequest="355" HeightRequest="30">
+            </BoxView>
+
+            <StackLayout Padding="5, 5, 5, 5" Orientation="Vertical" Spacing="10">
+                <Frame CornerRadius="8" Padding="0" HasShadow="False">
+                    <StackLayout BackgroundColor="#D0BC7C"  WidthRequest="355" HeightRequest="250">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                    </Grid>                   
+                </StackLayout>
+                </Frame>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

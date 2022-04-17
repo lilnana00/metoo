@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="metoo.Lk">
+    <ContentPage.Content>
+        <StackLayout Padding="5, 5, 5, 5"  Background="#FFF26A" >
+            <Button ImageSource="Group127.png" VerticalOptions="Start" HorizontalOptions="End" Margin="0, 20, 5, 0" WidthRequest="50" HeightRequest="50"></Button>
+            <Image Source="Group128.png"  WidthRequest="160" Margin="0, -20, 0, 0"/>
+            <Image Source="Line1.png"  WidthRequest="350" Margin="-20, -6, -20, 0"/>
+            <Label HorizontalTextAlignment="Center" FontSize="22" TextColor="#5517A2" >Алиса</Label>
+            <Label HorizontalTextAlignment="Center" FontSize="22" TextColor="#5517A2">255</Label>
+
+            <StackLayout Margin="30, 0, 0, 0" HorizontalOptions="Center" >
+
+                <Grid HorizontalOptions="Center" Margin="0, 10, 0, 0" WidthRequest="280">
+                    <Label FontSize="13" VerticalOptions="Center" HorizontalOptions="Start" TextColor="#5517A2">ВЫ ПОСЕТИЛИ:</Label>
+                    <Grid HorizontalOptions="Center" VerticalOptions="Center" >
+                        <Image Source="Ellipse 3.png" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center" ></Image>
+                        <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#5517A2">189</Label>
+                    </Grid>
+                    <Label FontSize="13"  VerticalOptions="Center" HorizontalOptions="End" Margin="0, 0, 30, 0" TextColor="#5517A2">СОБЫТИЙ</Label>
+                </Grid>
+
+                <Grid HorizontalOptions="Center" Margin="0, 10, 0, 0" WidthRequest="280">
+                    <Label FontSize="13" VerticalOptions="Center" HorizontalOptions="Start" TextColor="#5517A2">ВЫ ПОСЕТИЛИ:</Label>
+                    <Grid HorizontalOptions="Center" VerticalOptions="Center" >
+                        <Image Source="Ellipse 3.png" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center" ></Image>
+                        <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#5517A2">189</Label>
+                    </Grid>
+                    <Label FontSize="13"  VerticalOptions="Center" HorizontalOptions="End" Margin="0, 0, 30, 0" TextColor="#5517A2">СОБЫТИЙ</Label>
+                </Grid>
+
+                <Grid HorizontalOptions="Center" Margin="0, 10, 0, 0" WidthRequest="280">
+                    <Label FontSize="13" VerticalOptions="Center" HorizontalOptions="Start" TextColor="#5517A2">ВЫ ПОСЕТИЛИ:</Label>
+                    <Grid HorizontalOptions="Center" VerticalOptions="Center" >
+                        <Image Source="Ellipse 3.png" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center" ></Image>
+                        <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#5517A2">189</Label>
+                    </Grid>
+                    <Label FontSize="13"  VerticalOptions="Center" HorizontalOptions="End" Margin="0, 0, 30, 0" TextColor="#5517A2">СОБЫТИЙ</Label>
+                </Grid>
+
+            </StackLayout>
+
+            <Button Text="О ПРИЛОЖЕНИИ" TextColor="#5517A2"></Button>
+
+            <Grid ColumnSpacing="40" ColumnDefinitions="40" BackgroundColor="White" WidthRequest="100" VerticalOptions="End" Margin="-5" Padding="20, 10, 20, 10">
+                <Button Grid.ColumnSpan="1" HorizontalOptions ="Start" WidthRequest="30" HeightRequest="30" ImageSource="calendar.png"/>
+                <Button Grid.ColumnSpan="2" HorizontalOptions="Start" WidthRequest="30" HeightRequest="30" ImageSource="events.png" Margin="90, 0, 0, 0"/>
+                <Button Grid.ColumnSpan="2" HorizontalOptions="Start" WidthRequest="30" HeightRequest="30" ImageSource="chat.png" Margin="180, 0, 0, 0"/>
+                <Button Grid.ColumnSpan="2" HorizontalOptions="Start" WidthRequest="30" HeightRequest="30" ImageSource="user.png" Margin="270, 0, 0, 0"/>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

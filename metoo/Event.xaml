@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="metoo.Event">
+    <ContentPage.Content>
+        <StackLayout Padding="5, 5, 5, 5" Background="#FFF26A">
+           <StackLayout Orientation="Horizontal" Padding="5, 10, 5, 5">
+                <Button ImageSource="undo.png" WidthRequest="23" HeightRequest="10"/>
+                <Image Source="event.png" WidthRequest="169" HeightRequest="42"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" Padding="5,15,5,5" >
+                <Image Source="alice.png" WidthRequest="72" HeightRequest="67"/>
+                <Label Margin="5,0,0,0" Text="АЛИСА" TextColor="#5517A2" FontSize="35" />
+            </StackLayout>
+
+            <Label Padding="5, 10, 5, 10" Text="Хочу в мyзей музикально прикладного искусства во вторник в 19:00" FontSize="25" />
+
+            <Grid ColumnSpacing="15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+
+                <BoxView Grid.Column="0" Grid.Row="0" HorizontalOptions="Start" BackgroundColor="Gray" WidthRequest="140" HeightRequest="40" CornerRadius="10"/>
+                <Button Grid.Column="1" Grid.Row="0" HorizontalOptions="End" ImageSource="" WidthRequest="50" HeightRequest="50"/>
+
+            </Grid>
+            
+           <!--<StackLayout Orientation="Horizontal" >
+                <BoxView BackgroundColor="Gray" WidthRequest="140" HeightRequest="80" CornerRadius="8"/>
+                <Button ImageSource="" WidthRequest="132" HeightRequest="127"/>
+            </StackLayout>-->
+
+            <Image Source="comment.png" WidthRequest="168" HeightRequest="38" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

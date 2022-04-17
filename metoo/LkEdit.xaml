@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="metoo.LkEdit">
+    <ContentPage.Content>
+        <StackLayout Padding="5, 5, 5, 5"  Background="#FFF26A" >
+            <Grid >
+                <Button Grid.ColumnSpan="1" ImageSource="undo.png" HorizontalOptions="Start" Margin="0, 40, 0, 0" WidthRequest="23" HeightRequest="10"></Button>
+                <Image Grid.ColumnSpan="2" Source="Group127.png" HorizontalOptions="Start" Margin="50, 40, 0, 0" MinimumWidthRequest="30" HeightRequest="30"></Image>
+            </Grid>
+            <StackLayout Margin="20, 5, 20, 5" >
+
+                <Image Source="Group109.png"  WidthRequest="110" HeightRequest="110"/>
+
+                <Label Text="ИМЯ" TextColor="#5517A2" FontSize="15" ></Label>
+                <Entry Placeholder="ВВЕДИТЕ НАСТОЯЩЕЕ ИМЯ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7"/>
+                <Label Text="ВОЗРАСТ" TextColor="#5517A2" FontSize="15" ></Label>
+                <Entry Placeholder="ВВЕДИТЕ НАСТОЯЩИЙ ВОЗРАСТ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7" />
+                <Label Text="ПАРОЛЬ" TextColor="#5517A2" FontSize="15" ></Label>
+                <Entry IsPassword="True"  Placeholder="ВВЕДИТЕ ПАРОЛЬ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7"/>
+                <Label Text="ЕЩЕ РАЗ" TextColor="#5517A2"  FontSize="15" ></Label>
+                <Entry IsPassword="True"  Placeholder="ПОВТОРИТЕ ПАРОЛЬ" PlaceholderColor="#BC99D7" FontSize="15"  />
+
+            </StackLayout>
+            <Button WidthRequest="360" HeightRequest="63" ImageSource="Group129.png" Margin="0, 5, 0, 0"  ></Button>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
