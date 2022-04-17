@@ -10,7 +10,7 @@ namespace metoo
         {
             InitializeComponent();
 
-            MainPage = new MyCalendar();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

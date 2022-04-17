@@ -14,7 +14,7 @@
                 <Label Margin="5,0,0,0" Text="АЛИСА" TextColor="#5517A2" FontSize="35" />
             </StackLayout>
 
-            <Label Padding="5, 10, 5, 10" Text="Хочу в мyзей музикально прикладного искусства во вторник в 19:00" FontSize="25" />
+            <Label Padding="5, 10, 5, 10" Text="Хочу в мyзей музыкального прикладного искусства во вторник в 19:00" FontSize="25" />
 
             <Grid ColumnSpacing="15">
                 <Grid.ColumnDefinitions>
