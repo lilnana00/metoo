@@ -3,14 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="metoo.MainPage">
 
-    <StackLayout Padding="5, 5, 5, 5" Background="#FFF26A">
-        <Image Source="Group125.png" WidthRequest="360" HeightRequest="180" Margin="0, 80"/>
+    <StackLayout Padding="5" Background="#FFF26A">
+        <Image Source="Group125.png" WidthRequest="360" HeightRequest="180" Margin="0, 70"/>
 
-        <StackLayout Margin="0, 20">
-            <Button x:Name="vhod_button" WidthRequest="360" HeightRequest="6" ImageSource="Group113.png"/>
+        <FlexLayout Direction="Column" AlignContent="Center" JustifyContent="SpaceBetween" HeightRequest="210" WidthRequest="400" Padding="20,0,0,0">
+            <Button x:Name="vhod_button" WidthRequest="360" HeightRequest="62" ImageSource="Group113.png"/>
             <Button x:Name="reg_button" WidthRequest="360" HeightRequest="62" ImageSource="Group97.png"/>
-            <Button x:Name="vhod1_button" WidthRequest="340" HeightRequest="37" ImageSource="just_cont.png"/>
-        </StackLayout>
+            <Button x:Name="vhod1_button" WidthRequest="360" HeightRequest="37" ImageSource="just_cont.png"/>
+        </FlexLayout>
 
     </StackLayout>
 
