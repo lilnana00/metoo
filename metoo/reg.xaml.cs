@@ -15,6 +15,16 @@ namespace metoo
         public Reg()
         {
             InitializeComponent();
+            reg2_button.Clicked += Go_to_reg2;
+            back_button.Clicked += Back_to_main;
+        }
+        private async void Go_to_reg2(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Reg2());
+        }
+        private async void Back_to_main(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
         }
     }
 }

@@ -15,6 +15,11 @@ namespace metoo
         public Vhod()
         {
             InitializeComponent();
+            back_button.Clicked += Back_to_main;
+        }
+        private async void Back_to_main(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
         }
     }
 }
