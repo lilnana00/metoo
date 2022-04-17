@@ -10,7 +10,7 @@ namespace metoo
         {
             InitializeComponent();
 
-            MainPage = new Event();
+            MainPage = new Creat_event();
         }
 
         protected override void OnStart()

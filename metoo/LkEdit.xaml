@@ -22,7 +22,7 @@
                 <Entry IsPassword="True"  Placeholder="ПОВТОРИТЕ ПАРОЛЬ" PlaceholderColor="#BC99D7" FontSize="15"  />
 
             </StackLayout>
-            <Button WidthRequest="360" HeightRequest="63" ImageSource="Group129.png" Margin="0, 5, 0, 0"  ></Button>
+            <Button WidthRequest="360" HeightRequest="63" ImageSource="Check.png" Margin="0, 5, 0, 0"  ></Button>
 
 
         </StackLayout>
