@@ -10,7 +10,8 @@ namespace metoo
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+           // MainPage = new AllChat();
+             MainPage = new NavigationPage(new MainPage()); 
         }
 
         protected override void OnStart()
