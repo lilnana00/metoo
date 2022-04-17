@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace metoo
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class allevent : ContentPage
+    public partial class AllEvent : ContentPage
     {
-        public allevent()
+        public AllEvent()
         {
             InitializeComponent();
         }

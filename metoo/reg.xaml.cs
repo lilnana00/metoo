@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace metoo
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class reg : ContentPage
+    public partial class Reg : ContentPage
     {
-        public reg()
+        public Reg()
         {
             InitializeComponent();
         }
