@@ -9,15 +9,22 @@
 
             <StackLayout Padding="5, 5, 5, 5" Orientation="Vertical" Spacing="10">
                 <Frame CornerRadius="8" Padding="0" HasShadow="False">
-                    <StackLayout BackgroundColor="#D0BC7C"  WidthRequest="355" HeightRequest="250">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
+                    <StackLayout BackgroundColor="#D0BC7C" Orientation="Horizontal" WidthRequest="355" HeightRequest="150">
 
-                        </Grid>
+                        <FlexLayout Direction="Column" AlignContent="Center" JustifyContent="Center" Padding="10">
+                            <Image Source="alice.png" HeightRequest="75" WidthRequest="75" />
+                            <Label Text="АЛИСА" TextColor="#5517A2" FontSize="25"/>
+                        </FlexLayout>
+
+                        <FlexLayout Direction="Column" AlignContent="Center" JustifyContent="Center" Padding="10">
+                            <Label Text="Хочу в кино!!!" TextColor="#5517A2" FontSize="30"/>
+                            <Label Text="Во вторник в 19:00" TextColor="#5517A2" FontSize="20"/>
+                        </FlexLayout>
+
+                        <FlexLayout Direction="Column" AlignContent="Center" JustifyContent="Center" Padding="10">
+                            <Image Source="events.png" HeightRequest="35" WidthRequest="35"/>
+                            <Label Text="#кино" TextColor="#5517A2" FontSize="15"/>
+                        </FlexLayout>
                     </StackLayout>
                 </Frame>
             </StackLayout>
