@@ -16,7 +16,7 @@
                 <Label Text="Мы отправим вам на почту SMS  с кодом для подтверждения регистрации" TextColor="#5517A2" HorizontalTextAlignment="Center"></Label>
             </StackLayout>
 
-            <Button WidthRequest="360" HeightRequest="63" ImageSource="continue.png" Margin="0, 40, 0, 0"  ></Button>
+            <Button WidthRequest="360" HeightRequest="63" ImageSource="cont.png" Margin="0, 40, 0, 0"  ></Button>
 
         </StackLayout>
     </ContentPage.Content>

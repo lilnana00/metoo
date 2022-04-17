@@ -19,7 +19,7 @@
 
             </StackLayout>
 
-            <Button WidthRequest="360" HeightRequest="63" ImageSource="continue.png" Margin="0, 20, 0, 0"  ></Button>
+            <Button WidthRequest="360" HeightRequest="63" ImageSource="cont.png" Margin="0, 20, 0, 0"  ></Button>
 
         </StackLayout>
     </ContentPage.Content>

@@ -152,9 +152,6 @@
     <BundleResource Include="Resources\comment.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\continue.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\create_event.png" />
   </ItemGroup>
   <ItemGroup>
@@ -213,5 +210,8 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Ellipse3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\continue.png" />
   </ItemGroup>
 </Project>
