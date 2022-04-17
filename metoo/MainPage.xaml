@@ -7,9 +7,9 @@
         <Image Source="Group125.png" WidthRequest="360" HeightRequest="180" Margin="0, 80"/>
 
         <StackLayout Margin="0, 20">
-            <Button WidthRequest="360" HeightRequest="6" ImageSource="Group113.png" Clicked="Go_to_vhod"/>
-            <Button WidthRequest="360" HeightRequest="62" ImageSource="Group97.png"/>
-            <Button WidthRequest="340" HeightRequest="37" ImageSource="Group43.png"/>
+            <Button x:Name="vhod_button" WidthRequest="360" HeightRequest="6" ImageSource="Group113.png"/>
+            <Button x:Name="reg_button" WidthRequest="360" HeightRequest="62" ImageSource="Group97.png"/>
+            <Button x:Name="vhod_button" WidthRequest="340" HeightRequest="37" ImageSource="Group43.png"/>
         </StackLayout>
 
     </StackLayout>

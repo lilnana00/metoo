@@ -13,6 +13,7 @@ namespace metoo
         public MainPage()
         {
             InitializeComponent();
+            vhod_button.Clicked += Go_to_vhod;
         }
 
         private async void Go_to_vhod(object sender, EventArgs e)
