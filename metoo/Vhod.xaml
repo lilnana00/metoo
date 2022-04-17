@@ -18,7 +18,7 @@
 
 
 
-            <Button WidthRequest="360" HeightRequest="62" ImageSource="Group113.png" Margin="0, 20, 0, 0"  ></Button>
+            <Button x:Name="event_button" WidthRequest="360" HeightRequest="62" ImageSource="Group113.png" Margin="0, 20, 0, 0"  ></Button>
 
         </StackLayout>
     </ContentPage.Content>

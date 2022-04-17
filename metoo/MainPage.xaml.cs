@@ -15,6 +15,7 @@ namespace metoo
             InitializeComponent();
             vhod_button.Clicked += Go_to_vhod;
             reg_button.Clicked += Go_to_reg;
+            vhod1_button.Clicked += Go_to_vhod1;
         }
 
         private async void Go_to_vhod(object sender, EventArgs e)
@@ -24,6 +25,10 @@ namespace metoo
         private async void Go_to_reg(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Reg());
+        }
+        private async void Go_to_vhod1(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AllEvent());
         }
     }
 }
