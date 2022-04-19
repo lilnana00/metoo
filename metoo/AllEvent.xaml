@@ -3,31 +3,38 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="metoo.AllEvent">
     <ContentPage.Content>
-        <StackLayout Padding="5, 5, 5, 5" BackgroundColor="#FFF26A">
+        <StackLayout Padding="5, 5, 5, 5" BackgroundColor="#FFF26A" Orientation="Vertical">
             <BoxView BackgroundColor="Gray" CornerRadius="5" WidthRequest="355" HeightRequest="30">
             </BoxView>
 
-            <StackLayout Padding="5, 5, 5, 5" Orientation="Vertical" Spacing="10">
-                <Frame CornerRadius="8" Padding="0" HasShadow="False">
-                    <StackLayout BackgroundColor="#D0BC7C" Orientation="Horizontal" WidthRequest="355" HeightRequest="150">
 
-                        <FlexLayout Direction="Column" AlignContent="Center" JustifyContent="Center" Padding="10">
-                            <Image Source="alice.png" HeightRequest="75" WidthRequest="75" />
-                            <Label Text="АЛИСА" TextColor="#5517A2" FontSize="25"/>
-                        </FlexLayout>
+            <Frame CornerRadius="8" Padding="0" HasShadow="False">
+                <StackLayout BackgroundColor="#D0BC7C" Orientation="Horizontal" WidthRequest="355" HeightRequest="150">
 
-                        <FlexLayout Direction="Column" AlignContent="Center" JustifyContent="Center" Padding="10">
-                            <Label Text="Хочу в кино!!!" TextColor="#5517A2" FontSize="30"/>
-                            <Label Text="Во вторник в 19:00" TextColor="#5517A2" FontSize="20"/>
-                        </FlexLayout>
+                    <FlexLayout Direction="Column" AlignContent="Center" JustifyContent="Center" Padding="10">
+                        <Image Source="alice.png" HeightRequest="75" WidthRequest="75" />
+                        <Label Text="АЛИСА" TextColor="#5517A2" FontSize="25"/>
+                    </FlexLayout>
 
-                        <FlexLayout Direction="Column" AlignContent="Center" JustifyContent="Center" Padding="10">
-                            <Image Source="events.png" HeightRequest="35" WidthRequest="35"/>
-                            <Label Text="#кино" TextColor="#5517A2" FontSize="15"/>
-                        </FlexLayout>
-                    </StackLayout>
-                </Frame>
-            </StackLayout>
+                    <FlexLayout Direction="Column" AlignContent="Center" JustifyContent="Center" Padding="10">
+                        <Label Text="Хочу в кино!!!" TextColor="#5517A2" FontSize="30"/>
+                        <Label Text="Во вторник в 19:00" TextColor="#5517A2" FontSize="20"/>
+                    </FlexLayout>
+
+                    <FlexLayout Direction="Column" AlignContent="Center" JustifyContent="Center" Padding="10">
+                        <Image Source="events.png" HeightRequest="35" WidthRequest="35"/>
+                        <Label Text="#кино" TextColor="#5517A2" FontSize="15"/>
+                    </FlexLayout>
+                </StackLayout>
+            </Frame>
+
+
+            <FlexLayout BackgroundColor="White" Direction="Row" AlignContent="Center" JustifyContent="SpaceAround" HeightRequest="50" WidthRequest="355" >
+                <Button WidthRequest="30" HeightRequest="30" ImageSource="calendar.png"/>
+                <Button WidthRequest="30" HeightRequest="30" ImageSource="events.png" />
+                <Button WidthRequest="30" HeightRequest="30" ImageSource="chat.png" />
+                <Button WidthRequest="30" HeightRequest="30" ImageSource="user.png" />
+            </FlexLayout>
 
         </StackLayout>
     </ContentPage.Content>
