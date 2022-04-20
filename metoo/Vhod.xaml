@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout Padding="5, 5, 5, 5"  Background="#FFF26A" >
             <Grid >
-                <Button x:Name="back_button" Grid.ColumnSpan="1" ImageSource="undo.png" HorizontalOptions="Start" Margin="0, 40, 0, 0" WidthRequest="23" HeightRequest="10"></Button>
+                <Button BackgroundColor="#FFF26A" x:Name="back_button" Grid.ColumnSpan="1" ImageSource="undo.png" HorizontalOptions="Start" Margin="0, 40, 0, 0" WidthRequest="23" HeightRequest="10"></Button>
                 <Image Grid.ColumnSpan="2" Source="vhod.png" HorizontalOptions="Start" Margin="50, 40, 0, 0" MinimumWidthRequest="25" HeightRequest="25"></Image>
             </Grid>
 
@@ -18,7 +18,7 @@
 
 
 
-            <Button x:Name="event_button" WidthRequest="360" HeightRequest="62" ImageSource="Group113.png" Margin="0, 20, 0, 0"  ></Button>
+            <Button BackgroundColor="#FFF26A" x:Name="event_button" WidthRequest="360" HeightRequest="62" ImageSource="Group113.png" Margin="0, 20, 0, 0"  ></Button>
 
         </StackLayout>
     </ContentPage.Content>

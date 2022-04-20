@@ -5,21 +5,21 @@
     <ContentPage.Content>
         <StackLayout Padding="5, 5, 5, 5"  Background="#FFF26A" >
             <Grid >
-                <Button x:Name="back_button" Grid.ColumnSpan="1" ImageSource="undo.png" HorizontalOptions="Start" Margin="0, 40, 0, 0" WidthRequest="23" HeightRequest="10"></Button>
+                <Button BackgroundColor="#FFF26A" x:Name="back_button" Grid.ColumnSpan="1" ImageSource="undo.png" HorizontalOptions="Start" Margin="0, 40, 0, 0" WidthRequest="23" HeightRequest="10"></Button>
                 <Image Grid.ColumnSpan="2" Source="step_3.png" HorizontalOptions="Start" Margin="50, 40, 0, 0" MinimumWidthRequest="30" HeightRequest="30"></Image>
             </Grid>
             <StackLayout Margin="15, 25, 15, 5" >
 
                 <Image Source="Group109.png"  WidthRequest="130" HeightRequest="130" Margin="0, -5, 0, 20"/>
-
+ 
                 <Label Text="ИМЯ" TextColor="#5517A2" ></Label>
-                <Entry  Margin="0, 10" Placeholder="ВВЕДИТЕ НАСТОЯЩЕЕ ИМЯ" PlaceholderColor="#BC99D7" />
+                <Entry Margin="0, 10" Placeholder="ВВЕДИТЕ НАСТОЯЩЕЕ ИМЯ" PlaceholderColor="#BC99D7" />
                 <Label Text="ВОЗРАСТ" TextColor="#5517A2" Margin= "0, 12, 0, 0" ></Label>
                 <Entry Margin="0, 10" Placeholder="ВВЕДИТЕ НАСТОЯЩИЙ ВОЗРАСТ" PlaceholderColor="#BC99D7"  />
 
             </StackLayout>
 
-            <Button x:Name="reg3_button" WidthRequest="360" HeightRequest="63" ImageSource="cont.png" Margin="0, 20, 0, 0"  ></Button>
+            <Button BackgroundColor="#FFF26A" x:Name="reg3_button" WidthRequest="360" HeightRequest="63" ImageSource="cont.png" Margin="0, 20, 0, 0"  ></Button>
 
         </StackLayout>
     </ContentPage.Content>

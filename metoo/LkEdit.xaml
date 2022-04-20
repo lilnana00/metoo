@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout Padding="5, 5, 5, 5"  Background="#FFF26A" >
             <Grid >
-                <Button x:Name="back_button" ImageSource="undo.png" HorizontalOptions="Start" Margin="0, 40, 0, 0" WidthRequest="23" HeightRequest="10"></Button>
+                <Button x:Name="back_button" ImageSource="undo.png" HorizontalOptions="Start" Margin="0, 40, 0, 0" WidthRequest="23" HeightRequest="10" BackgroundColor="#FFF26A"></Button>
                 <Image Grid.ColumnSpan="2" Source="Group127.png" HorizontalOptions="Start" Margin="50, 40, 0, 0" MinimumWidthRequest="30" HeightRequest="30"></Image>
             </Grid>
             <StackLayout Margin="20, 5, 20, 5" >
