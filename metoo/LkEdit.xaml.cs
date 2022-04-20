@@ -15,6 +15,12 @@ namespace metoo
         public LkEdit()
         {
             InitializeComponent();
+            back_button.Clicked += Back_to_Lk;
+            save_button.Clicked += Back_to_Lk;
+        }
+        private async void Back_to_Lk(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
         }
     }
 }

@@ -30,10 +30,10 @@
 
 
             <FlexLayout BackgroundColor="White" Direction="Row" AlignContent="Center" JustifyContent="SpaceAround" HeightRequest="50" WidthRequest="355" >
-                <Button WidthRequest="30" HeightRequest="30" ImageSource="calendar.png"/>
-                <Button WidthRequest="30" HeightRequest="30" ImageSource="events.png" />
-                <Button WidthRequest="30" HeightRequest="30" ImageSource="chat.png" />
-                <Button WidthRequest="30" HeightRequest="30" ImageSource="user.png" />
+                <Button x:Name="calendar" WidthRequest="30" HeightRequest="30" ImageSource="calendar.png"/>
+                <Button x:Name="events" WidthRequest="30" HeightRequest="30" ImageSource="events.png" />
+                <Button x:Name="chats" WidthRequest="30" HeightRequest="30" ImageSource="chat.png" />
+                <Button x:Name="user" WidthRequest="30" HeightRequest="30" ImageSource="user.png" />
             </FlexLayout>
 
         </StackLayout>

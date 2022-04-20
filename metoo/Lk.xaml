@@ -4,7 +4,7 @@
              x:Class="metoo.Lk">
     <ContentPage.Content>
         <StackLayout Padding="5, 5, 5, 5"  Background="#FFF26A" >
-            <Button ImageSource="Group127.png" VerticalOptions="Start" HorizontalOptions="End" Margin="0, 20, 5, 0" WidthRequest="50" HeightRequest="50"></Button>
+            <Button x:Name="lkEdit" ImageSource="Group127.png" VerticalOptions="Start" HorizontalOptions="End" Margin="0, 20, 5, 0" WidthRequest="50" HeightRequest="50"></Button>
             <Image Source="Group128.png"  WidthRequest="160" Margin="0, -20, 0, 0"/>
             <Image Source="Line1.png"  WidthRequest="350" Margin="-20, -6, -20, 0"/>
             <Label HorizontalTextAlignment="Center" FontSize="22" TextColor="#5517A2" >Алиса</Label>

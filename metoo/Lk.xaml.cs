@@ -15,6 +15,11 @@ namespace metoo
         public Lk()
         {
             InitializeComponent();
+            lkEdit.Clicked += Lk_edit;
+        }
+        private async void Lk_edit(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LkEdit());
         }
     }
 }
