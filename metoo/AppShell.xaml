@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="metoo.AppShell"
+       xmlns:system="clr-namespace:System;assembly=System.Runtime">
+    <!--  xmlns:views="clr-namespace:metoo.Views" --> 
+    <TabBar>
+      <!--  <ShellContent 
+            Title="MyCalendar" 
+            Icon="my_calendar.png"
+            ContentTemplate="{DataTemplate system:MyCalendar}" >
+        </ShellContent> 
+
+        <ShellContent 
+            Title="AllEvent" 
+            Icon="events.png"
+            ContentTemplate="{DataTemplate system:AllEvent}" >
+        </ShellContent>
+
+        <ShellContent 
+            Title="AllChat" 
+            Icon="chat.png"
+            ContentTemplate="{DataTemplate system:AllChat}" >
+        </ShellContent>
+
+        <ShellContent 
+            Title="Lk" 
+            Icon="user.png"
+            ContentTemplate="{DataTemplate system:Lk}" >
+        </ShellContent> -->
+
+    </TabBar>
+</Shell>
