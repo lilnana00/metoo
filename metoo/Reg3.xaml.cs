@@ -26,5 +26,14 @@ namespace metoo
         {
             await Navigation.PopAsync();
         }
+
+        private void SaveUser(object sender, EventArgs e)
+        {
+            var User = (User)BindingContext;
+            if (!String.IsNullOrEmpty(User.Name))
+            {
+                App.Database.SaveItem(User);
+            }
+        }
     }
 }

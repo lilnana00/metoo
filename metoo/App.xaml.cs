@@ -1,12 +1,30 @@
 ﻿using System;
 using Xamarin.Forms;
+using System.IO;
 using Xamarin.Forms.Xaml;
 
 namespace metoo
 {
     public partial class App : Application
     {
-        public App()
+        
+            public const string DATABASE_NAME = "User.db";
+            public static UserReprositoryi database;
+            public static UserReprositoryi Database
+            {
+                get
+                {
+                    if (database == null)
+                    {
+                        database = new UserReprositoryi(
+                            Path.Combine(
+                                Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), DATABASE_NAME));
+                    }
+                    return database;
+                }
+            }
+
+            public App()
         {
             InitializeComponent();
 

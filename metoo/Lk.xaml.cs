@@ -21,5 +21,11 @@ namespace metoo
         {
             await Navigation.PushAsync(new LkEdit());
         }
+
+        protected override void OnAppearing()
+        {
+            UserInfo.ItemsSource = App.Database.GetItems();
+            base.OnAppearing();
+        }
     }
 }
