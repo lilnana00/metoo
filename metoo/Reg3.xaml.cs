@@ -29,11 +29,12 @@ namespace metoo
 
         private void SaveUser(object sender, EventArgs e)
         {
-            var User = (User)BindingContext;
-            if (!String.IsNullOrEmpty(User.Name))
+            var user = (User)BindingContext;
+            if (!String.IsNullOrEmpty(user.Name))
             {
-                App.Database.SaveItem(User);
+                App.Database.SaveItem(user);
             }
+            this.Navigation.PushAsync(new Vhod());
         }
     }
 }

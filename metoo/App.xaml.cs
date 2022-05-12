@@ -8,7 +8,7 @@ namespace metoo
     public partial class App : Application
     {
         
-            public const string DATABASE_NAME = "User.db";
+            public const string DATABASE_NAME = "Users.db";
             public static UserReprositoryi database;
             public static UserReprositoryi Database
             {

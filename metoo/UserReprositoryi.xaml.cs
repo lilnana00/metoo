@@ -15,6 +15,10 @@ namespace metoo
             database.CreateTable<User>();
             InitializeComponent();
         }
+        public int Count()
+        {
+            return database.Table<User>().Count();
+        }
         public IEnumerable<User> GetItems()
         {
             return database.Table<User>().ToList();

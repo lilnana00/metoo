@@ -3,7 +3,7 @@
 
 namespace metoo
 {
-    [Table("User")]
+    [Table("Users")]
     public class User 
     {
         [PrimaryKey, AutoIncrement, Column("_id")]
