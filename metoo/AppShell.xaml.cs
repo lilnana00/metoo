@@ -16,7 +16,6 @@ namespace metoo
         {
             InitializeComponent();
 
-            Routing.RegisterRoute(nameof(MainPage), typeof(MainPage));
         }
     }
 }
