@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -20,6 +22,16 @@ namespace metoo
         }
         private async void Go_to_reg3(object sender, EventArgs e)
         {
+            if (pass.Text != passOk.Text)
+            {
+                isOk.Text = "Пароли не совпадают";
+                return;
+            }
+            if (!Regex.IsMatch(pass.Text, "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%*?&])[A-Za-z0-9@$!%*?&]{8,}$"))
+            {
+                isOk.Text = "Некорректный пароль";
+                return;
+            }
             Reg3 reg3Page = new Reg3();
             reg3Page.BindingContext = this.BindingContext;
             await Navigation.PushAsync(reg3Page);
