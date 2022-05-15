@@ -2,32 +2,33 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="metoo.AppShell"
-       xmlns:system="clr-namespace:System;assembly=System.Runtime">
-    <!--  xmlns:views="clr-namespace:metoo.Views" --> 
+            xmlns:views="clr-namespace:metoo.Views" >
+    <!-- xmlns:system="clr-namespace:System;assembly=System.Runtime" --> 
+            <!-- xmlns:views="clr-namespace:metoo.Views" --> 
     <TabBar>
-      <!--  <ShellContent 
+        <!--     <ShellContent 
             Title="MyCalendar" 
             Icon="my_calendar.png"
-            ContentTemplate="{DataTemplate system:MyCalendar}" >
+            ContentTemplate="{DataTemplate views:MyCalendar}" >
         </ShellContent> 
 
         <ShellContent 
             Title="AllEvent" 
             Icon="events.png"
-            ContentTemplate="{DataTemplate system:AllEvent}" >
+            ContentTemplate="{DataTemplate views:AllEvent}" >
         </ShellContent>
 
         <ShellContent 
             Title="AllChat" 
             Icon="chat.png"
-            ContentTemplate="{DataTemplate system:AllChat}" >
+            ContentTemplate="{DataTemplate views:AllChat}" >
         </ShellContent>
 
         <ShellContent 
             Title="Lk" 
             Icon="user.png"
-            ContentTemplate="{DataTemplate system:Lk}" >
-        </ShellContent> -->
-
+            ContentTemplate="{DataTemplate views:Lk}" >
+        </ShellContent>
+-->
     </TabBar>
 </Shell>
