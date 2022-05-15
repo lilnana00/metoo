@@ -20,10 +20,9 @@ namespace metoo
         }
         private async void Go_to_reg3(object sender, EventArgs e)
         {
-            User user = new User();
-            Reg3 userPage = new Reg3();
-            userPage.BindingContext = user;
-            await Navigation.PushAsync(userPage);
+            Reg3 reg3Page = new Reg3();
+            reg3Page.BindingContext = this.BindingContext;
+            await Navigation.PushAsync(reg3Page);
         }
         private async void Back_to_reg(object sender, EventArgs e)
         {

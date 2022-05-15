@@ -11,7 +11,7 @@
             <StackLayout Margin="15, 70, 15, 0">
 
                 <Label Text="ПАРОЛЬ" TextColor="#5517A2" ></Label>
-                <Entry IsPassword="True" Margin="0, 10" Placeholder="ВВЕДИТЕ ПАРОЛЬ" PlaceholderColor="#BC99D7" />
+                <Entry Text="{Binding Password}" IsPassword="True" Margin="0, 10" Placeholder="ВВЕДИТЕ ПАРОЛЬ" PlaceholderColor="#BC99D7" />
                 <Label Text="ЕЩЕ РАЗ" TextColor="#5517A2" Margin= "0, 12, 0, 0" ></Label>
                 <Entry IsPassword="True" Margin="0, 10" Placeholder="ПОВТОРИТЕ ПАРОЛЬ" PlaceholderColor="#BC99D7"  />
                 <Label Text="НЕ СОШЛОСЬ" TextColor="#5517A2" HorizontalTextAlignment="Center" FontSize="15"></Label>

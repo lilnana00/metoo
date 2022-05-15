@@ -24,7 +24,7 @@ namespace metoo
 
         protected override void OnAppearing()
         {
-            userName.Text = App.Database.GetItem(App.Database.Count()).Name;
+            this.BindingContext = App.user;
             base.OnAppearing();
         }
     }

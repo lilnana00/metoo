@@ -24,7 +24,9 @@ namespace metoo
                 }
             }
 
-            public App()
+        public static User user;
+
+        public App()
         {
             InitializeComponent();
 

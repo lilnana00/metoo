@@ -24,7 +24,10 @@ namespace metoo
         }
         private async void Go_to_reg(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Reg());
+            User user = new User();
+            Reg regPage = new Reg();
+            regPage.BindingContext = user;
+            await Navigation.PushAsync(regPage);
         }
         private async void Go_to_vhod1(object sender, EventArgs e)
         {

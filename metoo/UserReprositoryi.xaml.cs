@@ -19,6 +19,13 @@ namespace metoo
         {
             return database.Table<User>().Count();
         }
+        public User Login(string email, string pass)
+        {
+            List<User> users = database.Query<User>("select * from Users where Email=? and Password=?", email, pass);
+            if (users.Count == 1)
+                return GetItem(users[0].ID);
+            else return null;
+        }
         public IEnumerable<User> GetItems()
         {
             return database.Table<User>().ToList();

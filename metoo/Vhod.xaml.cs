@@ -24,6 +24,9 @@ namespace metoo
         }
         private async void Go_to_allEvent(object sender, EventArgs e)
         {
+            var email = userEmail.Text.ToString();
+            var pass = userPass.Text.ToString();
+            App.user = App.Database.Login(email, pass);
             await Navigation.PushAsync(new AllEvent());
         }
     }
