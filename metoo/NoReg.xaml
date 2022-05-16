@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="metoo.no_reg">
+    <ContentPage.Content>
+        
+        
+        <FlexLayout BackgroundColor="#FFF26A" Direction="Column" AlignContent="Center" JustifyContent="SpaceEvenly">
+            <Button ImageSource="undo.png" WidthRequest="23" HeightRequest="10"/>
+            
+            <Label Text="Для получения доступа к этому раздела, нужно войти или зарегстрироваться!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Button x:Name="vhod_button" WidthRequest="360" HeightRequest="62" ImageSource="Group113.png" BackgroundColor="#FFF26A"/>
+            <Button x:Name="reg_button" WidthRequest="360" HeightRequest="62" ImageSource="Group97.png" BackgroundColor="#FFF26A"/>
+
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>
