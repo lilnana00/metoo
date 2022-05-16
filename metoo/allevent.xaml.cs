@@ -19,7 +19,30 @@ namespace metoo
             events.Clicked += Events;
             chats.Clicked += Chats;
             user.Clicked += LK;
+            addevent.Clicked += CreateEventAsync;
+
         }
+
+        private async void CreateEventAsync(object sender, EventArgs e)
+        {
+
+            EventTable event2 = new EventTable();
+            Creat_event eventPage = new Creat_event();
+            eventPage.BindingContext = event2;
+            await Navigation.PushAsync(new Creat_event());
+        }
+
+        protected override void OnAppearing()
+        {
+            eventName.Text = App.Database2.GetItem(App.Database2.Count()).EventName;
+            eventTags.Text = App.Database2.GetItem(App.Database2.Count()).Tags;
+            base.OnAppearing();
+
+        }
+
+        
+
+
         private async void Calendar(object sender, EventArgs e)
         {
             if (App.user == null) await Navigation.PushAsync(new no_reg());

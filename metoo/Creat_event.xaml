@@ -5,22 +5,22 @@
     <ContentPage.Content>
         <StackLayout Padding="5, 5, 5, 5"  Background="#FFF26A" >
             <Grid >
-                <Button Grid.ColumnSpan="1" ImageSource="undo.png" HorizontalOptions="Start" Margin="5, 40, 0, 0" WidthRequest="23" HeightRequest="10"></Button>
+                <Button  x:Name="back_button"  Grid.ColumnSpan="1" ImageSource="undo.png" HorizontalOptions="Start" Margin="5, 40, 0, 0" WidthRequest="23" HeightRequest="10"></Button>
                 <Image Grid.ColumnSpan="2" Source="create_event.png" HorizontalOptions="Start" Margin="55, 40, 0, 0" MinimumWidthRequest="314" HeightRequest="43"></Image>
             </Grid>
             <StackLayout Padding="0, 30, 0, 0" Margin="20, 30, 20, 30">
 
                 <Label Text="ХОЧУ" TextColor="#5517A2" FontSize="15" />
-                <Entry Placeholder="КУДА ХОТИТЕ ПОЙТИ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7"/>
+                <Entry Text="{Binding EventName}" Placeholder="КУДА ХОТИТЕ ПОЙТИ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7"/>
                 <Label Text="КОГДА" TextColor="#5517A2" FontSize="15" />
                 <Entry Placeholder="В КАКОЕ ВРЕМЯ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7" />
                 <Label Text="ДЕТАЛИ" TextColor="#5517A2" FontSize="15" />
                 <Entry Placeholder="ДОБАВЬТЕ НЕМНОГО ДЕТАЛЕЙ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7"/>
                 <Label Text="ТЕГИ" TextColor="#5517A2"  FontSize="15" />
-                <Entry Placeholder="ДОБАВЬТЕ ТЕГИ" PlaceholderColor="#BC99D7" FontSize="15"  />
+                <Entry Text="{Binding Tags}" Placeholder="ДОБАВЬТЕ ТЕГИ" PlaceholderColor="#BC99D7" FontSize="15"  />
 
             </StackLayout>
-            <Button WidthRequest="360" HeightRequest="63" ImageSource="Check.png" Margin="0, 45, 0, 0"  />
+            <Button Text="{Binding Tags}" x:Name="save_button" Clicked="SaveEvent" WidthRequest="360" HeightRequest="63" ImageSource="Check.png" Margin="0, 45, 0, 0"  />
 
 
         </StackLayout>

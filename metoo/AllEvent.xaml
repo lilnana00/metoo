@@ -13,23 +13,40 @@
         <FlexLayout Padding="5" BackgroundColor="#FFF26A" Direction="Column" AlignContent="Center" JustifyContent="Start">
             <BoxView BackgroundColor="Gray" CornerRadius="5" HeightRequest="30" />
             
-            <FlexLayout BackgroundColor="#D0BC7C" Direction="Row" AlignContent="Center" JustifyContent="SpaceAround" HeightRequest="150" Padding="5">
+            <ListView  ItemsSource="{Binding}">
+              <ListView.ItemTemplate>
+                <DataTemplate>
+                  <ViewCell>
+                    <ViewCell.View>
+                      <StackLayout Orientation="Horizontal">
+                            <FlexLayout BackgroundColor="#D0BC7C" Direction="Row" AlignContent="Center" JustifyContent="SpaceAround" HeightRequest="150" Padding="5">
 
-                <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5">
-                        <Image Source="alice.png" HeightRequest="75" WidthRequest="75" />
-                        <Label Text="АЛИСА" TextColor="#5517A2" FontSize="25"/>
-                    </StackLayout>
+                            <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5">
+                                    <Image Source="alice.png" HeightRequest="75" WidthRequest="75" />
+                                    <Label Text="АЛИСА" TextColor="#5517A2" FontSize="20"/>
+                                </StackLayout>
 
-                <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5">
-                        <Label Text="Хочу в кино!!!" TextColor="#5517A2" FontSize="30"/>
-                        <Label Text="Во вторник в 19:00" TextColor="#5517A2" FontSize="20"/>
-                    </StackLayout>
+                            <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5">
+                                    <Label x:Name="eventName" Text="{Binding eventName}" TextColor="#5517A2" FontSize="22"/>
+                                    <Label Text="Во вторник в 19:00" TextColor="#5517A2" FontSize="17"/>
+                                </StackLayout>
 
-                <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5">
-                        <Image Source="events.png" HeightRequest="35" WidthRequest="35"/>
-                        <Label Text="#кино" TextColor="#5517A2" FontSize="15"/>
-                    </StackLayout>
-                </FlexLayout>
+                            <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5">
+                                    <Image Source="events.png" HeightRequest="35" WidthRequest="35"/>
+                                    <Label x:Name="eventTags" Text="{Binding eventTags}" TextColor="#5517A2" FontSize="15"/>
+                                </StackLayout>
+                            </FlexLayout>
+                      </StackLayout>
+                    </ViewCell.View>
+                  </ViewCell>
+                </DataTemplate>
+              </ListView.ItemTemplate>
+             </ListView>
+
+
+
+               <Button x:Name="addevent" Text="добавить" BackgroundColor="White" WidthRequest="90" Clicked="CreateEventAsync"></Button>
+
            
             <FlexLayout BackgroundColor="White" Direction="Row" AlignContent="Center" JustifyContent="SpaceAround" HeightRequest="50" FlexLayout.AlignSelf="End" >
                 <Button x:Name="calendar" ImageSource="calendar.png" HeightRequest="50" WidthRequest="50" Style="{StaticResource Key=menu_button}"/>
