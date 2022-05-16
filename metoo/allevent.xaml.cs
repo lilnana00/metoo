@@ -34,14 +34,10 @@ namespace metoo
 
         protected override void OnAppearing()
         {
-            eventName.Text = App.Database2.GetItem(App.Database2.Count()).EventName;
-            eventTags.Text = App.Database2.GetItem(App.Database2.Count()).Tags;
+            this.BindingContext = App.Database2.GetItems();
             base.OnAppearing();
 
         }
-
-        
-
 
         private async void Calendar(object sender, EventArgs e)
         {

@@ -20,7 +20,7 @@
                 <Entry Text="{Binding Tags}" Placeholder="ДОБАВЬТЕ ТЕГИ" PlaceholderColor="#BC99D7" FontSize="15"  />
 
             </StackLayout>
-            <Button Text="{Binding Tags}" x:Name="save_button" Clicked="SaveEvent" WidthRequest="360" HeightRequest="63" ImageSource="Check.png" Margin="0, 45, 0, 0"  />
+            <Button x:Name="save_button" Clicked="SaveEvent" WidthRequest="360" HeightRequest="63" ImageSource="Check.png" Margin="0, 45, 0, 0"  />
 
 
         </StackLayout>

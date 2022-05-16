@@ -26,10 +26,10 @@ namespace metoo
 
         private void SaveEvent(object sender, EventArgs e)
         {
-            var event2 = (EventTable)BindingContext;
-            if (!String.IsNullOrEmpty(event2.EventName))
+            var eventTable = (EventTable)BindingContext;
+            if (!String.IsNullOrEmpty(eventTable.EventName))
             {
-                App.Database2.SaveItem(event2);
+                App.Database2.SaveItem(eventTable);
             }
             this.Navigation.PushAsync(new AllEvent());
 

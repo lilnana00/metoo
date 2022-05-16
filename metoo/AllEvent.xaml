@@ -27,13 +27,13 @@
                                 </StackLayout>
 
                             <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5">
-                                    <Label x:Name="eventName" Text="{Binding eventName}" TextColor="#5517A2" FontSize="22"/>
+                                    <Label Text="{Binding EventName}" TextColor="#5517A2" FontSize="22"/>
                                     <Label Text="Во вторник в 19:00" TextColor="#5517A2" FontSize="17"/>
                                 </StackLayout>
 
                             <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5">
                                     <Image Source="events.png" HeightRequest="35" WidthRequest="35"/>
-                                    <Label x:Name="eventTags" Text="{Binding eventTags}" TextColor="#5517A2" FontSize="15"/>
+                                    <Label Text="{Binding Tags}" TextColor="#5517A2" FontSize="15"/>
                                 </StackLayout>
                             </FlexLayout>
                       </StackLayout>

@@ -31,7 +31,11 @@ namespace metoo
         }
         private async void Go_to_vhod1(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AllEvent());
+            EventTable eventTable = new EventTable();
+            Creat_event crEvent = new Creat_event();
+            crEvent.BindingContext = eventTable;
+
+            await Navigation.PushAsync(crEvent);
         }
     }
 }
