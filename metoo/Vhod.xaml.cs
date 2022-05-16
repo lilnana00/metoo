@@ -27,6 +27,11 @@ namespace metoo
             var email = userEmail.Text.ToString();
             var pass = userPass.Text.ToString();
             App.user = App.Database.Login(email, pass);
+            if (App.user == null)
+            {
+                isOk.Text = "Проверьте правильность данных";
+                return;
+            }
             await Navigation.PushAsync(new AllEvent());
         }
     }

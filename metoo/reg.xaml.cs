@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -20,6 +21,11 @@ namespace metoo
         }
         private async void Go_to_reg2(object sender, EventArgs e)
         {
+            if (!Regex.IsMatch(email.Text, "^[A-Za-z0-9][A-Za-z0-9._-]*[A-Za-z0-9]*@([A-Za-z0-9]+([A-Za-z0-9]*[A-Za-z0-9]+)*.)+[A-Za-z]*$"))
+            {
+                isOk.Text = "Некорректный E-mail";
+                return;
+            }
             Reg2 reg2Page = new Reg2();
             reg2Page.BindingContext = this.BindingContext;
             await Navigation.PushAsync(reg2Page);
