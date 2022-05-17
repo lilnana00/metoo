@@ -9,27 +9,28 @@
             <Setter Property="BackgroundColor" Value="White" />
         </Style>
     </ContentPage.Resources>
+    
     <ContentPage.Content>
-        <FlexLayout Padding="5" BackgroundColor="#FFF26A" Direction="Column" AlignContent="Center" JustifyContent="Start">
+        <FlexLayout Padding="5" BackgroundColor="#FFF26A" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
             <BoxView BackgroundColor="Gray" CornerRadius="5" HeightRequest="30" />
             
-            <ListView  ItemsSource="{Binding}">
+            <ListView  ItemsSource="{Binding}" HasUnevenRows="True">
               <ListView.ItemTemplate>
                 <DataTemplate>
                   <ViewCell>
                     <ViewCell.View>
-                      <StackLayout Orientation="Horizontal">
-                            <FlexLayout BackgroundColor="#D0BC7C" Direction="Row" AlignContent="Center" JustifyContent="SpaceAround" HeightRequest="150" Padding="5">
+                      <StackLayout Orientation="Vertical" VerticalOptions="Start" Padding="5">
+                            <FlexLayout BackgroundColor="#D0BC7C" Direction="Row" AlignContent="Center" JustifyContent="SpaceEvenly" HeightRequest="150" Padding="5">
 
                             <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5">
                                     <Image Source="alice.png" HeightRequest="75" WidthRequest="75" />
                                     <Label Text="АЛИСА" TextColor="#5517A2" FontSize="20"/>
                                 </StackLayout>
 
-                            <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5">
-                                    <Label Text="{Binding EventName}" TextColor="#5517A2" FontSize="22"/>
-                                    <Label Text="Во вторник в 19:00" TextColor="#5517A2" FontSize="17"/>
-                                </StackLayout>
+                            <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5" >
+                                    <Label Text="{Binding EventName}" TextColor="#5517A2" FontSize="22" LineBreakMode="NoWrap"/>
+                                     <Label Text="Во вторник в 19:00" TextColor="#5517A2" FontSize="17" LineBreakMode="NoWrap"/>
+                                        </StackLayout>
 
                             <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5">
                                     <Image Source="events.png" HeightRequest="35" WidthRequest="35"/>
@@ -44,11 +45,14 @@
              </ListView>
 
 
+            <AbsoluteLayout>
+                <ImageButton x:Name="addevent" Source="add_event_butt.png" BackgroundColor="#FFF26A"
+                         WidthRequest="90" HeightRequest="90" AbsoluteLayout.LayoutBounds="5, 3, 90, 90" 
+                         Clicked="CreateEventAsync" />
+            </AbsoluteLayout>
 
-               <Button x:Name="addevent" Text="добавить" BackgroundColor="White" WidthRequest="90" Clicked="CreateEventAsync"></Button>
 
-           
-            <FlexLayout BackgroundColor="White" Direction="Row" AlignContent="Center" JustifyContent="SpaceAround" HeightRequest="50" FlexLayout.AlignSelf="End" >
+            <FlexLayout BackgroundColor="White" Direction="Row" AlignContent="Center" JustifyContent="SpaceAround" HeightRequest="50"  FlexLayout.AlignSelf="End" >
                 <Button x:Name="calendar" ImageSource="calendar.png" HeightRequest="50" WidthRequest="50" Style="{StaticResource Key=menu_button}"/>
                 <Button x:Name="events" ImageSource="events.png" HeightRequest="50" WidthRequest="50" Style="{StaticResource Key=menu_button}" />
                 <Button x:Name="chats" ImageSource="chat.png" HeightRequest="50" WidthRequest="50" Style="{StaticResource Key=menu_button}" />
@@ -56,6 +60,6 @@
             </FlexLayout>
 
         </FlexLayout>
-        
+
     </ContentPage.Content>
 </ContentPage>
