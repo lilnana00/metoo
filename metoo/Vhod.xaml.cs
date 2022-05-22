@@ -32,7 +32,11 @@ namespace metoo
                 isOk.Text = "Проверьте правильность данных";
                 return;
             }
-            await Navigation.PushAsync(new AllEvent());
+
+            EventTable table = new EventTable();
+            Creat_event creat_Event = new Creat_event();
+            creat_Event.BindingContext = table;
+            await Navigation.PushAsync(creat_Event);
         }
     }
 }

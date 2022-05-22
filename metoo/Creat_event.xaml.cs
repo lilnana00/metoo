@@ -27,6 +27,7 @@ namespace metoo
         private void SaveEvent(object sender, EventArgs e)
         {
             var eventTable = (EventTable)BindingContext;
+            eventTable.CreatorID = App.user.ID;
             if (!String.IsNullOrEmpty(eventTable.EventName))
             {
                 App.Database2.SaveItem(eventTable);

@@ -10,33 +10,37 @@
         </Style>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <FlexLayout Padding="5" BackgroundColor="#FFF26A" Direction="Column" AlignContent="Center" JustifyContent="Start">
+        <FlexLayout Padding="5" BackgroundColor="#FFF26A" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
             <BoxView BackgroundColor="Gray" CornerRadius="5" HeightRequest="30" />
-            <SearchBar x:Name="MainSearchBar"> </SearchBar> 
-
-            <ListView  ItemsSource="{Binding}">
-              <ListView.ItemTemplate>
+            
+            <SearchBar x:Name="MainSearchBar"></SearchBar>
+            
+            <ListView ItemTapped="GoToEvent" ItemsSource="{Binding}" HasUnevenRows="True">
+                <ListView.ItemTemplate>
                 <DataTemplate>
                   <ViewCell>
                     <ViewCell.View>
-                      <StackLayout Orientation="Horizontal">
-                            <FlexLayout BackgroundColor="#D0BC7C" Direction="Row" AlignContent="Center" JustifyContent="SpaceAround" HeightRequest="150" Padding="5">
+                      <StackLayout  Padding="5">
+                        <FlexLayout BackgroundColor="#D0BC7C" Direction="Row" AlignContent="Center" JustifyContent="SpaceEvenly" HeightRequest="150" Padding="3">
 
-                            <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5">
-                                    <Image Source="alice.png" HeightRequest="75" WidthRequest="75" />
-                                    <Label Text="АЛИСА" TextColor="#5517A2" FontSize="20"/>
+                         <FlexLayout Direction="Column" AlignContent="Center" FlexLayout.Grow="1" Padding="5">
+                            <Image Source="alice.png" HeightRequest="75" WidthRequest="75" />
+                            <Label Text="АЛИСА" TextColor="#5517A2" FontSize="20"/>
+                         </FlexLayout>
+                            
+                            <FlexLayout Direction="Column" AlignContent="Center" JustifyContent="SpaceEvenly" WidthRequest="275" FlexLayout.Grow="3">
+                                <StackLayout Orientation="Vertical" VerticalOptions="Center"  Padding="5">
+                                    <Label Text="{Binding EventName}" TextColor="#5517A2" FontSize="25" LineBreakMode="NoWrap"/>
+                                    <Label Text="Во вторник в 19:00" TextColor="#5517A2" FontSize="15" LineBreakMode="NoWrap"/>
                                 </StackLayout>
 
-                            <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5">
-                                    <Label x:Name="eventName" Text="{Binding eventName}" TextColor="#5517A2" FontSize="22"/>
-                                    <Label Text="Во вторник в 19:00" TextColor="#5517A2" FontSize="17"/>
-                                </StackLayout>
-
-                            <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5">
-                                    <Image Source="events.png" HeightRequest="35" WidthRequest="35"/>
-                                    <Label x:Name="eventTags" Text="{Binding eventTags}" TextColor="#5517A2" FontSize="15"/>
+                                <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="5">
+                                    <!-- <Image Source="events.png" HeightRequest="35" WidthRequest="35"/> -->
+                                    <Label Text="{Binding Tags}" TextColor="#5517A2" FontSize="15"/>
                                 </StackLayout>
                             </FlexLayout>
+
+                        </FlexLayout>
                       </StackLayout>
                     </ViewCell.View>
                   </ViewCell>
@@ -45,8 +49,13 @@
              </ListView>
 
 
-
-               <Button x:Name="addevent" Text="добавить" BackgroundColor="White" WidthRequest="90" Clicked="CreateEventAsync"></Button>
+            <AbsoluteLayout>
+                <Button x:Name="addevent" ImageSource="add_event_butt.png" BackgroundColor="#00FBC1BC"
+                        WidthRequest="75" HeightRequest="75" 
+                        AbsoluteLayout.LayoutBounds="0.9, 2.5, -1, -1"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        Clicked="CreateEventAsync" />
+            </AbsoluteLayout>
 
            
             <FlexLayout BackgroundColor="White" Direction="Row" AlignContent="Center" JustifyContent="SpaceAround" HeightRequest="50" FlexLayout.AlignSelf="End" >

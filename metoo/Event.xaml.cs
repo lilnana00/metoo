@@ -15,10 +15,18 @@ namespace metoo
         public Event()
         {
             InitializeComponent();
-            back_button.Clicked += Back_to_allevent;
+            back_button.Clicked += Back;
         }
 
-        private async void Back_to_allevent(object sender, EventArgs e)
+        protected override void OnAppearing()
+        {
+            EventTable table = new EventTable();
+            table = BindingContext as EventTable;
+            userName.Text = App.Database.GetItem(table.CreatorID).Name;
+            base.OnAppearing();
+        }
+
+        private async void Back(object sender, EventArgs e)
         {
             await Navigation.PopAsync();
         }

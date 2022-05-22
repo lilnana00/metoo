@@ -20,15 +20,17 @@ namespace metoo
             chats.Clicked += Chats;
             user.Clicked += LK;
             addevent.Clicked += CreateEventAsync;
+        }
 
+        private async void GoToEvent(object sender, ItemTappedEventArgs e)
+        {
+            Event event2 = new Event();
+            event2.BindingContext = e.Item as EventTable;
+            await Navigation.PushAsync(event2);
         }
 
         private async void CreateEventAsync(object sender, EventArgs e)
         {
-
-            EventTable event2 = new EventTable();
-            Creat_event eventPage = new Creat_event();
-            eventPage.BindingContext = event2;
             await Navigation.PushAsync(new Creat_event());
         }
 
@@ -36,7 +38,6 @@ namespace metoo
         {
             this.BindingContext = App.Database2.GetItems();
             base.OnAppearing();
-
         }
 
         //void OnBtnPressed(object sender, EventArgs ea)

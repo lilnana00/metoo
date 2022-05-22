@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout Padding="5, 5, 5, 5" Background="#FFF26A">
            <StackLayout Orientation="Horizontal" Padding="5, 10, 5, 5">
-                <Button ImageSource="undo.png" WidthRequest="23" HeightRequest="10" x:Name="back_button"/>
+                <Button x:Name="back_button" ImageSource="undo.png" WidthRequest="23" HeightRequest="10"/>
                 <Image Source="event.png" WidthRequest="169" HeightRequest="42"/>
             </StackLayout>
 
@@ -14,12 +14,12 @@
 
                             <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5">
                                     <Image Source="alice.png" HeightRequest="75" WidthRequest="75" />
-                                    <Label Text="АЛИСА" TextColor="#5517A2" FontSize="20"/>
+                                    <Label  x:Name="userName" Text="АЛИСА" TextColor="#5517A2" FontSize="20"/>
                                 </StackLayout>
 
                             <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5" >
                                    <!-- <Label Text="{Binding EventName}" TextColor="#5517A2" FontSize="22" LineBreakMode="NoWrap"/>-->
-                                     <Label Text="Во вторник в 19:00" TextColor="#5517A2" FontSize="17" LineBreakMode="NoWrap"/>
+                                     <Label Text="{Binding Details}" TextColor="#5517A2" FontSize="17" LineBreakMode="NoWrap"/>
                                         </StackLayout>
 
                             <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5">
@@ -64,7 +64,7 @@
                                     <Label Text="АЛИСА" TextColor="#5517A2" FontSize="20"/>
                                 </StackLayout>
 
-<StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5" >
+                            <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5" >
                                     <Label Text="{Binding Comment}" TextColor="#5517A2" FontSize="22" LineBreakMode="NoWrap"/>
                                         </StackLayout>
                             </FlexLayout>
@@ -79,7 +79,6 @@
                 <Image Source="alice.png" WidthRequest="50" HeightRequest="50"/>
                 <Entry Placeholder="ВАШ КОММЕНТАРИЙ" PlaceholderColor="#BC99D7" Margin="10,0,0,0"/>
             </StackLayout>
-
             
         </StackLayout>
     </ContentPage.Content>
