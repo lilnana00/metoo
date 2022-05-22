@@ -19,7 +19,7 @@ namespace metoo
             events.Clicked += Events;
             chats.Clicked += Chats;
             user.Clicked += LK;
-            addevent.Clicked += CreateEventAsync;
+            //addevent.Clicked += CreateEventAsync;
         }
 
         private async void GoToEvent(object sender, ItemTappedEventArgs e)

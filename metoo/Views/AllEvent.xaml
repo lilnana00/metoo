@@ -13,51 +13,54 @@
         <FlexLayout Padding="5" BackgroundColor="#FFF26A" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
             <BoxView BackgroundColor="Gray" CornerRadius="5" HeightRequest="30" />
             
-            <SearchBar x:Name="MainSearchBar"></SearchBar>
-            
-            <ListView ItemTapped="GoToEvent" ItemsSource="{Binding}" HasUnevenRows="True">
-                <ListView.ItemTemplate>
-                <DataTemplate>
-                  <ViewCell>
-                    <ViewCell.View>
-                      <StackLayout  Padding="5">
-                        <FlexLayout BackgroundColor="#D0BC7C" Direction="Row" AlignContent="Center" JustifyContent="SpaceEvenly" HeightRequest="150" Padding="3">
+            <!--<SearchBar x:Name="MainSearchBar"></SearchBar>-->
+            <StackLayout >
+                <ListView  ItemTapped="GoToEvent" ItemsSource="{Binding}" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <StackLayout  Padding="5">
+                                        <FlexLayout BackgroundColor="#D0BC7C" Direction="Row" AlignContent="Center" JustifyContent="SpaceEvenly" HeightRequest="150" Padding="3">
 
-                         <FlexLayout Direction="Column" AlignContent="Center" FlexLayout.Grow="1" Padding="5">
-                            <Image Source="alice.png" HeightRequest="75" WidthRequest="75" />
-                            <Label Text="АЛИСА" TextColor="#5517A2" FontSize="20"/>
-                         </FlexLayout>
-                            
-                            <FlexLayout Direction="Column" AlignContent="Center" JustifyContent="SpaceEvenly" WidthRequest="275" FlexLayout.Grow="3">
-                                <StackLayout Orientation="Vertical" VerticalOptions="Center"  Padding="5">
-                                    <Label Text="{Binding EventName}" TextColor="#5517A2" FontSize="25" LineBreakMode="NoWrap"/>
-                                    <Label Text="Во вторник в 19:00" TextColor="#5517A2" FontSize="15" LineBreakMode="NoWrap"/>
-                                </StackLayout>
+                                            <FlexLayout Direction="Column" AlignContent="Center" FlexLayout.Grow="1" Padding="5">
+                                                <Image Source="alice.png" HeightRequest="75" WidthRequest="75" />
+                                                <Label Text="АЛИСА" TextColor="#5517A2" FontSize="20"/>
+                                            </FlexLayout>
 
-                                <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="5">
-                                    <!-- <Image Source="events.png" HeightRequest="35" WidthRequest="35"/> -->
-                                    <Label Text="{Binding Tags}" TextColor="#5517A2" FontSize="15"/>
-                                </StackLayout>
-                            </FlexLayout>
+                                            <FlexLayout Direction="Column" AlignContent="Center" JustifyContent="SpaceEvenly" WidthRequest="275" FlexLayout.Grow="3">
+                                                <StackLayout Orientation="Vertical" VerticalOptions="Center"  Padding="5">
+                                                    <Label Text="{Binding EventName}" TextColor="#5517A2" FontSize="25" LineBreakMode="NoWrap"/>
+                                                    <Label Text="Во вторник в 19:00" TextColor="#5517A2" FontSize="15" LineBreakMode="NoWrap"/>
+                                                </StackLayout>
 
-                        </FlexLayout>
-                      </StackLayout>
-                    </ViewCell.View>
-                  </ViewCell>
-                </DataTemplate>
-              </ListView.ItemTemplate>
-             </ListView>
+                                                <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="5">
+                                                    <!-- <Image Source="events.png" HeightRequest="35" WidthRequest="35"/> -->
+                                                    <Label Text="{Binding Tags}" TextColor="#5517A2" FontSize="15"/>
+                                                </StackLayout>
+                                            </FlexLayout>
 
-
-            <AbsoluteLayout>
+                                        </FlexLayout>
+                                    </StackLayout>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <FlexLayout BackgroundColor="White" Direction="Row" AlignContent="Center" JustifyContent="SpaceAround" HeightRequest="50" FlexLayout.AlignSelf="End">
+                    <Button x:Name="calendar" ImageSource="calendar.png" HeightRequest="50" WidthRequest="50" Style="{StaticResource Key=menu_button}"/>
+                    <Button x:Name="events" ImageSource="events.png" HeightRequest="50" WidthRequest="50" Style="{StaticResource Key=menu_button}" />
+                    <Button x:Name="chats" ImageSource="chat.png" HeightRequest="50" WidthRequest="50" Style="{StaticResource Key=menu_button}" />
+                    <Button x:Name="user" ImageSource="user.png" HeightRequest="50" WidthRequest="50" Style="{StaticResource Key=menu_button}" />
+                </FlexLayout>
+            </StackLayout>
+<!--<AbsoluteLayout>
                 <Button x:Name="addevent" ImageSource="add_event_butt.png" BackgroundColor="#00FBC1BC"
                         WidthRequest="75" HeightRequest="75" 
                         AbsoluteLayout.LayoutBounds="0.95, 1.5, -1, -1"
                         AbsoluteLayout.LayoutFlags="PositionProportional"
                         Clicked="CreateEventAsync" />
-            </AbsoluteLayout>
-
-           
+            </AbsoluteLayout>-->
             
 
         </FlexLayout>

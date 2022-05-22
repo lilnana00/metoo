@@ -16,12 +16,18 @@ namespace metoo
         {
             InitializeComponent();
             lkEdit.Clicked += Lk_edit;
+            exitButton.Clicked += Exit;
         }
         private async void Lk_edit(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new LkEdit());
         }
 
+        private async void Exit(object sender, EventArgs e)
+        {
+            App.user = null;
+            await Navigation.PopAsync();
+        }
         protected override void OnAppearing()
         {
             this.BindingContext = App.user;
