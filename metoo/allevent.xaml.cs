@@ -39,6 +39,23 @@ namespace metoo
 
         }
 
+        //void OnBtnPressed(object sender, EventArgs ea)
+        //{
+        //    var keyword = MainSearchBar.Text;
+        //    MainListView.ItemsSource =
+        //    App.Database2.GetItems().Where(Tags => Tags.ToLower().Contains(keyword.ToLower()));
+        //}
+
+        private async void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+
+            EventTable selectedEvent = (EventTable)e.SelectedItem;
+            Event eventPage2 = new Event();
+            eventPage2.BindingContext = selectedEvent;
+            await Navigation.PushAsync(new Event());
+
+        }
+
         private async void Calendar(object sender, EventArgs e)
         {
             if (App.user == null) await Navigation.PushAsync(new no_reg());

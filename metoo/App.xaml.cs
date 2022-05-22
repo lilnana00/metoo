@@ -10,8 +10,11 @@ namespace metoo
 
         public const string DATABASE_NAME = "Users.db";
         public const string DATABASE_NAME2 = "Events.db";
+        public const string DATABASE_NAME3 = "Comments.db";
         public static UserReprositoryi database;
         public static EventReprositoryi database2;
+        public static CommentReprository database3;
+
         public static UserReprositoryi Database
         {
             get
@@ -39,6 +42,20 @@ namespace metoo
             }
         }
 
+        public static CommentReprository Database3
+        {
+            get
+            {
+                if (database3 == null)
+                {
+                    database3 = new CommentReprository(
+                        Path.Combine(
+                            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), DATABASE_NAME3));
+                }
+                return database3;
+            }
+        }
+
 
 
         public static User user;
@@ -48,8 +65,8 @@ namespace metoo
             InitializeComponent();
 
             // MainPage = new MyCalendar();
-            MainPage = new NavigationPage(new MainPage()); 
-           // MainPage = new AppShell();
+            MainPage = new NavigationPage(new MainPage());
+            // MainPage = new AppShell();
         }
 
         protected override void OnStart()
@@ -65,3 +82,4 @@ namespace metoo
         }
     }
 }
+

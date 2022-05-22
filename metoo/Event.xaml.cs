@@ -15,6 +15,12 @@ namespace metoo
         public Event()
         {
             InitializeComponent();
+            back_button.Clicked += Back_to_allevent;
+        }
+
+        private async void Back_to_allevent(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
         }
     }
 }

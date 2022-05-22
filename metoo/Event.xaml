@@ -5,16 +5,29 @@
     <ContentPage.Content>
         <StackLayout Padding="5, 5, 5, 5" Background="#FFF26A">
            <StackLayout Orientation="Horizontal" Padding="5, 10, 5, 5">
-                <Button ImageSource="undo.png" WidthRequest="23" HeightRequest="10"/>
+                <Button ImageSource="undo.png" WidthRequest="23" HeightRequest="10" x:Name="back_button"/>
                 <Image Source="event.png" WidthRequest="169" HeightRequest="42"/>
             </StackLayout>
 
-            <StackLayout Orientation="Horizontal" Padding="5,15,5,5" >
-                <Image Source="alice.png" WidthRequest="72" HeightRequest="67"/>
-                <Label Margin="5,0,0,0" Text="АЛИСА" TextColor="#5517A2" FontSize="35" />
-            </StackLayout>
+             <StackLayout  Orientation="Vertical" VerticalOptions="Start" Padding="5">
+                            <FlexLayout  Direction="Row" AlignContent="Center" JustifyContent="SpaceEvenly" HeightRequest="150" Padding="5">
 
-            <Label Padding="5, 10, 5, 10" Text="Хочу в мyзей музыкального прикладного искусства во вторник в 19:00" FontSize="25" />
+                            <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5">
+                                    <Image Source="alice.png" HeightRequest="75" WidthRequest="75" />
+                                    <Label Text="АЛИСА" TextColor="#5517A2" FontSize="20"/>
+                                </StackLayout>
+
+                            <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5" >
+                                   <!-- <Label Text="{Binding EventName}" TextColor="#5517A2" FontSize="22" LineBreakMode="NoWrap"/>-->
+                                     <Label Text="Во вторник в 19:00" TextColor="#5517A2" FontSize="17" LineBreakMode="NoWrap"/>
+                                        </StackLayout>
+
+                            <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5">
+                                    <Image Source="events.png" HeightRequest="35" WidthRequest="35"/>
+                                   <!-- <Label Text="{Binding Tags}" TextColor="#5517A2" FontSize="15"/>-->
+                                </StackLayout>
+                            </FlexLayout>
+             </StackLayout>
 
             <Grid ColumnSpacing="15">
                 <Grid.ColumnDefinitions>
@@ -38,10 +51,35 @@
                 <Image Source="comment.png" WidthRequest="168" HeightRequest="38" />
             </FlexLayout>
 
+            <ListView   ItemsSource="{Binding}" HasUnevenRows="True"  >
+              <ListView.ItemTemplate>
+                <DataTemplate>
+                  <ViewCell>
+                    <ViewCell.View>
+                      <StackLayout Orientation="Vertical" VerticalOptions="Start" Padding="5">
+                            <FlexLayout BackgroundColor="#D0BC7C" Direction="Row" AlignContent="Center" JustifyContent="SpaceEvenly" HeightRequest="150" Padding="5">
+
+                            <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5">
+                                    <Image Source="alice.png" HeightRequest="75" WidthRequest="75" />
+                                    <Label Text="АЛИСА" TextColor="#5517A2" FontSize="20"/>
+                                </StackLayout>
+
+<StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5" >
+                                    <Label Text="{Binding Comment}" TextColor="#5517A2" FontSize="22" LineBreakMode="NoWrap"/>
+                                        </StackLayout>
+                            </FlexLayout>
+                      </StackLayout>
+                    </ViewCell.View>
+                  </ViewCell>
+                </DataTemplate>
+              </ListView.ItemTemplate>
+             </ListView>
+
             <StackLayout Orientation="Horizontal" Padding="5,200,0,0">
                 <Image Source="alice.png" WidthRequest="50" HeightRequest="50"/>
                 <Entry Placeholder="ВАШ КОММЕНТАРИЙ" PlaceholderColor="#BC99D7" Margin="10,0,0,0"/>
             </StackLayout>
+
             
         </StackLayout>
     </ContentPage.Content>
