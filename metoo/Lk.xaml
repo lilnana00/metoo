@@ -4,7 +4,12 @@
              x:Class="metoo.Lk">
     <ContentPage.Content>
         <StackLayout Padding="5, 5, 5, 5"  Background="#FFF26A" >
-            <Button x:Name="lkEdit" ImageSource="Group127.png" VerticalOptions="Start" HorizontalOptions="End" Margin="0, 20, 5, 0" WidthRequest="50" HeightRequest="50" BackgroundColor="#FFF26A"></Button>
+            <AbsoluteLayout>
+                <Button ImageSource="icon_exit.png" HeightRequest="25" WidthRequest="25" BackgroundColor="#00FBC1BC"
+                       AbsoluteLayout.LayoutBounds="35, 30, autosize, autosize"
+                         />
+            </AbsoluteLayout>
+            <Button x:Name="lkEdit" ImageSource="Group127.png" VerticalOptions="Start" HorizontalOptions="End" Margin="0, 20, 5, 0" WidthRequest="50" HeightRequest="50" BackgroundColor="#00FBC1BC"></Button>
             <Image Source="Group128.png"  WidthRequest="160" Margin="0, -20, 0, 0"/>
             <Image Source="Line1.png"  WidthRequest="350" Margin="-20, -6, -20, 0"/>
             <Label x:Name="userName" HorizontalTextAlignment="Center" FontSize="22" TextColor="#5517A2" Text="{Binding Name}" ></Label>

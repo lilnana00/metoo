@@ -223,4 +223,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\add_event_butt.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\icon_exit.png" />
+  </ItemGroup>
 </Project>

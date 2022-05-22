@@ -2,7 +2,7 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="metoo.AppShell"
-            xmlns:views="clr-namespace:metoo.Views" >
+            xmlns:views="clr-namespace:metoo" >
     <!-- xmlns:system="clr-namespace:System;assembly=System.Runtime" --> 
             <!-- xmlns:views="clr-namespace:metoo.Views" --> 
     <TabBar>
