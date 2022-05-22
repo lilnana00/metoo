@@ -19,23 +19,26 @@
                 <DataTemplate>
                   <ViewCell>
                     <ViewCell.View>
-                      <StackLayout Orientation="Vertical" VerticalOptions="Start" Padding="5">
-                            <FlexLayout BackgroundColor="#D0BC7C" Direction="Row" AlignContent="Center" JustifyContent="SpaceEvenly" HeightRequest="150" Padding="5">
+                      <StackLayout  Padding="5">
+                            <FlexLayout BackgroundColor="#D0BC7C" Direction="Row" AlignContent="Center" JustifyContent="SpaceEvenly" HeightRequest="150" Padding="3">
 
-                            <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5">
+                            <FlexLayout Direction="Column" AlignContent="Center" FlexLayout.Grow="1" Padding="5">
                                     <Image Source="alice.png" HeightRequest="75" WidthRequest="75" />
                                     <Label Text="АЛИСА" TextColor="#5517A2" FontSize="20"/>
+                            </FlexLayout>
+
+                            <FlexLayout Direction="Column" AlignContent="Center" JustifyContent="SpaceEvenly" WidthRequest="275" FlexLayout.Grow="3">
+                                <StackLayout Orientation="Vertical" VerticalOptions="Center"  Padding="5">
+                                    <Label Text="{Binding EventName}" TextColor="#5517A2" FontSize="25" LineBreakMode="NoWrap"/>
+                                    <Label Text="Во вторник в 19:00" TextColor="#5517A2" FontSize="15" LineBreakMode="NoWrap"/>
                                 </StackLayout>
 
-                            <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5" >
-                                    <Label Text="{Binding EventName}" TextColor="#5517A2" FontSize="22" LineBreakMode="NoWrap"/>
-                                     <Label Text="Во вторник в 19:00" TextColor="#5517A2" FontSize="17" LineBreakMode="NoWrap"/>
-                                        </StackLayout>
-
-                            <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5">
-                                    <Image Source="events.png" HeightRequest="35" WidthRequest="35"/>
+                            <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="5">
+                                   <!-- <Image Source="events.png" HeightRequest="35" WidthRequest="35"/> -->
                                     <Label Text="{Binding Tags}" TextColor="#5517A2" FontSize="15"/>
-                                </StackLayout>
+                            </StackLayout>
+                            </FlexLayout>
+
                             </FlexLayout>
                       </StackLayout>
                     </ViewCell.View>
@@ -46,13 +49,15 @@
 
 
             <AbsoluteLayout>
-                <ImageButton x:Name="addevent" Source="add_event_butt.png" BackgroundColor="#FFF26A"
-                         WidthRequest="90" HeightRequest="90" AbsoluteLayout.LayoutBounds="5, 3, 90, 90" 
-                         Clicked="CreateEventAsync" />
+                <Button x:Name="addevent" ImageSource="add_event_butt.png" BackgroundColor="#00FBC1BC"
+                        WidthRequest="75" HeightRequest="75" 
+                        AbsoluteLayout.LayoutBounds="0.9, 2.5, -1, -1"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                        Clicked="CreateEventAsync" />
             </AbsoluteLayout>
 
 
-            <FlexLayout BackgroundColor="White" Direction="Row" AlignContent="Center" JustifyContent="SpaceAround" HeightRequest="50"  FlexLayout.AlignSelf="End" >
+            <FlexLayout BackgroundColor="White" Direction="Row" AlignContent="Center" JustifyContent="SpaceAround" HeightRequest="50" >
                 <Button x:Name="calendar" ImageSource="calendar.png" HeightRequest="50" WidthRequest="50" Style="{StaticResource Key=menu_button}"/>
                 <Button x:Name="events" ImageSource="events.png" HeightRequest="50" WidthRequest="50" Style="{StaticResource Key=menu_button}" />
                 <Button x:Name="chats" ImageSource="chat.png" HeightRequest="50" WidthRequest="50" Style="{StaticResource Key=menu_button}" />

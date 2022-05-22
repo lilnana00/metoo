@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout Padding="5, 5, 5, 5"  Background="#FFF26A" >
             <Grid >
-                <Button  x:Name="back_button" BackgroundColor="#FFF26A" Grid.ColumnSpan="1" ImageSource="undo.png" HorizontalOptions="Start" Margin="5, 40, 0, 0" WidthRequest="23" HeightRequest="10"></Button>
+                <Button  x:Name="back_button" BackgroundColor="#00FBC1BC" Grid.ColumnSpan="1" ImageSource="undo.png" HorizontalOptions="Start" Margin="5, 40, 0, 0" WidthRequest="23" HeightRequest="10"></Button>
                 <Image Grid.ColumnSpan="2" Source="create_event.png" HorizontalOptions="Start" Margin="55, 40, 0, 0" MinimumWidthRequest="314" HeightRequest="43"></Image>
             </Grid>
             <StackLayout Padding="0, 30, 0, 0" Margin="20, 30, 20, 30">
@@ -20,7 +20,7 @@
                 <Entry Text="{Binding Tags}" Placeholder="ДОБАВЬТЕ ТЕГИ" PlaceholderColor="#BC99D7" FontSize="15"  />
 
             </StackLayout>
-            <Button x:Name="save_button" BackgroundColor="#FFF26A" Clicked="SaveEvent" WidthRequest="360" HeightRequest="63" ImageSource="Check.png" Margin="0, 45, 0, 0"  />
+            <Button x:Name="save_button" BackgroundColor="#00FBC1BC" Clicked="SaveEvent" WidthRequest="360" HeightRequest="63" ImageSource="Check.png" Margin="0, 4, 0, 0"  /> <!--в маргине раньше стояло 45 и на настоящем тлф норм смотрелось-->
 
 
         </StackLayout>

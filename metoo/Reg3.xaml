@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout Padding="5, 5, 5, 5"  Background="#FFF26A" >
             <Grid >
-                <Button BackgroundColor="#FFF26A" x:Name="back_button" Grid.ColumnSpan="1" ImageSource="undo.png" HorizontalOptions="Start" Margin="0, 40, 0, 0" WidthRequest="23" HeightRequest="10" ></Button>
+                <Button BackgroundColor="#00FBC1BC" x:Name="back_button" Grid.ColumnSpan="1" ImageSource="undo.png" HorizontalOptions="Start" Margin="0, 40, 0, 0" WidthRequest="23" HeightRequest="10" ></Button>
                 <Image Grid.ColumnSpan="2" Source="step_3.png" HorizontalOptions="Start" Margin="50, 40, 0, 0" MinimumWidthRequest="30" HeightRequest="30"></Image>
             </Grid>
             <StackLayout Margin="15, 25, 15, 5" >
@@ -19,7 +19,7 @@
 
             </StackLayout>
 
-            <Button BackgroundColor="#FFF26A" x:Name="reg3_button" WidthRequest="360" HeightRequest="63" ImageSource="cont.png" Margin="0, 20, 0, 0" Clicked="SaveUser" ></Button>
+            <Button BackgroundColor="#00FBC1BC" x:Name="reg3_button" WidthRequest="360" HeightRequest="63" ImageSource="cont.png" Margin="0, 20, 0, 0" Clicked="SaveUser" ></Button>
 
         </StackLayout>
     </ContentPage.Content>
