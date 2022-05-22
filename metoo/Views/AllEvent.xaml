@@ -52,18 +52,13 @@
             <AbsoluteLayout>
                 <Button x:Name="addevent" ImageSource="add_event_butt.png" BackgroundColor="#00FBC1BC"
                         WidthRequest="75" HeightRequest="75" 
-                        AbsoluteLayout.LayoutBounds="0.9, 2.5, -1, -1"
+                        AbsoluteLayout.LayoutBounds="0.95, 1.5, -1, -1"
                         AbsoluteLayout.LayoutFlags="PositionProportional"
                         Clicked="CreateEventAsync" />
             </AbsoluteLayout>
 
            
-            <FlexLayout BackgroundColor="White" Direction="Row" AlignContent="Center" JustifyContent="SpaceAround" HeightRequest="50" FlexLayout.AlignSelf="End" >
-                <Button x:Name="calendar" ImageSource="calendar.png" HeightRequest="50" WidthRequest="50" Style="{StaticResource Key=menu_button}"/>
-                <Button x:Name="events" ImageSource="events.png" HeightRequest="50" WidthRequest="50" Style="{StaticResource Key=menu_button}" />
-                <Button x:Name="chats" ImageSource="chat.png" HeightRequest="50" WidthRequest="50" Style="{StaticResource Key=menu_button}" />
-                <Button x:Name="user" ImageSource="user.png" HeightRequest="50" WidthRequest="50" Style="{StaticResource Key=menu_button}" />
-            </FlexLayout>
+            
 
         </FlexLayout>
         

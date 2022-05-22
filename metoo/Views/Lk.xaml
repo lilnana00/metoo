@@ -50,12 +50,7 @@
 
             <Button Text="О ПРИЛОЖЕНИИ" TextColor="#5517A2"></Button>
 
-            <Grid ColumnSpacing="40" ColumnDefinitions="40" BackgroundColor="White" WidthRequest="100" VerticalOptions="End" Margin="-5" Padding="20, 10, 20, 10">
-                <Button Grid.ColumnSpan="1" HorizontalOptions ="Start" WidthRequest="30" HeightRequest="30" ImageSource="calendar.png"/>
-                <Button Grid.ColumnSpan="2" HorizontalOptions="Start" WidthRequest="30" HeightRequest="30" ImageSource="events.png" Margin="90, 0, 0, 0"/>
-                <Button Grid.ColumnSpan="2" HorizontalOptions="Start" WidthRequest="30" HeightRequest="30" ImageSource="chat.png" Margin="180, 0, 0, 0"/>
-                <Button Grid.ColumnSpan="2" HorizontalOptions="Start" WidthRequest="30" HeightRequest="30" ImageSource="user.png" Margin="270, 0, 0, 0"/>
-            </Grid>
+            
 
         </StackLayout>
     </ContentPage.Content>

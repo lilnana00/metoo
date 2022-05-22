@@ -6,7 +6,7 @@
     <!-- xmlns:system="clr-namespace:System;assembly=System.Runtime" --> 
             <!-- xmlns:views="clr-namespace:metoo.Views" --> 
     <TabBar>
-        <!--     <ShellContent 
+           <ShellContent 
             Title="MyCalendar" 
             Icon="my_calendar.png"
             ContentTemplate="{DataTemplate views:MyCalendar}" >
@@ -29,6 +29,6 @@
             Icon="user.png"
             ContentTemplate="{DataTemplate views:Lk}" >
         </ShellContent>
--->
+
     </TabBar>
 </Shell>
