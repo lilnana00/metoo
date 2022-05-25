@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="metoo.Vhod">
     <ContentPage.Content>
-        <StackLayout Padding="5, 5, 5, 5"  Background="#FFF26A" >
+        <StackLayout Padding="10, 5"  Background="#FFF26A" >
             <Grid >
                 <ImageButton BackgroundColor="#00FBC1BC" x:Name="back_button" Grid.ColumnSpan="1" Source="undo.png" HorizontalOptions="Start" Margin="0, 40, 0, 0" WidthRequest="23" HeightRequest="10"></ImageButton>
                 <Image Grid.ColumnSpan="2" Source="vhod.png" HorizontalOptions="Start" Margin="50, 40, 0, 0" MinimumWidthRequest="25" HeightRequest="25"></Image>
