@@ -25,7 +25,7 @@ namespace metoo
         private async void GoToEvent(object sender, ItemTappedEventArgs e)
         {
             Event event2 = new Event();
-            event2.BindingContext = e.Item as EventTable;
+            event2.BindingContext = e.Item;
             await Navigation.PushAsync(event2);
         }
 
@@ -36,7 +36,18 @@ namespace metoo
 
         protected override void OnAppearing()
         {
-            this.BindingContext = App.Database2.GetItems();
+            var items = App.Database2.GetItems();
+            var names = new List<string>();
+            foreach (var item in items)
+            {
+                var name = App.Database.GetItem(item.CreatorID).Name;
+                names.Add(name);
+            }
+            this.BindingContext = from Users in App.Database.GetItems()
+                                  from Events in App.Database2.GetItems()
+                                  where Users.ID == Events.CreatorID
+                                  select new {CreatorName=Users.Name, EventName=Events.EventName,
+                                            DateTime=Events.DateTime, Details=Events.Details, Tags=Events.Tags};
             base.OnAppearing();
         }
 

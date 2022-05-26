@@ -13,7 +13,7 @@
                 <Label Text="ХОЧУ" TextColor="#5517A2" FontSize="15" />
                 <Entry Text="{Binding EventName}" Placeholder="КУДА ХОТИТЕ ПОЙТИ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7"/>
                 <Label Text="КОГДА" TextColor="#5517A2" FontSize="15" />
-                <Entry Placeholder="В КАКОЕ ВРЕМЯ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7" />
+                <Entry Text="{Binding DateTime}" Placeholder="В КАКОЕ ВРЕМЯ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7" />
                 <Label Text="ДЕТАЛИ" TextColor="#5517A2" FontSize="15" />
                 <Entry Text="{Binding Details}" Placeholder="ДОБАВЬТЕ НЕМНОГО ДЕТАЛЕЙ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7"/>
                 <Label Text="ТЕГИ" TextColor="#5517A2"  FontSize="15" />

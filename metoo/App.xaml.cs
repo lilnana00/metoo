@@ -38,6 +38,7 @@ namespace metoo
                         Path.Combine(
                             Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), DATABASE_NAME2));
                 }
+               // database2.DeleteAll();
                 return database2;
             }
         }

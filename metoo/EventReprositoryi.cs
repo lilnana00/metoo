@@ -36,5 +36,10 @@ namespace metoo
                 return database2.Insert(item);
             }
         }
+
+        public void DeleteAll()
+        {
+            database2.Execute("DELETE FROM Events");
+        }
     }
 }

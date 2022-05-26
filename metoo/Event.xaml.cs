@@ -22,7 +22,6 @@ namespace metoo
         {
             EventTable table = new EventTable();
             table = BindingContext as EventTable;
-            userName.Text = App.Database.GetItem(table.CreatorID).Name;
             base.OnAppearing();
         }
 

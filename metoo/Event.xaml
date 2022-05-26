@@ -14,7 +14,7 @@
 
                             <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5">
                                     <Image Source="alice.png" HeightRequest="75" WidthRequest="75" />
-                                    <Label  x:Name="userName" Text="АЛИСА" TextColor="#5517A2" FontSize="20"/>
+                                    <Label Text="{Binding CreatorName}" TextColor="#5517A2" FontSize="20"/>
                                 </StackLayout>
 
                             <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5" >
