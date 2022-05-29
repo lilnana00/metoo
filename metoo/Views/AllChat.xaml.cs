@@ -14,6 +14,7 @@ namespace metoo
     {
         public AllChat()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
     }

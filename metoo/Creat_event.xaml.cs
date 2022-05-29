@@ -14,6 +14,7 @@ namespace metoo
     {
         public Creat_event()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
             back_button.Clicked += Back_to_allevent;
             Date.MinimumDate = DateTime.Now;

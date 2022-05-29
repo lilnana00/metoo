@@ -14,6 +14,7 @@ namespace metoo
     {
         public MyCalendar()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
     }

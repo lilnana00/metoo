@@ -33,6 +33,7 @@ namespace metoo
         }
         public AllEvent()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
             calendar.Clicked += Calendar;
             events.Clicked += Events;

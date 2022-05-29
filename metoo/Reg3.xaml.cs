@@ -14,6 +14,7 @@ namespace metoo
     {
         public Reg3()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
             reg3_button.Clicked += Go_to_vhodr;
             back_button.Clicked += Back_to_reg2;

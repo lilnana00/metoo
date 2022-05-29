@@ -14,6 +14,7 @@ namespace metoo
     {
         public Lk()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
             lkEdit.Clicked += Lk_edit;
             exitButton.Clicked += Exit;

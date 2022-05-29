@@ -14,6 +14,7 @@ namespace metoo
     {
         public no_reg()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }
     }

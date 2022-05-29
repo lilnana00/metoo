@@ -14,6 +14,7 @@ namespace metoo
     {
         public LkEdit()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
             back_button.Clicked += Back_to_Lk;
             save_button.Clicked += Back_to_Lk;

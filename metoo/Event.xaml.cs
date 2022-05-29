@@ -15,6 +15,7 @@ namespace metoo
         public int EventID;
         public Event()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
             back_button.Clicked += Back;
         }

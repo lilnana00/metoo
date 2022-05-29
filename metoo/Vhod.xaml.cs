@@ -14,6 +14,7 @@ namespace metoo
     {
         public Vhod()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
             back_button.Clicked += Back_to_main;
             event_button.Clicked += Go_to_allEvent;

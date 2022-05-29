@@ -12,6 +12,7 @@ namespace metoo
     {
         public MainPage()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
             vhod_button.Clicked += Go_to_vhod;
             reg_button.Clicked += Go_to_reg;
