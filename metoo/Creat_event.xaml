@@ -13,16 +13,15 @@
                 <Label Text="ХОЧУ" TextColor="#5517A2" FontSize="15" />
                 <Entry Text="{Binding EventName}" Placeholder="КУДА ХОТИТЕ ПОЙТИ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7"/>
                 <Label Text="КОГДА" TextColor="#5517A2" FontSize="15" />
-                <Entry Text="{Binding DateTime}" Placeholder="В КАКОЕ ВРЕМЯ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7" />
+                <DatePicker x:Name="Date" Format="dd.MM.yyyy" FontSize="15" Margin="0, 0, 0, 7" />
+                <Label Text="ВО СКОЛЬКО" TextColor="#5517A2" FontSize="15" />
+                <TimePicker x:Name="Time" Format="HH:mm" FontSize="15" Margin="0, 0, 0, 7" />
                 <Label Text="ДЕТАЛИ" TextColor="#5517A2" FontSize="15" />
                 <Entry Text="{Binding Details}" Placeholder="ДОБАВЬТЕ НЕМНОГО ДЕТАЛЕЙ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7"/>
                 <Label Text="ТЕГИ" TextColor="#5517A2"  FontSize="15" />
                 <Entry Text="{Binding Tags}" Placeholder="ДОБАВЬТЕ ТЕГИ" PlaceholderColor="#BC99D7" FontSize="15"  />
-
             </StackLayout>
             <Button x:Name="save_button" BackgroundColor="#00FBC1BC" Clicked="SaveEvent" WidthRequest="360" HeightRequest="63" ImageSource="Check.png" Margin="0, 4, 0, 0"  /> <!--в маргине раньше стояло 45 и на настоящем тлф норм смотрелось-->
-
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

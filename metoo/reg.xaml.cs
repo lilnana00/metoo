@@ -26,8 +26,10 @@ namespace metoo
                 isOk.Text = "Некорректный E-mail";
                 return;
             }
-            Reg2 reg2Page = new Reg2();
-            reg2Page.BindingContext = this.BindingContext;
+            Reg2 reg2Page = new Reg2
+            {
+                BindingContext = this.BindingContext
+            };
             await Navigation.PushAsync(reg2Page);
         }
         private async void Back_to_main(object sender, EventArgs e)

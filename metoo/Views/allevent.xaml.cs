@@ -12,6 +12,25 @@ namespace metoo
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AllEvent : ContentPage
     {
+
+        class Shtuka
+        {
+            public Shtuka(int ID, string CreatorName, string EventName, string DateTime, string Details, string Tags)
+            {
+                this.ID = ID;
+                this.CreatorName = CreatorName;
+                this.EventName = EventName;
+                this.DateTime = DateTime;
+                this.Details = Details;
+                this.Tags = Tags;
+            }
+            public int ID { get; set; }
+            public string CreatorName { get; set; }
+            public string EventName { get; set; }
+            public string DateTime { get; set; }
+            public string Details { get; set; }
+            public string Tags  { get; set; }
+        }
         public AllEvent()
         {
             InitializeComponent();
@@ -24,8 +43,11 @@ namespace metoo
 
         private async void GoToEvent(object sender, ItemTappedEventArgs e)
         {
-            Event event2 = new Event();
-            event2.BindingContext = e.Item;
+            Event event2 = new Event
+            {
+                BindingContext = e.Item as Shtuka,
+                EventID = ((Shtuka)e.Item).ID,
+            };
             await Navigation.PushAsync(event2);
         }
 
@@ -36,18 +58,11 @@ namespace metoo
 
         protected override void OnAppearing()
         {
-            var items = App.Database2.GetItems();
-            var names = new List<string>();
-            foreach (var item in items)
-            {
-                var name = App.Database.GetItem(item.CreatorID).Name;
-                names.Add(name);
-            }
             this.BindingContext = from Users in App.Database.GetItems()
                                   from Events in App.Database2.GetItems()
                                   where Users.ID == Events.CreatorID
-                                  select new {CreatorName=Users.Name, EventName=Events.EventName,
-                                            DateTime=Events.DateTime, Details=Events.Details, Tags=Events.Tags};
+                                  select new Shtuka(Events.ID,Users.Name,Events.EventName,
+                                            Events.DateTime, Events.Details, Events.Tags);
             base.OnAppearing();
         }
 
@@ -60,10 +75,10 @@ namespace metoo
 
         private async void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-
             EventTable selectedEvent = (EventTable)e.SelectedItem;
             Event eventPage2 = new Event();
             eventPage2.BindingContext = selectedEvent;
+
             await Navigation.PushAsync(new Event());
 
         }

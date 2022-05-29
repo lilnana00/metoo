@@ -12,6 +12,7 @@ namespace metoo
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Event : ContentPage
     {
+        public int EventID;
         public Event()
         {
             InitializeComponent();
@@ -20,8 +21,11 @@ namespace metoo
 
         protected override void OnAppearing()
         {
-            EventTable table = new EventTable();
-            table = BindingContext as EventTable;
+            Comment comment = new Comment();
+            comment.EventID = EventID;
+            comment.Text = "abracadabra";
+            App.Database3.SaveItem(comment);
+            list.ItemsSource = App.Database3.GetEventItems(EventID);
             base.OnAppearing();
         }
 

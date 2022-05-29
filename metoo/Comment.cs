@@ -8,8 +8,8 @@ namespace metoo
         [PrimaryKey, AutoIncrement, Column("_id")]
         public int ID { get; set; }
         public int CreatorID { get; set; }
-        public string EventID { get; set; }
-        public int datetime { get; set; }
+        public int EventID { get; set; }
+        public string Datetime { get; set; }
         public string Text { get; set; }
 
     }

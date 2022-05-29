@@ -20,6 +20,11 @@ namespace metoo
             return database3.Table<Comment>().ToList();
         }
         public Comment GetItem(int id) => database3.Get<Comment>(id);
+
+        public IEnumerable<Comment> GetEventItems(int id)
+        {
+            return database3.Query<Comment>("select * from Comments where EventID = ?", id);
+        }
         public int DeleteItem(int id)
         {
             return database3.Delete<Comment>(id);

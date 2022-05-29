@@ -32,8 +32,10 @@ namespace metoo
                 isOk.Text = "Некорректный пароль";
                 return;
             }
-            Reg3 reg3Page = new Reg3();
-            reg3Page.BindingContext = this.BindingContext;
+            Reg3 reg3Page = new Reg3
+            {
+                BindingContext = this.BindingContext
+            };
             await Navigation.PushAsync(reg3Page);
         }
         private async void Back_to_reg(object sender, EventArgs e)

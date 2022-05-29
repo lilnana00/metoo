@@ -15,10 +15,10 @@
                             <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5">
                                     <Image Source="alice.png" HeightRequest="75" WidthRequest="75" />
                                     <Label Text="{Binding CreatorName}" TextColor="#5517A2" FontSize="20"/>
-                                </StackLayout>
+                            </StackLayout>
 
                             <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5" >
-                                   <!-- <Label Text="{Binding EventName}" TextColor="#5517A2" FontSize="22" LineBreakMode="NoWrap"/>-->
+                                   <!--<Label Text="{Binding EventName}" TextColor="#5517A2" FontSize="22" LineBreakMode="NoWrap"/>-->
                                      <Label Text="{Binding Details}" TextColor="#5517A2" FontSize="17" LineBreakMode="NoWrap"/>
                                         </StackLayout>
 
@@ -51,7 +51,7 @@
                 <Image Source="comment.png" WidthRequest="168" HeightRequest="38" />
             </FlexLayout>
 
-            <ListView   ItemsSource="{Binding}" HasUnevenRows="True"  >
+            <ListView x:Name="list"  ItemsSource="{Binding}" HasUnevenRows="True"  >
               <ListView.ItemTemplate>
                 <DataTemplate>
                   <ViewCell>
@@ -65,7 +65,7 @@
                                 </StackLayout>
 
                             <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5" >
-                                    <Label Text="{Binding Comment}" TextColor="#5517A2" FontSize="22" LineBreakMode="NoWrap"/>
+                                    <Label Text="{Binding Text}" TextColor="#5517A2" FontSize="22" LineBreakMode="NoWrap"/>
                                         </StackLayout>
                             </FlexLayout>
                       </StackLayout>

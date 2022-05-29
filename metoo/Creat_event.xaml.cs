@@ -16,7 +16,8 @@ namespace metoo
         {
             InitializeComponent();
             back_button.Clicked += Back_to_allevent;
-
+            Date.MinimumDate = DateTime.Now;
+            Date.MaximumDate = new DateTime(DateTime.Now.Year+1, 12, 31);
         }
         private async void Back_to_allevent(object sender, EventArgs e)
         {
@@ -28,6 +29,7 @@ namespace metoo
         {
             var eventTable = (EventTable)BindingContext;
             eventTable.CreatorID = App.user.ID;
+            eventTable.DateTime = Date.Date.ToString(@"dd\.MM\.yyyy") + " " + Time.Time.ToString(@"hh\:mm");
             if (!String.IsNullOrEmpty(eventTable.EventName))
             {
                 App.Database2.SaveItem(eventTable);
