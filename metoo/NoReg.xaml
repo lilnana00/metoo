@@ -7,7 +7,7 @@
 
         <FlexLayout BackgroundColor="#FFF26A" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround" Padding="5">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Padding="7,0,0,0">
-                <Button ImageSource="undo.png" WidthRequest="23" HeightRequest="10"/>
+                <Button x:Name="back_button" ImageSource="undo.png" WidthRequest="23" HeightRequest="10"/>
             </StackLayout>
 
             <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center" Padding="5">
@@ -18,6 +18,12 @@
             <StackLayout Orientation="Vertical" VerticalOptions="End" Padding="5">
                 <Button x:Name="vhod_button" WidthRequest="360" HeightRequest="62" ImageSource="Group113.png" BackgroundColor="#FFF26A"/>
                 <Button x:Name="reg_button" WidthRequest="360" HeightRequest="62" ImageSource="Group97.png" BackgroundColor="#FFF26A" Padding="0,35,0,0"/>
+                <FlexLayout BackgroundColor="White" Direction="Row" AlignContent="Center" JustifyContent="SpaceAround" HeightRequest="50" FlexLayout.AlignSelf="End">
+                    <Button x:Name="calendar" ImageSource="calendar.png" HeightRequest="50" WidthRequest="50" BackgroundColor="White"/>
+                    <Button x:Name="events" ImageSource="events.png" HeightRequest="50" WidthRequest="50" BackgroundColor="White"/>
+                    <Button x:Name="chats" ImageSource="chat.png" HeightRequest="50" WidthRequest="50" BackgroundColor="White"/>
+                    <Button x:Name="user" ImageSource="user.png" HeightRequest="50" WidthRequest="50" BackgroundColor="White"/>
+                </FlexLayout>
             </StackLayout>
             
         </FlexLayout>

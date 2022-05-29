@@ -39,7 +39,6 @@ namespace metoo
             events.Clicked += Events;
             chats.Clicked += Chats;
             user.Clicked += LK;
-            //addevent.Clicked += CreateEventAsync;
         }
 
         private async void GoToEvent(object sender, ItemTappedEventArgs e)
@@ -54,7 +53,12 @@ namespace metoo
 
         private async void CreateEventAsync(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Creat_event());
+            Creat_event create_Event = new Creat_event
+            {
+                BindingContext = new EventTable()
+            };
+            await Navigation.PushAsync(create_Event);
+
         }
 
         protected override void OnAppearing()

@@ -34,10 +34,7 @@ namespace metoo
                 return;
             }
 
-            EventTable table = new EventTable();
-            Creat_event creat_Event = new Creat_event();
-            creat_Event.BindingContext = table;
-            await Navigation.PushAsync(creat_Event);
+            await Navigation.PushAsync(new AllEvent());
         }
     }
 }

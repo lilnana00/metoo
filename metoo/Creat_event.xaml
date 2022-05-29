@@ -21,7 +21,7 @@
                 <Label Text="ТЕГИ" TextColor="#5517A2"  FontSize="15" />
                 <Entry Text="{Binding Tags}" Placeholder="ДОБАВЬТЕ ТЕГИ" PlaceholderColor="#BC99D7" FontSize="15"  />
             </StackLayout>
-            <Button x:Name="save_button" BackgroundColor="#00FBC1BC" Clicked="SaveEvent" WidthRequest="360" HeightRequest="63" ImageSource="Check.png" Margin="0, 4, 0, 0"  /> <!--в маргине раньше стояло 45 и на настоящем тлф норм смотрелось-->
+            <Button BackgroundColor="#00FBC1BC" Clicked="SaveEvent" WidthRequest="360" HeightRequest="63" ImageSource="Check.png" Margin="0, 4, 0, 0"  /> <!--в маргине раньше стояло 45 и на настоящем тлф норм смотрелось-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
