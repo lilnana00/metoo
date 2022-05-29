@@ -35,7 +35,6 @@ namespace metoo
                 App.Database2.SaveItem(eventTable);
             }
             this.Navigation.PushAsync(new AllEvent());
-
         }
 
     }

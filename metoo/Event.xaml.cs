@@ -19,13 +19,32 @@ namespace metoo
             back_button.Clicked += Back;
         }
 
+        private void SendComment(object sender, EventArgs e)
+        {
+            if (comm.Text != null)
+            {
+                Comment comment = new Comment();
+                comment.CreatorID = App.user.ID;
+                comment.EventID = EventID;
+                comment.Datetime = DateTime.Now.ToString(@"dd\.MM\.yyyy HH:mm");
+                comment.Text = comm.Text;
+                App.Database3.SaveItem(comment);
+                comm.Text = null;
+                Update();
+            }
+        }
+        
+        private void Update()
+        {
+            list.ItemsSource = from Comments in App.Database3.GetEventItems(EventID)
+                               from Users in App.Database.GetItems()
+                               where Users.ID == Comments.CreatorID
+                               select new { CommentCreator = Users.Name, Text = Comments.Text, DateTime = Comments.Datetime };
+        }
+
         protected override void OnAppearing()
         {
-            Comment comment = new Comment();
-            comment.EventID = EventID;
-            comment.Text = "abracadabra";
-            App.Database3.SaveItem(comment);
-            list.ItemsSource = App.Database3.GetEventItems(EventID);
+            Update();
             base.OnAppearing();
         }
 

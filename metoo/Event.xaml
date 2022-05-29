@@ -62,11 +62,13 @@
 
                             <FlexLayout Direction="Column" AlignContent="Start" FlexLayout.Grow="1" Padding="5" >
                                     <Image Source="alice.png" HeightRequest="75" WidthRequest="75" />
-                                    <Label Text="АЛИСА" TextColor="#5517A2" FontSize="20"/>
+                                    <Label Text="{Binding CommentCreator}" TextColor="#5517A2" FontSize="20"/>
+                                    
                             </FlexLayout>
 
                             <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="2" Padding="5" >
                                     <Label Text="{Binding Text}" TextColor="#5517A2" FontSize="22" LineBreakMode="NoWrap"/>
+                                    <Label Text="{Binding DateTime}" TextColor="#5517A2" FontSize="20"/>
                             </StackLayout>
                             </FlexLayout>
                       </StackLayout>
@@ -78,8 +80,8 @@
 
             <FlexLayout Direction="Row" >
                 <Image Source="alice.png" WidthRequest="50" HeightRequest="50"/>
-                <Entry Placeholder="ВАШ КОММЕНТАРИЙ" PlaceholderColor="#BC99D7" Margin="10,0,0,0"/>
-                <Button ImageSource="send_butt.png"/>
+                <Entry x:Name="comm" Placeholder="ВАШ КОММЕНТАРИЙ" PlaceholderColor="#BC99D7" Margin="10,0,0,0"/>
+                <Button Clicked="SendComment" ImageSource="send_butt.png"/>
                 </FlexLayout>
                 
             </StackLayout>
