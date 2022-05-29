@@ -7,8 +7,9 @@
             <Setter Property="BackgroundColor" Value="White" />
         </Style>
     </ContentPage.Resources>
+    
     <ContentPage.Content>
-        <FlexLayout Padding="5" BackgroundColor="#FFF26A" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
+        <FlexLayout BackgroundColor="#FFF26A" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
             <BoxView BackgroundColor="Gray" CornerRadius="5" HeightRequest="30" />
             
             <!--<SearchBar x:Name="MainSearchBar"></SearchBar>-->
@@ -18,7 +19,7 @@
                         <DataTemplate>
                             <ViewCell>
                                 <ViewCell.View>
-                                    <StackLayout  Padding="5">
+                                    <StackLayout Padding="5">
                                             <FlexLayout BackgroundColor="#D0BC7C" Direction="Row" AlignContent="Center" JustifyContent="SpaceEvenly" HeightRequest="150" Padding="3">
 
                                                 <FlexLayout Direction="Column" AlignContent="Center" FlexLayout.Grow="1" Padding="5">
@@ -45,13 +46,13 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <!--<AbsoluteLayout>
+               <!-- <AbsoluteLayout>
                 <Button x:Name="addevent" ImageSource="add_event_butt.png" BackgroundColor="#00FBC1BC"
                         WidthRequest="75" HeightRequest="75" 
                         AbsoluteLayout.LayoutBounds="0.95, 1.5, -1, -1"
                         AbsoluteLayout.LayoutFlags="PositionProportional"
                         Clicked="CreateEventAsync" />
-                </AbsoluteLayout>-->
+                </AbsoluteLayout> -->
                 <FlexLayout BackgroundColor="White" Direction="Row" AlignContent="Center" JustifyContent="SpaceAround" HeightRequest="50" FlexLayout.AlignSelf="End">
                     <Button x:Name="calendar" ImageSource="calendar.png" HeightRequest="50" WidthRequest="50" Style="{StaticResource Key=menu_button}"/>
                     <Button x:Name="events" ImageSource="events.png" HeightRequest="50" WidthRequest="50" Style="{StaticResource Key=menu_button}" />

@@ -140,9 +140,6 @@
     <BundleResource Include="Resources\alice.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\background.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\calendar.png" />
   </ItemGroup>
   <ItemGroup>
@@ -230,6 +227,9 @@
     <BundleResource Include="Resources\back.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\back3.png" />
+    <BundleResource Include="Resources\send_butt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\join_butt.png" />
   </ItemGroup>
 </Project>
