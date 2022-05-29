@@ -226,4 +226,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\icon_exit.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\back3.png" />
+  </ItemGroup>
 </Project>

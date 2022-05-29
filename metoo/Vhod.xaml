@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="metoo.Vhod">
+             x:Class="metoo.Vhod"
+             BackgroundImage="back.png">
     <ContentPage.Content>
-        <StackLayout Padding="10, 5"  Background="#FFF26A" >
+        <StackLayout Padding="10, 5" >
             <Grid >
                 <ImageButton BackgroundColor="#00FBC1BC" x:Name="back_button" Grid.ColumnSpan="1" Source="undo.png" HorizontalOptions="Start" Margin="0, 40, 0, 0" WidthRequest="23" HeightRequest="10"></ImageButton>
                 <Image Grid.ColumnSpan="2" Source="vhod.png" HorizontalOptions="Start" Margin="50, 40, 0, 0" MinimumWidthRequest="25" HeightRequest="25"></Image>
