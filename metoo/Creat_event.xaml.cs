@@ -38,5 +38,9 @@ namespace metoo
             this.Navigation.PushAsync(new AllEvent());
         }
 
+        void picker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

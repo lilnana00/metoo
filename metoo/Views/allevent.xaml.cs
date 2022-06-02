@@ -13,6 +13,7 @@ namespace metoo
     public partial class AllEvent : ContentPage
     {
 
+
         class Shtuka
         {
             public Shtuka(int ID, string CreatorName, string EventName, string DateTime, string Details, string Tags)
@@ -31,6 +32,7 @@ namespace metoo
             public string Details { get; set; }
             public string Tags  { get; set; }
         }
+
         public AllEvent()
         {
             NavigationPage.SetHasNavigationBar(this, false);
@@ -39,6 +41,8 @@ namespace metoo
             events.Clicked += Events;
             chats.Clicked += Chats;
             user.Clicked += LK;
+
+
         }
 
         private async void GoToEvent(object sender, ItemTappedEventArgs e)
@@ -108,4 +112,5 @@ namespace metoo
             await Navigation.PushAsync(new AllEvent());
         }
     }
+
 }

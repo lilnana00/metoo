@@ -9,7 +9,7 @@
     </ContentPage.Resources>
     
     <ContentPage.Content>
-        <FlexLayout BackgroundColor="#FFF26A" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround">
+        <FlexLayout BackgroundColor="#FFF26A" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround" Padding="0,100,0,0 ">
             <BoxView BackgroundColor="Gray" CornerRadius="5" HeightRequest="30" />
             
             <!--<SearchBar x:Name="MainSearchBar"></SearchBar>-->
@@ -24,7 +24,7 @@
 
                                                 <FlexLayout Direction="Column" AlignContent="Center" FlexLayout.Grow="1" Padding="5">
                                                     <Image Source="alice.png" HeightRequest="75" WidthRequest="75" />
-                                                <Label Text="{Binding CreatorName}" TextColor="#5517A2" FontSize="20"/>
+                                                <Label Text="{Binding CreatorName}" TextColor="#5517A2" FontSize="20" HorizontalTextAlignment="Center"/>
                                                 </FlexLayout>
 
                                                 <FlexLayout Direction="Column" AlignContent="Center" JustifyContent="SpaceEvenly" WidthRequest="275" FlexLayout.Grow="3">
@@ -35,8 +35,9 @@
 
                                                     <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="5">
                                                         <!-- <Image Source="events.png" HeightRequest="35" WidthRequest="35"/> -->
-                                                        <Label Text="{Binding Tags}" TextColor="#5517A2" FontSize="15"/>
-                                                    </StackLayout>
+                                                    <Label Text="{Binding Tags}" TextColor="#5517A2" FontSize="15"/>
+                                                        
+                                                </StackLayout>
                                                 </FlexLayout>
 
                                             </FlexLayout>
