@@ -31,16 +31,12 @@ namespace metoo
             var eventTable = (EventTable)BindingContext;
             eventTable.CreatorID = App.user.ID;
             eventTable.DateTime = Date.Date.ToString(@"dd\.MM\.yyyy") + " " + Time.Time.ToString(@"hh\:mm");
+            eventTable.Tags = picker.SelectedItem.ToString();
             if (!String.IsNullOrEmpty(eventTable.EventName))
             {
                 App.Database2.SaveItem(eventTable);
             }
             this.Navigation.PushAsync(new AllEvent());
-        }
-
-        void picker_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
+        }     
     }
 }

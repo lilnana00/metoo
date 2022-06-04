@@ -25,7 +25,7 @@
                 <!-- <Label Text="ТЕГИ" TextColor="#5517A2"  FontSize="15" />
                 <Entry Text="{Binding Tags}" Placeholder="ДОБАВЬТЕ ТЕГИ" PlaceholderColor="#BC99D7" FontSize="15"  /> -->
                 <Label x:Name="tag" Text="КЛЮЧЕВОЕ СЛОВО СОБЫТИЯ" FontSize="15" TextColor="#5517A2"/>
-                <Picker x:Name="picker" SelectedIndexChanged="picker_SelectedIndexChanged">
+                <Picker x:Name="picker">
                     <Picker.Items>
                         <x:String>Кино</x:String>
                         <x:String>Прогулка</x:String>

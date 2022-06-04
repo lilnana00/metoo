@@ -12,8 +12,6 @@ namespace metoo
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AllEvent : ContentPage
     {
-
-
         class Shtuka
         {
             public Shtuka(int ID, string CreatorName, string EventName, string DateTime, string Details, string Tags)
@@ -110,6 +108,27 @@ namespace metoo
         private async void Events(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AllEvent());
+        }
+
+        private void picker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (picker.SelectedIndex == 0)
+            {
+                this.BindingContext = from Users in App.Database.GetItems()
+                                      from Events in App.Database2.GetItems()
+                                      where Users.ID == Events.CreatorID
+                                      select new Shtuka(Events.ID, Users.Name, Events.EventName,
+                                                Events.DateTime, Events.Details, Events.Tags);
+            }
+            else
+            {
+                this.BindingContext = from Users in App.Database.GetItems()
+                                      from Events in App.Database2.GetItems()
+                                      where Users.ID == Events.CreatorID
+                                      where Events.Tags == picker.SelectedItem.ToString()
+                                      select new Shtuka(Events.ID, Users.Name, Events.EventName,
+                                                Events.DateTime, Events.Details, Events.Tags);
+            }
         }
     }
 
