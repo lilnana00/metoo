@@ -25,9 +25,13 @@ namespace metoo
         {
             this.BindingContext = from UsersToEvents in App.Database.GetEvents(App.user.ID)
                                   from Events in App.Database2.GetItems()
+                                  from Users in App.Database.GetItems()
                                   where UsersToEvents.EventID == Events.ID
+                                  where Users.ID == Events.CreatorID
                                   select new
                                   {
+                                      CreatorName = Users.Name,
+                                      DT = Events.DT.ToString(@"dd\.MM\.yyyy HH:mm"),
                                       Events.EventName,
                                       Events.Tags
                                   };

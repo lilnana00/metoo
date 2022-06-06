@@ -13,37 +13,35 @@
             <Image Source="Group128.png"  WidthRequest="160" Margin="0, -20, 0, 0"/>
             <Image Source="Line1.png"  WidthRequest="350" Margin="-20, -6, -20, 0"/>
             <Label x:Name="userName" HorizontalTextAlignment="Center" FontSize="22" TextColor="#5517A2" Text="{Binding Name}" ></Label>
-            <Label x:Name="userEmail" HorizontalTextAlignment="Center" FontSize="22" TextColor="#5517A2" Text="{Binding Email}" ></Label>
             <Label x:Name="userAge" HorizontalTextAlignment="Center" FontSize="22" TextColor="#5517A2" Text="{Binding Age}" ></Label>
-            <Label x:Name="userPass" HorizontalTextAlignment="Center" FontSize="22" TextColor="#5517A2" Text="{Binding Password}" ></Label>
 
             <StackLayout Margin="30, 0, 0, 0" HorizontalOptions="Center" >
 
                 <Grid HorizontalOptions="Center" Margin="0, 10, 0, 0" WidthRequest="280">
                     <Label FontSize="13" VerticalOptions="Center" HorizontalOptions="Start" TextColor="#5517A2">ВЫ ПОСЕТИЛИ:</Label>
                     <Grid HorizontalOptions="Center" VerticalOptions="Center" >
-                        <Image Source="Ellipse3.png" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center" ></Image>
+                        <Image Source="Ellipse3.png" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center"></Image>
                         <Label x:Name ="EventsCount" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#5517A2"></Label>
                     </Grid>
                     <Label FontSize="13"  VerticalOptions="Center" HorizontalOptions="End" Margin="0, 0, 30, 0" TextColor="#5517A2">СОБЫТИЙ</Label>
                 </Grid>
 
                 <Grid HorizontalOptions="Center" Margin="0, 10, 0, 0" WidthRequest="280">
-                    <Label FontSize="13" VerticalOptions="Center" HorizontalOptions="Start" TextColor="#5517A2">ВЫ ПОСЕТИЛИ:</Label>
+                    <Label FontSize="13" VerticalOptions="Center" HorizontalOptions="Start" TextColor="#5517A2">ВЫ СОЗДАЛИ:</Label>
                     <Grid HorizontalOptions="Center" VerticalOptions="Center" >
                         <Image Source="Ellipse3.png" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center" ></Image>
-                        <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#5517A2">189</Label>
+                        <Label x:Name="CreateCount" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#5517A2"></Label>
                     </Grid>
                     <Label FontSize="13"  VerticalOptions="Center" HorizontalOptions="End" Margin="0, 0, 30, 0" TextColor="#5517A2">СОБЫТИЙ</Label>
                 </Grid>
 
                 <Grid HorizontalOptions="Center" Margin="0, 10, 0, 0" WidthRequest="280">
-                    <Label FontSize="13" VerticalOptions="Center" HorizontalOptions="Start" TextColor="#5517A2">ВЫ ПОСЕТИЛИ:</Label>
+                    <Label FontSize="13" VerticalOptions="Center" HorizontalOptions="Start" TextColor="#5517A2">ВЫ ОСТАВИЛИ:</Label>
                     <Grid HorizontalOptions="Center" VerticalOptions="Center" >
                         <Image Source="Ellipse3.png" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center" ></Image>
-                        <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#5517A2">189</Label>
+                        <Label x:Name="CommentCount" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#5517A2"></Label>
                     </Grid>
-                    <Label FontSize="13"  VerticalOptions="Center" HorizontalOptions="End" Margin="0, 0, 30, 0" TextColor="#5517A2">СОБЫТИЙ</Label>
+                    <Label FontSize="13"  VerticalOptions="Center" HorizontalOptions="End" Margin="0, 0, 30, 0" TextColor="#5517A2">КОММЕНТАРИЕВ</Label>
                 </Grid>
 
             </StackLayout>

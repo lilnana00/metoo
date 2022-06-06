@@ -27,6 +27,11 @@ namespace metoo
                 isOk.Text = "Некорректный E-mail";
                 return;
             }
+            if (App.Database.GetItem(email.Text) != null)
+            {
+                isOk.Text = "Данный E-mail уже использован";
+                return;
+            }
             Reg2 reg2Page = new Reg2
             {
                 BindingContext = this.BindingContext

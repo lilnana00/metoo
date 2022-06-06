@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using SQLite;
 
 namespace metoo
@@ -40,6 +41,10 @@ namespace metoo
             {
                 return database3.Insert(item);
             }
+        }
+        public int CommentsCount(int ID)
+        {
+            return database3.Query<Comment>("select * from Comments where CreatorID=?", ID).Count();
         }
     }
 }

@@ -36,6 +36,9 @@ namespace metoo
         protected override void OnAppearing()
         {
             this.BindingContext = App.user;
+            EventsCount.Text = App.Database.GetEventsCount(App.user.ID).ToString();
+            CreateCount.Text = App.Database2.GetCreatorCount(App.user.ID).ToString();
+            CommentCount.Text = App.Database3.CommentsCount(App.user.ID).ToString();
             base.OnAppearing();
         }
         

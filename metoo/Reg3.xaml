@@ -14,13 +14,13 @@
                 <Image Source="Group109.png"  WidthRequest="130" HeightRequest="130" Margin="0, -5, 0, 20"/>
  
                 <Label Text="ИМЯ" TextColor="#5517A2" ></Label>
-                <Entry Text="{Binding Name}" Margin="0, 10" Placeholder="ВВЕДИТЕ НАСТОЯЩЕЕ ИМЯ" PlaceholderColor="#BC99D7" />
+                <Entry x:Name ="Name" Text="{Binding Name}" Margin="0, 10" Placeholder="ВВЕДИТЕ НАСТОЯЩЕЕ ИМЯ" PlaceholderColor="#BC99D7" />
                 <Label Text="ВОЗРАСТ" TextColor="#5517A2" Margin= "0, 12, 0, 0" ></Label>
                 <Entry x:Name ="Age" TextChanged="AgeChanged" Margin="0, 10" Placeholder="ВВЕДИТЕ НАСТОЯЩИЙ ВОЗРАСТ" Keyboard="Numeric" PlaceholderColor="#BC99D7"  />
-
+                <Label x:Name="isOk" TextColor="#5517A2" HorizontalTextAlignment="Center" FontSize="15"></Label>
             </StackLayout>
 
-            <Button BackgroundColor="#00FBC1BC" x:Name="reg3_button" WidthRequest="360" HeightRequest="63" ImageSource="cont.png" Margin="0, 20, 0, 0" Clicked="SaveUser" ></Button>
+            <Button BackgroundColor="#00FBC1BC" WidthRequest="360" HeightRequest="63" ImageSource="cont.png" Margin="0, 20, 0, 0" Clicked="SaveUser" ></Button>
 
         </StackLayout>
     </ContentPage.Content>

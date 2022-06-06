@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using SQLite;
 using Xamarin.Forms;
 
@@ -23,9 +24,7 @@ namespace metoo
         public User Login(string email, string pass)
         {
             List<User> users = database.Query<User>("select * from Users where Email=? and Password=?", email, pass);
-            if (users.Count == 1)
-                return GetItem(users[0].ID);
-            else return null;
+            return users.Count > 0 ? users[0] : null;
         }
         public IEnumerable<User> GetItems()
         {
@@ -34,6 +33,11 @@ namespace metoo
         public User GetItem(int id)
         {
             return database.Get<User>(id);
+        }
+        public User GetItem(string email)
+        {
+            List<User> users = database.Query<User>("select * from Users where Email=?", email);
+            return users.Count > 0 ? users[0] : null;
         }
         public int DeleteItem(int id)
         {
@@ -71,6 +75,10 @@ namespace metoo
                 return q[0];
             }
             else return null;
-        }       
+        }
+        public int GetEventsCount(int UserID)
+        {
+            return database.Query<UserEvents>("select * from UsersToEvents where UserID=?", UserID).Count();
+        }
     }
 }

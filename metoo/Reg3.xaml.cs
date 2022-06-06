@@ -16,12 +16,7 @@ namespace metoo
         {
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
-            reg3_button.Clicked += Go_to_vhodr;
             back_button.Clicked += Back_to_reg2;
-        }
-        private async void Go_to_vhodr(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Vhod());
         }
         private async void Back_to_reg2(object sender, EventArgs e)
         {
@@ -30,12 +25,14 @@ namespace metoo
 
         private void SaveUser(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(Name.Text) || string.IsNullOrWhiteSpace(Age.Text))
+            {
+                isOk.Text = "Заполните все поля";
+                return;
+            }
             var user = (User)BindingContext;
             user.Age = int.Parse(Age.Text);
-            if (!String.IsNullOrEmpty(user.Name))
-            {
-                App.Database.SaveItem(user);
-            }
+            App.Database.SaveItem(user);
             this.Navigation.PushAsync(new Vhod());
         }
 

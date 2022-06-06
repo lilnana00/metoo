@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout Padding="5, 5, 5, 5"  Background="#FFF26A" >
             <Grid >
-                <Button x:Name="back_button" ImageSource="undo.png" HorizontalOptions="Start" Margin="0, 40, 0, 0" WidthRequest="23" HeightRequest="10" BackgroundColor="#FFF26A"></Button>
+                <Button Clicked="Back" ImageSource="undo.png" HorizontalOptions="Start" Margin="0, 40, 0, 0" WidthRequest="23" HeightRequest="10" BackgroundColor="#FFF26A"></Button>
                 <Image Grid.ColumnSpan="2" Source="Group127.png" HorizontalOptions="Start" Margin="50, 40, 0, 0" MinimumWidthRequest="30" HeightRequest="30"></Image>
             </Grid>
             <StackLayout Margin="20, 5, 20, 5" >
@@ -13,18 +13,16 @@
                 <Image Source="Group109.png"  WidthRequest="110" HeightRequest="110"/>
 
                 <Label Text="ИМЯ" TextColor="#5517A2" FontSize="15" ></Label>
-                <Entry Placeholder="ВВЕДИТЕ НАСТОЯЩЕЕ ИМЯ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7"/>
+                <Entry x:Name="name" Placeholder="ВВЕДИТЕ НАСТОЯЩЕЕ ИМЯ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7"/>
                 <Label Text="ВОЗРАСТ" TextColor="#5517A2" FontSize="15" ></Label>
-                <Entry Placeholder="ВВЕДИТЕ НАСТОЯЩИЙ ВОЗРАСТ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7" />
+                <Entry x:Name="age" TextChanged="AgeChanged" Keyboard="Numeric" Placeholder="ВВЕДИТЕ НАСТОЯЩИЙ ВОЗРАСТ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7" />
                 <Label Text="ПАРОЛЬ" TextColor="#5517A2" FontSize="15" ></Label>
-                <Entry IsPassword="True"  Placeholder="ВВЕДИТЕ ПАРОЛЬ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7"/>
+                <Entry x:Name="pass" IsPassword="True"  Placeholder="ВВЕДИТЕ ПАРОЛЬ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7"/>
                 <Label Text="ЕЩЕ РАЗ" TextColor="#5517A2"  FontSize="15" ></Label>
-                <Entry IsPassword="True"  Placeholder="ПОВТОРИТЕ ПАРОЛЬ" PlaceholderColor="#BC99D7" FontSize="15"  />
-
+                <Entry x:Name="passOk" IsPassword="True"  Placeholder="ПОВТОРИТЕ ПАРОЛЬ" PlaceholderColor="#BC99D7" FontSize="15"  />
+                <Label x:Name="isOk" TextColor="#5517A2" HorizontalTextAlignment="Center" FontSize="15"></Label>
             </StackLayout>
-            <Button x:Name="save_button" WidthRequest="360" HeightRequest="63" ImageSource="Check.png" Margin="0, 5, 0, 0"  ></Button>
-
-
+            <Button Clicked="UpdateUser" WidthRequest="360" HeightRequest="63" ImageSource="Check.png" Margin="0, 5, 0, 0"  ></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

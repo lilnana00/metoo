@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using SQLite;
 
 namespace metoo
@@ -19,7 +20,10 @@ namespace metoo
         {
             return database2.Table<EventTable>().ToList();
         }
-        public EventTable GetItem(int id) => database2.Get<EventTable>(id);
+        public EventTable GetItem(int id) 
+        { 
+            return database2.Get<EventTable>(id); 
+        }
         public int DeleteItem(int id)
         {
             return database2.Delete<EventTable>(id);
@@ -36,10 +40,13 @@ namespace metoo
                 return database2.Insert(item);
             }
         }
-
         public void DeleteAll()
         {
             database2.Execute("DELETE FROM Events");
+        }
+        public int GetCreatorCount(int ID)
+        {
+            return database2.Query<EventTable>("select * from Events where CreatorID=?", ID).Count();
         }
     }
 }
