@@ -30,8 +30,9 @@ namespace metoo
         {
             var eventTable = (EventTable)BindingContext;
             eventTable.CreatorID = App.user.ID;
-            eventTable.DateTime = Date.Date.ToString(@"dd\.MM\.yyyy") + " " + Time.Time.ToString(@"hh\:mm");
+            eventTable.DT = new DateTime(Date.Date.Year, Date.Date.Month, Date.Date.Day, Time.Time.Hours, Time.Time.Minutes, 0);
             eventTable.Tags = picker.SelectedItem.ToString();
+            eventTable.IsActive = true;
             if (!String.IsNullOrEmpty(eventTable.EventName))
             {
                 App.Database2.SaveItem(eventTable);

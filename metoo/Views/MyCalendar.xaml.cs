@@ -21,6 +21,19 @@ namespace metoo
             chats.Clicked += Chats;
             user.Clicked += LK;
         }
+        protected override void OnAppearing()
+        {
+            this.BindingContext = from UsersToEvents in App.Database.GetEvents(App.user.ID)
+                                  from Events in App.Database2.GetItems()
+                                  where UsersToEvents.EventID == Events.ID
+                                  select new
+                                  {
+                                      Events.EventName,
+                                      Events.Tags
+                                  };
+            base.OnAppearing();
+        }
+
         private async void Calendar(object sender, EventArgs e)
         {
             if (App.user == null) await Navigation.PushAsync(new no_reg());

@@ -11,17 +11,17 @@ namespace metoo
         public const string DATABASE_NAME = "Users.db";
         public const string DATABASE_NAME2 = "Events.db";
         public const string DATABASE_NAME3 = "Comments.db";
-        public static UserReprositoryi database;
+        public static UserReprository database;
         public static EventReprositoryi database2;
         public static CommentReprository database3;
 
-        public static UserReprositoryi Database
+        public static UserReprository Database
         {
             get
             {
                 if (database == null)
                 {
-                    database = new UserReprositoryi(
+                    database = new UserReprository(
                         Path.Combine(
                             Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), DATABASE_NAME));
                 }

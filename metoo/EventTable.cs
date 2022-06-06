@@ -1,4 +1,5 @@
 ﻿using SQLite;
+using System;
 
 namespace metoo
 {
@@ -11,6 +12,7 @@ namespace metoo
         public string EventName { get; set; }
         public string Details { get; set; }
         public string Tags { get; set; }
-        public string DateTime { get; set; }
+        public DateTime DT { get; set; }
+        public bool IsActive { get; set; }
     }
 }

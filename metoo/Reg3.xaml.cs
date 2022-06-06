@@ -31,11 +31,21 @@ namespace metoo
         private void SaveUser(object sender, EventArgs e)
         {
             var user = (User)BindingContext;
+            user.Age = int.Parse(Age.Text);
             if (!String.IsNullOrEmpty(user.Name))
             {
                 App.Database.SaveItem(user);
             }
             this.Navigation.PushAsync(new Vhod());
+        }
+
+        private void AgeChanged(object sender, TextChangedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(e.NewTextValue)) return;
+            if (!int.TryParse(e.NewTextValue, out int value))
+            {
+                ((Entry)sender).Text = e.OldTextValue;
+            }
         }
     }
 }

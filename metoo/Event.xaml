@@ -16,7 +16,7 @@
                             <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" WidthRequest="75" Padding="5">
                                     <Image Source="alice.png" HeightRequest="75" WidthRequest="75"/>
                                     <Label Text="{Binding CreatorName}" TextColor="#5517A2" HorizontalTextAlignment="Center"/>
-                                    <Label Text="age" TextColor="#5517A2" HorizontalTextAlignment="Center"/>
+                                    <Label Text="{Binding CreatorAge}" TextColor="#5517A2" HorizontalTextAlignment="Center"/>
                             </StackLayout>
 
                             <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="3" WidthRequest="250" Padding="5" >
@@ -34,7 +34,7 @@
 
             <FlexLayout Direction="Row" AlignContent="Center" JustifyContent="SpaceBetween" Padding="0,20,0,5">
                 <Label Text="189 тоже!" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#6A29BB" BackgroundColor="#C4C4C4" WidthRequest="140" HeightRequest="40" />
-                <Button  ImageSource="join_butt.png" BackgroundColor="#00FBC1BC" WidthRequest="50" HeightRequest="50" Margin="0,0,25,0"/>
+                <Button Clicked="JoinToEvent"  ImageSource="join_butt.png" BackgroundColor="#00FBC1BC" WidthRequest="50" HeightRequest="50" Margin="0,0,25,0"/>
             </FlexLayout>
 
         <!--<StackLayout Orientation="Horizontal" >

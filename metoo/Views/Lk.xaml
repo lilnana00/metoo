@@ -23,7 +23,7 @@
                     <Label FontSize="13" VerticalOptions="Center" HorizontalOptions="Start" TextColor="#5517A2">ВЫ ПОСЕТИЛИ:</Label>
                     <Grid HorizontalOptions="Center" VerticalOptions="Center" >
                         <Image Source="Ellipse3.png" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center" ></Image>
-                        <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#5517A2">189</Label>
+                        <Label x:Name ="EventsCount" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#5517A2"></Label>
                     </Grid>
                     <Label FontSize="13"  VerticalOptions="Center" HorizontalOptions="End" Margin="0, 0, 30, 0" TextColor="#5517A2">СОБЫТИЙ</Label>
                 </Grid>

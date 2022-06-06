@@ -5,14 +5,15 @@ using Xamarin.Forms;
 
 namespace metoo
 {
-    public partial class UserReprositoryi : ContentPage
+    public partial class UserReprository : ContentPage
     {
-        
+
         SQLiteConnection database;
-        public UserReprositoryi(string databasePath)
+        public UserReprository(string databasePath)
         {
             database = new SQLiteConnection(databasePath);
             database.CreateTable<User>();
+            database.CreateTable<UserEvents>();
             InitializeComponent();
         }
         public int Count()
@@ -50,5 +51,26 @@ namespace metoo
                 return database.Insert(item);
             }
         }
+        public int JoinEvent(UserEvents item)
+        {
+            return database.Insert(item);
+        }
+        public IEnumerable<UserEvents> GetEvents(int ID)
+        {
+            return database.Query<UserEvents>("select * from UsersToEvents where UserID=?", ID);
+        }
+        public int DeleteEvent(int UserID, int EventID)
+        {
+            return database.Execute("delete from UsersToEvents where UserID=? and EventID=?", UserID, EventID);
+        } 
+        public UserEvents GetEvent(int UserID, int EventID)
+        {
+            List<UserEvents> q = database.Query<UserEvents>("select * from UsersToEvents where UserID=? and EventID=?", UserID, EventID);
+            if (q.Count == 1)
+            {
+                return q[0];
+            }
+            else return null;
+        }       
     }
 }

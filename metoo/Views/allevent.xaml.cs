@@ -14,10 +14,11 @@ namespace metoo
     {
         class Shtuka
         {
-            public Shtuka(int ID, string CreatorName, string EventName, string DateTime, string Details, string Tags)
+            public Shtuka(int ID, string CreatorName, int CreatorAge, string EventName, string DateTime, string Details, string Tags)
             {
                 this.ID = ID;
                 this.CreatorName = CreatorName;
+                this.CreatorAge = CreatorAge;
                 this.EventName = EventName;
                 this.DateTime = DateTime;
                 this.Details = Details;
@@ -25,6 +26,7 @@ namespace metoo
             }
             public int ID { get; set; }
             public string CreatorName { get; set; }
+            public int CreatorAge { get; set; }
             public string EventName { get; set; }
             public string DateTime { get; set; }
             public string Details { get; set; }
@@ -39,8 +41,6 @@ namespace metoo
             events.Clicked += Events;
             chats.Clicked += Chats;
             user.Clicked += LK;
-
-
         }
 
         private async void GoToEvent(object sender, ItemTappedEventArgs e)
@@ -60,7 +60,6 @@ namespace metoo
                 BindingContext = new EventTable()
             };
             await Navigation.PushAsync(create_Event);
-
         }
 
         protected override void OnAppearing()
@@ -68,8 +67,9 @@ namespace metoo
             this.BindingContext = from Users in App.Database.GetItems()
                                   from Events in App.Database2.GetItems()
                                   where Users.ID == Events.CreatorID
-                                  select new Shtuka(Events.ID,Users.Name,Events.EventName,
-                                            Events.DateTime, Events.Details, Events.Tags);
+                                  where (DateTime.Now - Events.DT).Days <= 1
+                                  select new Shtuka(Events.ID,Users.Name, Users.Age, Events.EventName,
+                                            Events.DT.ToString(@"dd\.MM\.yyyy HH:mm"), Events.Details, Events.Tags);
             base.OnAppearing();
         }
 
@@ -117,8 +117,8 @@ namespace metoo
                 this.BindingContext = from Users in App.Database.GetItems()
                                       from Events in App.Database2.GetItems()
                                       where Users.ID == Events.CreatorID
-                                      select new Shtuka(Events.ID, Users.Name, Events.EventName,
-                                                Events.DateTime, Events.Details, Events.Tags);
+                                      select new Shtuka(Events.ID, Users.Name, Users.Age, Events.EventName,
+                                                Events.DT.ToString(@"dd\.MM\.yyyy HH:mm"), Events.Details, Events.Tags);
             }
             else
             {
@@ -126,8 +126,8 @@ namespace metoo
                                       from Events in App.Database2.GetItems()
                                       where Users.ID == Events.CreatorID
                                       where Events.Tags == picker.SelectedItem.ToString()
-                                      select new Shtuka(Events.ID, Users.Name, Events.EventName,
-                                                Events.DateTime, Events.Details, Events.Tags);
+                                      select new Shtuka(Events.ID, Users.Name, Users.Age, Events.EventName,
+                                                Events.DT.ToString(@"dd\.MM\.yyyy HH:mm"), Events.Details, Events.Tags);
             }
         }
     }

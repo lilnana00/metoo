@@ -53,5 +53,17 @@ namespace metoo
         {
             await Navigation.PopAsync();
         }
+
+        private void JoinToEvent(object sender, EventArgs e)
+        {
+            if (App.Database.GetEvent(App.user.ID, EventID) == null)
+            {
+                App.Database.JoinEvent(new UserEvents
+                {
+                    EventID = this.EventID,
+                    UserID = App.user.ID
+                });
+            }
+        }
     }
 }

@@ -13,18 +13,18 @@
             <BoxView BackgroundColor="Gray" CornerRadius="5" HeightRequest="30" />
 
             <!--<SearchBar x:Name="MainSearchBar"></SearchBar>-->
-           
+            
             <StackLayout >
-                <Picker x:Name="picker" SelectedIndexChanged="picker_SelectedIndexChanged">
-                    <Picker.Items>
-                        <x:String>Все теги</x:String>
-                        <x:String>Кино</x:String>
-                        <x:String>Прогулка</x:String>
-                        <x:String>Концерт</x:String>
-                        <x:String>Парк развлечений</x:String>
-                    </Picker.Items>
-                </Picker>
-                <ListView  ItemTapped="GoToEvent" ItemsSource="{Binding}" HasUnevenRows="True">
+            <Picker x:Name="picker" SelectedIndexChanged="picker_SelectedIndexChanged">
+                <Picker.Items>
+                    <x:String>Все теги</x:String>
+                    <x:String>Кино</x:String>
+                    <x:String>Прогулка</x:String>
+                    <x:String>Концерт</x:String>
+                    <x:String>Парк развлечений</x:String>
+                </Picker.Items>
+            </Picker>
+                <ListView x:Name="Event_List" ItemTapped="GoToEvent" ItemsSource="{Binding}" HasUnevenRows="True">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>

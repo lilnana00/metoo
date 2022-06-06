@@ -38,6 +38,7 @@ namespace metoo
             this.BindingContext = App.user;
             base.OnAppearing();
         }
+        
         private async void Calendar(object sender, EventArgs e)
         {
             if (App.user == null) await Navigation.PushAsync(new no_reg());

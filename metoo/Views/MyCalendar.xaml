@@ -11,7 +11,7 @@
         <StackLayout Padding="5, 5, 5, 5" BackgroundColor="#FFF26A">
             <Image Source="my_calendar.png"/>
             <StackLayout >
-                <ListView HasUnevenRows="True">
+                <ListView HasUnevenRows="True" ItemsSource="{Binding}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
