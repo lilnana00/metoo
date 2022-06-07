@@ -15,14 +15,14 @@
 
                             <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" WidthRequest="75" Padding="5">
                                     <Image Source="alice.png" HeightRequest="75" WidthRequest="75"/>
-                                    <Label Text="{Binding CreatorName}" TextColor="#5517A2" HorizontalTextAlignment="Center"/>
-                                    <Label Text="{Binding CreatorAge}" TextColor="#5517A2" HorizontalTextAlignment="Center"/>
+                                     <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="{Binding CreatorName}" TextColor="#5517A2" HorizontalTextAlignment="Center"/>
+                                     <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="{Binding CreatorAge}" TextColor="#5517A2" HorizontalTextAlignment="Center"/>
                             </StackLayout>
 
                             <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="3" WidthRequest="250" Padding="5" >
                                    <!--<Label Text="{Binding EventName}" TextColor="#5517A2" FontSize="22" LineBreakMode="NoWrap"/>-->
-                                    <Label Text="{Binding Details}" TextColor="#5517A2" FontSize="20"/>
-                                    <Label Text="{Binding Tags}" TextColor="#5517A2" FontSize="15" />
+                                    <Label FontFamily="Comfortaa" Text="{Binding Details}" TextColor="#5517A2" FontSize="20"/>
+                                     <Label Text="{Binding Tags}" FontFamily="Comfortaa" FontAttributes="Bold" TextColor="#5517A2" FontSize="15" />
                             </StackLayout>
 
                            <!-- <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5">
@@ -33,7 +33,7 @@
              </StackLayout>
 
             <FlexLayout Direction="Row" AlignContent="Center" JustifyContent="SpaceBetween" Padding="0,20,0,5">
-                <Label Text="189 тоже!" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#6A29BB" BackgroundColor="#C4C4C4" WidthRequest="140" HeightRequest="40" />
+                <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="189 тоже!" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#6A29BB" BackgroundColor="#C4C4C4" WidthRequest="140" HeightRequest="40" />
                 <Button Clicked="JoinToEvent"  ImageSource="join_butt.png" BackgroundColor="#00FBC1BC" WidthRequest="50" HeightRequest="50" Margin="0,0,25,0"/>
             </FlexLayout>
 
@@ -54,14 +54,14 @@
                       <StackLayout Padding="5">
                             <FlexLayout BackgroundColor="#D0BC7C" Direction="Row" AlignContent="Center" JustifyContent="SpaceEvenly" HeightRequest="120" Padding="5">
 
-                            <StackLayout  Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5" >
-                                                <Image Source="alice.png" HeightRequest="75" WidthRequest="75"/>
-                                                <Label Text="{Binding CommentCreator}" TextColor="#5517A2" FontSize="20" HorizontalTextAlignment="Center"/>
+                            <StackLayout  Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="1" Padding="5"  Margin="0, 0, 10, 0">
+                                                <Image Source="alice.png" HeightRequest="75" WidthRequest="150"/>
+                                                <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="{Binding CommentCreator}" TextColor="#5517A2" FontSize="20" HorizontalTextAlignment="Center"/>
                             </StackLayout>
 
-                            <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="3" Padding="5" >
-                                    <Label Text="{Binding Text}" TextColor="#5517A2" FontSize="22"/>
-                                    <Label Text="{Binding DateTime}" TextColor="#5517A2" FontSize="18" Padding="0,10,0,0"/>
+                            <StackLayout Orientation="Vertical" VerticalOptions="Center" FlexLayout.Grow="3" Padding="5">
+                                                <Label FontFamily="Comfortaa" HeightRequest="120" WidthRequest="150" Text="{Binding Text}" TextColor="#5517A2" FontSize="17"/>
+                                                <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="{Binding DateTime}" TextColor="#5517A2" FontSize="18" Padding="0,10,0,0"/>
                             </StackLayout>
                                 
                             </FlexLayout>
@@ -74,7 +74,7 @@
 
             <FlexLayout Direction="Row" AlignContent="Center" JustifyContent="SpaceBetween">
                 <Image Source="alice.png" WidthRequest="50" HeightRequest="50"/>
-                <Entry x:Name="comm" Placeholder="ВАШ КОММЕНТАРИЙ" PlaceholderColor="#BC99D7" Margin="10,0,0,0"/>
+                    <Entry x:Name="comm" FontFamily="Comfortaa" Placeholder="ВАШ КОММЕНТАРИЙ" PlaceholderColor="#BC99D7" Margin="10,0,0,0"/>
                     <Button Clicked="SendComment" ImageSource="send_butt.png" BackgroundColor="#00FBC1BC"/>
                 </FlexLayout>
                 

@@ -10,8 +10,8 @@
     
     <ContentPage.Content>
         <StackLayout BackgroundColor="#FFF26A" Orientation="Vertical" VerticalOptions="FillAndExpand" Spacing="10">
-            
-            <Picker x:Name="picker" SelectedIndexChanged="picker_SelectedIndexChanged" Title="Выберите ключевое слово для поиска">
+
+            <Picker FontFamily="Comfortaa" x:Name="picker" SelectedIndexChanged="picker_SelectedIndexChanged" Title="Выберите ключевое слово для поиска">
                 <Picker.Items>
                     <x:String>Все теги</x:String>
                     <x:String>Кино</x:String>
@@ -31,18 +31,18 @@
 
                                                 <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Padding="5">
                                                     <Image Source="alice.png" HeightRequest="75" WidthRequest="75"/>
-                                                    <Label Text="{Binding CreatorName}" TextColor="#5517A2" FontSize="20" HorizontalTextAlignment="Center"/>
+                                                    <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="{Binding CreatorName}" TextColor="#5517A2" FontSize="19" HorizontalTextAlignment="Center"/>
                                                 </StackLayout>
 
                                                 <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" Opacity="25" HorizontalOptions="FillAndExpand">
                                                     <StackLayout Orientation="Vertical" VerticalOptions="Start"  Padding="5">
-                                                        <Label Text="{Binding EventName}" TextColor="#5517A2" FontSize="25" LineBreakMode="NoWrap"/>
-                                                        <Label Text="{Binding DateTime}" TextColor="#5517A2" FontSize="15" LineBreakMode="NoWrap"/>
+                                                      <Label FontFamily="Comfortaa" Text="{Binding EventName}" TextColor="#5517A2" FontSize="24" LineBreakMode="NoWrap"/>
+                                                        <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="{Binding DateTime}" TextColor="#5517A2" FontSize="14" LineBreakMode="NoWrap"/>
                                                     </StackLayout>
 
                                                     <StackLayout Orientation="Vertical" VerticalOptions="End" Padding="5">
                                                         <!-- <Image Source="events.png" HeightRequest="35" WidthRequest="35"/> -->
-                                                        <Label Text="{Binding Tags}" TextColor="#5517A2" FontSize="15"/>
+                                                        <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="{Binding Tags}" TextColor="#5517A2" FontSize="14"/>
                                                     </StackLayout>
                                                 </StackLayout>
 

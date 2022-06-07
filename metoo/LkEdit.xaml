@@ -12,15 +12,15 @@
 
                 <Image Source="Group109.png"  WidthRequest="110" HeightRequest="110"/>
 
-                <Label Text="ИМЯ" TextColor="#5517A2" FontSize="15" ></Label>
-                <Entry x:Name="name" Placeholder="ВВЕДИТЕ НАСТОЯЩЕЕ ИМЯ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7"/>
-                <Label Text="ВОЗРАСТ" TextColor="#5517A2" FontSize="15" ></Label>
-                <Entry x:Name="age" TextChanged="AgeChanged" Keyboard="Numeric" Placeholder="ВВЕДИТЕ НАСТОЯЩИЙ ВОЗРАСТ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7" />
-                <Label Text="ПАРОЛЬ" TextColor="#5517A2" FontSize="15" ></Label>
-                <Entry x:Name="pass" IsPassword="True"  Placeholder="ВВЕДИТЕ ПАРОЛЬ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7"/>
-                <Label Text="ЕЩЕ РАЗ" TextColor="#5517A2"  FontSize="15" ></Label>
-                <Entry x:Name="passOk" IsPassword="True"  Placeholder="ПОВТОРИТЕ ПАРОЛЬ" PlaceholderColor="#BC99D7" FontSize="15"  />
-                <Label x:Name="isOk" TextColor="#5517A2" HorizontalTextAlignment="Center" FontSize="15"></Label>
+                <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="ИМЯ" TextColor="#5517A2" FontSize="14" ></Label>
+                <Entry  FontFamily="Comfortaa" x:Name="name" Placeholder="ВВЕДИТЕ НАСТОЯЩЕЕ ИМЯ" PlaceholderColor="#BC99D7" FontSize="14"  Margin="0, 0, 0, 7"/>
+                <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="ВОЗРАСТ" TextColor="#5517A2" FontSize="14" ></Label>
+                <Entry  FontFamily="Comfortaa" x:Name="age" TextChanged="AgeChanged" Keyboard="Numeric" Placeholder="ВВЕДИТЕ НАСТОЯЩИЙ ВОЗРСТ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7" />
+                <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="ПАРОЛЬ" TextColor="#5517A2" FontSize="14" ></Label>
+                <Entry  FontFamily="Comfortaa" x:Name="pass" IsPassword="True"  Placeholder="ВВЕДИТЕ ПАРОЛЬ" PlaceholderColor="#BC99D7" FontSize="14"  Margin="0, 0, 0, 7"/>
+                <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="ЕЩЕ РАЗ" TextColor="#5517A2"  FontSize="14" ></Label>
+                <Entry  FontFamily="Comfortaa" x:Name="passOk" IsPassword="True"  Placeholder="ПОВТОРИТЕ ПАРОЛЬ" PlaceholderColor="#BC99D7" FontSize="14"  />
+                <Label  FontFamily="Comfortaa" FontAttributes="Bold" x:Name="isOk" TextColor="#5517A2" HorizontalTextAlignment="Center" FontSize="14"></Label>
             </StackLayout>
             <Button Clicked="UpdateUser" WidthRequest="360" HeightRequest="63" ImageSource="Check.png" Margin="0, 5, 0, 0"  ></Button>
         </StackLayout>

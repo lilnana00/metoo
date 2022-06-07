@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using System.IO;
 using Xamarin.Forms.Xaml;
 
+[assembly: ExportFont("Comfortaa-VariableFont_wght.ttf", Alias = "Comfortaa")]
 namespace metoo
 {
     public partial class App : Application

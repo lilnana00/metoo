@@ -11,22 +11,22 @@
             </StackLayout>
 
             <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="10">
-                <Label Text="ХОЧУ" TextColor="#5517A2" FontSize="15" />
-                <Entry Text="{Binding EventName}" Placeholder="КУДА ХОТИТЕ ПОЙТИ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7"/>
-                
-                <Label Text="КОГДА" TextColor="#5517A2" FontSize="15" />
-                <DatePicker x:Name="Date" Format="dd.MM.yyyy" FontSize="15" Margin="0, 0, 0, 7" />
-                
-                <Label Text="ВО СКОЛЬКО" TextColor="#5517A2" FontSize="15" />
-                <TimePicker x:Name="Time" Format="HH:mm" FontSize="15" Margin="0, 0, 0, 7" />
-                
-                <Label Text="ДЕТАЛИ" TextColor="#5517A2" FontSize="15" />
-                <Entry Text="{Binding Details}" Placeholder="ДОБАВЬТЕ НЕМНОГО ДЕТАЛЕЙ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7"/>
+                <Label Text="ХОЧУ" FontFamily="Comfortaa" FontAttributes="Bold" TextColor="#5517A2" FontSize="15" />
+                <Entry Text="{Binding EventName}" FontFamily="Comfortaa" Placeholder="КУДА ХОТИТЕ ПОЙТИ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7"/>
+
+                <Label Text="КОГДА"  FontFamily="Comfortaa" FontAttributes="Bold" TextColor="#5517A2" FontSize="15" />
+                <DatePicker x:Name="Date" FontFamily="Comfortaa" Format="dd.MM.yyyy" TextColor="#BC99D7" FontSize="15" Margin="0, 0, 0, 7" />
+
+                <Label Text="ВО СКОЛЬКО"  FontFamily="Comfortaa" FontAttributes="Bold" TextColor="#5517A2" FontSize="15" />
+                <TimePicker x:Name="Time" FontFamily="Comfortaa" Format="HH:mm" TextColor="#BC99D7" FontSize="15" Margin="0, 0, 0, 7" />
+
+                <Label Text="ДЕТАЛИ"  FontFamily="Comfortaa" FontAttributes="Bold" TextColor="#5517A2" FontSize="15" />
+                <Entry Text="{Binding Details}" FontFamily="Comfortaa" Placeholder="ДОБАВЬТЕ НЕМНОГО ДЕТАЛЕЙ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7"/>
                 
                 <!-- <Label Text="ТЕГИ" TextColor="#5517A2"  FontSize="15" />
                 <Entry Text="{Binding Tags}" Placeholder="ДОБАВЬТЕ ТЕГИ" PlaceholderColor="#BC99D7" FontSize="15"  /> -->
-                <Label x:Name="tag" Text="КЛЮЧЕВОЕ СЛОВО СОБЫТИЯ" FontSize="15" TextColor="#5517A2"/>
-                <Picker x:Name="picker" Margin="0, 0, 0, 7">
+                <Label x:Name="tag"  FontFamily="Comfortaa" FontAttributes="Bold" Text="КЛЮЧЕВОЕ СЛОВО СОБЫТИЯ" FontSize="15" TextColor="#5517A2"/>
+                <Picker x:Name="picker" FontFamily="Comfortaa" TextColor="#BC99D7" Margin="0, 0, 0, 7">
                     <Picker.Items>
                         <x:String>Кино</x:String>
                         <x:String>Прогулка</x:String>

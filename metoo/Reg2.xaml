@@ -12,16 +12,16 @@
             </StackLayout>
             
             <StackLayout Orientation="Vertical" Padding="10">
-                <Label Text="ПАРОЛЬ" TextColor="#5517A2" FontSize="15"></Label>
-                <Entry x:Name="pass" Text="{Binding Password}"  Margin="0, 10, 0, 15" Placeholder="ВВЕДИТЕ ПАРОЛЬ" PlaceholderColor="#BC99D7" />
-                <Label Text="ЕЩЕ РАЗ" TextColor="#5517A2" FontSize="15"/>
-                <Entry x:Name="passOk"  Margin="0, 10, 0, 0" Placeholder="ПОВТОРИТЕ ПАРОЛЬ" PlaceholderColor="#BC99D7"  />
-                <Label x:Name="isOk" TextColor="#5517A2" HorizontalTextAlignment="Center" FontSize="15"></Label>
-                <Label Text="ТРЕБОВАНИЯ К ПАРОЛЮ: МИНИМУМ 8 СИМВОЛОВ, ОДНА БОЛЬШАЯ БУКВА, ОДНА ЦИФРА, ОДИН ЗНАК " TextColor="#5517A2" HorizontalTextAlignment="Center" Margin="0, 10, 0, 0"></Label>
+                <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="ПАРОЛЬ" TextColor="#5517A2" FontSize="14"></Label>
+                <Entry FontFamily="Comfortaa"  x:Name="pass" Text="{Binding Password}"  Margin="0, 10, 0, 15" Placeholder="ВВЕДИТЕ ПАРОЛЬ" PlaceholderColor="#BC99D7" />
+                <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="ЕЩЕ РАЗ" TextColor="#5517A2" FontSize="14"/>
+                <Entry FontFamily="Comfortaa"  x:Name="passOk"  Margin="0, 10, 0, 0" Placeholder="ПОВТОРИТЕ ПАРОЛЬ" PlaceholderColor="#BC99D7"  />
+                <Label FontFamily="Comfortaa" FontAttributes="Bold" x:Name="isOk" TextColor="#5517A2" HorizontalTextAlignment="Center" FontSize="14"></Label>
+                <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="ТРЕБОВАНИЯ К ПАРОЛЮ: МИНИМУМ 8 СИМВОЛОВ, ОДНА БОЛЬШАЯ БУКВА, ОДНА ЦИФРА, ОДИН ЗНАК " TextColor="#5517A2" HorizontalTextAlignment="Center" Margin="0, 10, 0, 0"></Label>
 
             </StackLayout>
 
-            <Button BackgroundColor="#00FBC1BC" x:Name="reg3_button" WidthRequest="360" HeightRequest="63" ImageSource="cont.png" Margin="0, 20, 0, 0"  ></Button>
+            <Button BackgroundColor="#00FBC1BC" x:Name="reg3_button" WidthRequest="360" HeightRequest="63" ImageSource="cont.png" Margin="0, 0, 0, 0"  ></Button>
 
         </StackLayout>
     </ContentPage.Content>

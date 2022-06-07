@@ -22,18 +22,18 @@
 
                                             <FlexLayout Direction="Column" AlignContent="Center" FlexLayout.Grow="1" Padding="5">
                                                 <Image Source="alice.png" HeightRequest="75" WidthRequest="75" />
-                                                <Label Text="{Binding CreatorName}" TextColor="#5517A2" FontSize="20"/>
+                                                <Label Text="{Binding CreatorName}" FontFamily="Comfortaa" TextColor="#5517A2" FontSize="20"/>
                                             </FlexLayout>
 
                                             <FlexLayout Direction="Column" AlignContent="Center" JustifyContent="SpaceEvenly" WidthRequest="275" FlexLayout.Grow="3">
                                                 <StackLayout Orientation="Vertical" VerticalOptions="Center"  Padding="5">
-                                                    <Label Text="{Binding EventName}" TextColor="#5517A2" FontSize="25" LineBreakMode="NoWrap"/>
-                                                    <Label Text="{Binding DT}" TextColor="#5517A2" FontSize="15" LineBreakMode="NoWrap"/>
+                                                    <Label Text="{Binding EventName}" FontFamily="Comfortaa" TextColor="#5517A2" FontSize="25" LineBreakMode="NoWrap"/>
+                                                    <Label Text="{Binding DT}" FontFamily="Comfortaa" FontAttributes="Bold" TextColor="#5517A2" FontSize="15" LineBreakMode="NoWrap"/>
                                                 </StackLayout>
 
                                                 <StackLayout Orientation="Vertical" VerticalOptions="Center" Padding="5">
                                                     <!-- <Image Source="events.png" HeightRequest="35" WidthRequest="35"/> -->
-                                                    <Label Text="{Binding Tags}" TextColor="#5517A2" FontSize="15"/>
+                                                    <Label Text="{Binding Tags}" FontFamily="Comfortaa" FontAttributes="Bold" TextColor="#5517A2" FontSize="15"/>
                                                 </StackLayout>
                                             </FlexLayout>
 

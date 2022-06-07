@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -17,6 +17,21 @@ namespace metoo
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
             back_button.Clicked += Back_to_reg2;
+        }
+        private async void Add_photo(object sender, EventArgs e)
+        {
+            var pickImage = await FilePicker.PickAsync(new PickOptions()
+            {
+                FileTypes = FilePickerFileType.Images,
+                PickerTitle = "Avatar"
+            });
+
+            if (pickImage != null)
+            {
+                var stream = await pickImage.OpenReadAsync();
+                imgFile.Source = ImageSource.FromStream(() => stream);
+                FileName.Text = pickImage.FileName;
+            }
         }
         private async void Back_to_reg2(object sender, EventArgs e)
         {
