@@ -164,13 +164,13 @@
     <BundleResource Include="Resources\Group102.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Group109.png" />
+    <BundleResource Include="Resources\add_photo.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Group113.png" />
+    <BundleResource Include="Resources\entry_butt.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Group125.png" />
+    <BundleResource Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Group127.png" />
@@ -179,7 +179,7 @@
     <BundleResource Include="Resources\Group128.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Group97.png" />
+    <BundleResource Include="Resources\regist_butt.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Line1.png" />

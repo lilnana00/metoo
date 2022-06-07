@@ -5,11 +5,11 @@
              BackgroundImage="back.png">
 
     <StackLayout Padding="5" Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center">
-        <Image Source="Group125.png" WidthRequest="200" HeightRequest="200"/>
+        <Image Source="logo.png" WidthRequest="200" HeightRequest="200"/>
 
         <FlexLayout Direction="Column" AlignContent="Center" JustifyContent="SpaceBetween" HeightRequest="230" WidthRequest="360" Padding="0,30,0,0">
-            <Button x:Name="vhod_button" WidthRequest="360" HeightRequest="62" ImageSource="Group113.png" BackgroundColor="#00FBC1BC"/>
-            <Button x:Name="reg_button" WidthRequest="360" HeightRequest="62" ImageSource="Group97.png" BackgroundColor="#00FBC1BC"/>
+            <Button x:Name="vhod_button" WidthRequest="360" HeightRequest="62" ImageSource="entry_butt.png" BackgroundColor="#00FBC1BC"/>
+            <Button x:Name="reg_button" WidthRequest="360" HeightRequest="62" ImageSource="regist_butt.png" BackgroundColor="#00FBC1BC"/>
             <Button x:Name="vhod1_button" WidthRequest="360" HeightRequest="62" ImageSource="just_cont.png" BackgroundColor="#00FBC1BC"/>
         </FlexLayout>
 

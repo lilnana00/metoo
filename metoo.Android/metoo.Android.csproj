@@ -101,16 +101,16 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Group97.png" />
+    <AndroidResource Include="Resources\drawable\regist_butt.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Group109.png" />
+    <AndroidResource Include="Resources\drawable\add_photo.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Group113.png" />
+    <AndroidResource Include="Resources\drawable\entry_butt.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Group125.png" />
+    <AndroidResource Include="Resources\drawable\logo.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\create_event.png" />

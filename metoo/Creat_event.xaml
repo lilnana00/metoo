@@ -3,13 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="metoo.Creat_event">
     <ContentPage.Content>
-        <StackLayout Padding="5, 5, 5, 5"  Background="#FFF26A" Orientation="Vertical" VerticalOptions="FillAndExpand">
-            <Grid >
-                <Button  x:Name="back_button" BackgroundColor="#00FBC1BC" Grid.ColumnSpan="1" ImageSource="undo.png" HorizontalOptions="Start" Margin="5, 40, 0, 0" WidthRequest="23" HeightRequest="10"/>
-                <Image Grid.ColumnSpan="2" Source="create_event.png" HorizontalOptions="Start" Margin="55, 40, 0, 0" MinimumWidthRequest="314" HeightRequest="43"/>
-            </Grid>
-            <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="0,10,0,0">
+        <StackLayout Padding="5"  Background="#FFF26A" Orientation="Vertical" VerticalOptions="FillAndExpand" Spacing="30">
+            
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Spacing="15">
+                <Button  x:Name="back_button" BackgroundColor="#00FBC1BC" ImageSource="undo.png" WidthRequest="30" HeightRequest="60"/>
+                <Image Source="create_event.png" WidthRequest="200" HeightRequest="60"/> <!--проверить разрешение пикчи-->
+            </StackLayout>
 
+            <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="10">
                 <Label Text="ХОЧУ" TextColor="#5517A2" FontSize="15" />
                 <Entry Text="{Binding EventName}" Placeholder="КУДА ХОТИТЕ ПОЙТИ" PlaceholderColor="#BC99D7" FontSize="15"  Margin="0, 0, 0, 7"/>
                 
@@ -25,7 +26,7 @@
                 <!-- <Label Text="ТЕГИ" TextColor="#5517A2"  FontSize="15" />
                 <Entry Text="{Binding Tags}" Placeholder="ДОБАВЬТЕ ТЕГИ" PlaceholderColor="#BC99D7" FontSize="15"  /> -->
                 <Label x:Name="tag" Text="КЛЮЧЕВОЕ СЛОВО СОБЫТИЯ" FontSize="15" TextColor="#5517A2"/>
-                <Picker x:Name="picker">
+                <Picker x:Name="picker" Margin="0, 0, 0, 7">
                     <Picker.Items>
                         <x:String>Кино</x:String>
                         <x:String>Прогулка</x:String>
@@ -35,7 +36,9 @@
                 </Picker>
                 
             </StackLayout>
-            <Button BackgroundColor="#00FBC1BC" Clicked="SaveEvent" WidthRequest="360" HeightRequest="63" ImageSource="Check.png" Margin="0, 10, 0, 0"  /> <!--в маргине раньше стояло 45 и на настоящем тлф норм смотрелось-->
+
+            <Button BackgroundColor="#00FBC1BC" Clicked="SaveEvent" WidthRequest="63" HeightRequest="63" ImageSource="Check.png"/> <!--в маргине раньше стояло 45 и на настоящем тлф норм смотрелось-->
+        
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

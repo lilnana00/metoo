@@ -16,8 +16,8 @@
             </StackLayout>
 
             <StackLayout Orientation="Vertical" VerticalOptions="End" Padding="5">
-                <Button x:Name="vhod_button" WidthRequest="360" HeightRequest="62" ImageSource="Group113.png" BackgroundColor="#FFF26A"/>
-                <Button x:Name="reg_button" WidthRequest="360" HeightRequest="62" ImageSource="Group97.png" BackgroundColor="#FFF26A" Padding="0,35,0,0"/>
+                <Button x:Name="vhod_button" WidthRequest="360" HeightRequest="62" ImageSource="entry_butt.png" BackgroundColor="#FFF26A"/>
+                <Button x:Name="reg_button" WidthRequest="360" HeightRequest="62" ImageSource="regist_butt.png" BackgroundColor="#FFF26A" Padding="0,35,0,0"/>
                 <FlexLayout BackgroundColor="White" Direction="Row" AlignContent="Center" JustifyContent="SpaceAround" HeightRequest="50" FlexLayout.AlignSelf="End">
                     <Button x:Name="calendar" ImageSource="calendar.png" HeightRequest="50" WidthRequest="50" BackgroundColor="White"/>
                     <Button x:Name="events" ImageSource="events.png" HeightRequest="50" WidthRequest="50" BackgroundColor="White"/>
