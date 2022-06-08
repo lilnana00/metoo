@@ -10,7 +10,7 @@
                 <Image Source="step_3.png" WidthRequest="85" HeightRequest="60"/>
             </StackLayout>
             <Button BackgroundColor="#00FBC1BC" ImageSource="add_photo.png"  Clicked="Add_photo" WidthRequest="90" HeightRequest="90" Margin="0, -5, 0, 0" ></Button>
-           <!-- <Image x:Name="imgFile" WidthRequest="200"></Image> -->
+            <Image x:Name="imgFile" WidthRequest="200"></Image>
             <Label x:Name="FileName"></Label>
             
 

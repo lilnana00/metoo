@@ -232,4 +232,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\join_butt.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\edit_lk.png" />
+  </ItemGroup>
 </Project>

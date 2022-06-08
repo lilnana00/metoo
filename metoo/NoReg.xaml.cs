@@ -17,10 +17,10 @@ namespace metoo
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
             back_button.Clicked += Back;
-            calendar.Clicked += Calendar;
-            events.Clicked += Events;
-            chats.Clicked += Chats;
-            user.Clicked += LK;
+            //calendar.Clicked += Calendar;
+            //events.Clicked += Events;
+            //chats.Clicked += Chats;
+            //user.Clicked += LK;
             reg_button.Clicked += Go_to_reg;
             vhod_button.Clicked += Go_to_vhod;
         }

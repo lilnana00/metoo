@@ -3,11 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="metoo.no_reg">
     <ContentPage.Content>
-
-
-        <FlexLayout BackgroundColor="#FFF26A" Direction="Column" AlignContent="Center" JustifyContent="SpaceAround" Padding="5">
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Padding="7,0,0,0">
-                <Button x:Name="back_button" ImageSource="undo.png" WidthRequest="23" HeightRequest="10"/>
+        <StackLayout BackgroundColor="#FFF26A" Orientation="Vertical" VerticalOptions="FillAndExpand" Spacing="125" Padding="5">
+            
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                <Button x:Name="back_button" ImageSource="undo.png" WidthRequest="30" HeightRequest="60" BackgroundColor="#00FBC1BC"/>
             </StackLayout>
 
             <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center" Padding="5">
@@ -15,17 +14,17 @@
                 HorizontalTextAlignment="Center" FontSize="30" TextColor="#5517A2"/>
             </StackLayout>
 
-            <StackLayout Orientation="Vertical" VerticalOptions="End" Padding="5">
-                <Button x:Name="vhod_button" WidthRequest="360" HeightRequest="62" ImageSource="entry_butt.png" BackgroundColor="#FFF26A"/>
-                <Button x:Name="reg_button" WidthRequest="360" HeightRequest="62" ImageSource="regist_butt.png" BackgroundColor="#FFF26A" Padding="0,35,0,0"/>
-                <FlexLayout BackgroundColor="White" Direction="Row" AlignContent="Center" JustifyContent="SpaceAround" HeightRequest="50" FlexLayout.AlignSelf="End">
+            <StackLayout Orientation="Vertical" VerticalOptions="End" Spacing="25">
+                <Button x:Name="vhod_button" WidthRequest="360" HeightRequest="62" ImageSource="entry_butt.png" BackgroundColor="#00FBC1BC"/>
+                <Button x:Name="reg_button" WidthRequest="360" HeightRequest="62" ImageSource="regist_butt.png" BackgroundColor="#00FBC1BC"/>
+            </StackLayout>
+            
+            <!-- <FlexLayout BackgroundColor="White" Direction="Row" AlignContent="Center" JustifyContent="SpaceAround" HeightRequest="50" FlexLayout.AlignSelf="End">
                     <Button x:Name="calendar" ImageSource="calendar.png" HeightRequest="50" WidthRequest="50" BackgroundColor="White"/>
                     <Button x:Name="events" ImageSource="events.png" HeightRequest="50" WidthRequest="50" BackgroundColor="White"/>
                     <Button x:Name="chats" ImageSource="chat.png" HeightRequest="50" WidthRequest="50" BackgroundColor="White"/>
                     <Button x:Name="user" ImageSource="user.png" HeightRequest="50" WidthRequest="50" BackgroundColor="White"/>
-                </FlexLayout>
-            </StackLayout>
-            
-        </FlexLayout>
+                </FlexLayout> -->
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
