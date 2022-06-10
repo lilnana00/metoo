@@ -23,7 +23,7 @@
                         <Image Source="Ellipse3.png" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center"></Image>
                         <Label FontFamily="Comfortaa" FontAttributes="Bold" FontSize="12" x:Name ="EventsCount" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#5517A2"></Label>
                     </Grid>
-                    <Label FontFamily="Comfortaa" FontAttributes="Bold" FontSize="12"  VerticalOptions="Center" HorizontalOptions="End" Margin="0, 0, 30, 0" TextColor="#5517A2">СОБЫТИЙ</Label>
+                    <Label x:Name="visited" Text="СОБЫТИЙ" FontFamily="Comfortaa" FontAttributes="Bold" FontSize="12"  VerticalOptions="Center" HorizontalOptions="End" Margin="0, 0, 30, 0" TextColor="#5517A2"></Label>
                 </Grid>
 
                 <Grid HorizontalOptions="Center"  WidthRequest="280">
@@ -32,7 +32,7 @@
                         <Image Source="Ellipse3.png" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center" ></Image>
                         <Label FontFamily="Comfortaa" FontAttributes="Bold" FontSize="12" x:Name="CreateCount" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#5517A2"></Label>
                     </Grid>
-                    <Label FontFamily="Comfortaa" FontAttributes="Bold" FontSize="12" VerticalOptions="Center" HorizontalOptions="End" Margin="0, 0, 30, 0" TextColor="#5517A2">СОБЫТИЙ</Label>
+                    <Label x:Name="added" Text="СОБЫТИЙ" FontFamily="Comfortaa" FontAttributes="Bold" FontSize="12" VerticalOptions="Center" HorizontalOptions="End" Margin="0, 0, 30, 0" TextColor="#5517A2"></Label>
                 </Grid>
 
                 <Grid HorizontalOptions="Center"  WidthRequest="280">
@@ -41,7 +41,7 @@
                         <Image Source="Ellipse3.png" WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center" ></Image>
                         <Label FontFamily="Comfortaa" FontAttributes="Bold" FontSize="12" x:Name="CommentCount" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#5517A2"></Label>
                     </Grid>
-                    <Label FontFamily="Comfortaa" FontAttributes="Bold" FontSize="12"  VerticalOptions="Center" HorizontalOptions="End" Margin="0, 0, -10, 0" TextColor="#5517A2">КОММЕНТАРИЕВ</Label>
+                    <Label x:Name="comment" Text="КОММЕНТАРИЕВ" FontFamily="Comfortaa" FontAttributes="Bold" FontSize="12"  VerticalOptions="Center" HorizontalOptions="End" Margin="0, 0, -10, 0" TextColor="#5517A2"></Label>
                 </Grid>
             </StackLayout>
 

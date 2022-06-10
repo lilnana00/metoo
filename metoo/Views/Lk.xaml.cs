@@ -33,14 +33,34 @@ namespace metoo
             App.user = null;
             await Navigation.PopAsync();
         }
+        public static string Padezh(int amount, string word)
+        {
+            if (word == "СОБЫТИЕ")
+            {
+                if (((amount % 10) >= 5) || ((amount % 10) == 0)) { word = "СОБЫТИЙ"; }
+                else if (((amount % 10) >= 2) && ((amount % 10) < 5)) { word = "СОБЫТИЯ";}
+                else { word = "СОБЫТИЕ";}
+            }
+            else
+            {
+                if (((amount % 10) >= 5) || ((amount % 10) == 0)){ word = "КОММЕНТАРИЕВ";}
+                else if (((amount % 10) >= 2) && ((amount % 10) < 5)){ word = "КОММЕНТАРИЯ";}
+                else{ word = "КОММЕНТАРИЙ";}
+            }
+            return word;
+        }
         protected override void OnAppearing()
         {
             this.BindingContext = App.user;
             EventsCount.Text = App.Database.GetEventsCount(App.user.ID).ToString();
+            visited.Text = Padezh(Convert.ToInt32(EventsCount.Text), "СОБЫТИЕ");
             CreateCount.Text = App.Database2.GetCreatorCount(App.user.ID).ToString();
+            added.Text = Padezh(Convert.ToInt32(CreateCount.Text), "СОБЫТИЕ");
             CommentCount.Text = App.Database3.CommentsCount(App.user.ID).ToString();
+            comment.Text = Padezh(Convert.ToInt32(CommentCount.Text), "КОММЕНТАРИЙ");
             base.OnAppearing();
         }
+
         
         private async void Calendar(object sender, EventArgs e)
         {
