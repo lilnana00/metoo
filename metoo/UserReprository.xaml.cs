@@ -80,5 +80,9 @@ namespace metoo
         {
             return database.Query<UserEvents>("select * from UsersToEvents where UserID=?", UserID).Count();
         }
+        public int GetUsersCount(int EventID)
+        {
+            return database.Query<UserEvents>("select * from UsersToEvents where EventID=?", EventID).Count();
+        }
     }
 }

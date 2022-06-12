@@ -16,7 +16,7 @@ namespace metoo
         {
             return database2.Table<EventTable>().Count();
         }
-        public IEnumerable<EventTable> GetItems()
+        public List<EventTable> GetItems()
         {
             return database2.Table<EventTable>().ToList();
         }

@@ -36,6 +36,12 @@ namespace metoo
             if (!String.IsNullOrEmpty(eventTable.EventName))
             {
                 App.Database2.SaveItem(eventTable);
+                UserEvents item = new UserEvents
+                {
+                    UserID = App.user.ID,
+                    EventID = App.Database2.GetItems()[App.Database2.Count() - 1].ID
+                };
+                App.Database.JoinEvent(item);
             }
             this.Navigation.PushAsync(new AllEvent());
         }     

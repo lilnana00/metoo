@@ -41,6 +41,7 @@ namespace metoo
                                from Users in App.Database.GetItems()
                                where Users.ID == Comments.CreatorID
                                select new { CommentCreator = Users.Name, Text = Comments.Text, DateTime = Comments.Datetime };
+            MembersButton.Text = App.Database.GetUsersCount(EventID).ToString()+" ТОЖЕ!";
         }
 
         protected override void OnAppearing()
@@ -63,6 +64,11 @@ namespace metoo
                     EventID = this.EventID,
                     UserID = App.user.ID
                 });
+                Update();
+            }
+            else
+            {
+                DisplayAlert("Внимание", "Вы уже присоединились к данному событию", "ОК");
             }
         }
     }

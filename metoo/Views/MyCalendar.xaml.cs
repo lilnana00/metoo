@@ -21,6 +21,15 @@ namespace metoo
             chats.Clicked += Chats;
             user.Clicked += LK;
         }
+        private async void GoToEvent(object sender, ItemTappedEventArgs e)
+        {
+            Event event2 = new Event
+            {
+                BindingContext = e.Item as EventInfo,
+                EventID = ((EventInfo)e.Item).ID,
+            };
+            await Navigation.PushAsync(event2);
+        }
         protected override void OnAppearing()
         {
             this.BindingContext = from UsersToEvents in App.Database.GetEvents(App.user.ID)
@@ -28,13 +37,9 @@ namespace metoo
                                   from Users in App.Database.GetItems()
                                   where UsersToEvents.EventID == Events.ID
                                   where Users.ID == Events.CreatorID
-                                  select new
-                                  {
-                                      CreatorName = Users.Name,
-                                      DT = Events.DT.ToString(@"dd\.MM\.yyyy HH:mm"),
-                                      Events.EventName,
-                                      Events.Tags
-                                  };
+                                  where (DateTime.Now - Events.DT).Days <= 1
+                                  select new EventInfo(Events.ID, Users.Name, Users.Age, Events.EventName,
+                                                       Events.DT.ToString(@"dd\.MM\.yyyy HH:mm"), Events.Details, Events.Tags);
             base.OnAppearing();
         }
 

@@ -33,11 +33,11 @@
              </StackLayout>
 
             <FlexLayout Direction="Row" AlignContent="Center" JustifyContent="SpaceBetween" Padding="0,20,0,5">
-                <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="189 тоже!" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="#6A29BB" BackgroundColor="#C4C4C4" WidthRequest="140" HeightRequest="40" />
+                <Button x:Name="MembersButton" FontFamily="Comfortaa" FontAttributes="Bold" Text="189 тоже!" TextColor="#6A29BB" BackgroundColor="#C4C4C4" WidthRequest="140" HeightRequest="40"/>
                 <Button Clicked="JoinToEvent"  ImageSource="join_butt.png" BackgroundColor="#00FBC1BC" WidthRequest="50" HeightRequest="50" Margin="0,0,25,0"/>
             </FlexLayout>
 
-        <!--<StackLayout Orientation="Horizontal" >
+            <!--<StackLayout Orientation="Horizontal" >
                 <BoxView BackgroundColor="Gray" WidthRequest="140" HeightRequest="80" CornerRadius="8"/>
                 <Button ImageSource="" WidthRequest="132" HeightRequest="127"/>
             </StackLayout>-->
