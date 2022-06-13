@@ -28,7 +28,7 @@ namespace metoo
             if (pickImage != null)
             {
                 var stream = await pickImage.OpenReadAsync();
-                add_photo_button.ImageSource = ImageSource.FromStream(() => stream);
+                add_photo_button.Source = ImageSource.FromStream(() => stream);
             }
         }
         private async void Back_to_reg2(object sender, EventArgs e)
