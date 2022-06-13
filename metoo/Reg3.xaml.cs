@@ -18,19 +18,17 @@ namespace metoo
             InitializeComponent();
             back_button.Clicked += Back_to_reg2;
         }
-        private async void Add_photo(object sender, EventArgs e)
+        private async void Add_photo(System.Object sender, System.EventArgs e)
         {
-            var pickImage = await FilePicker.PickAsync(new PickOptions()
+            var pickImage = await MediaPicker.PickPhotoAsync(new MediaPickerOptions()
             {
-                FileTypes = FilePickerFileType.Images,
-                PickerTitle = "Avatar"
+               Title = "Выберите аватар"
             });
 
             if (pickImage != null)
             {
                 var stream = await pickImage.OpenReadAsync();
-                imgFile.Source = ImageSource.FromStream(() => stream);
-                FileName.Text = pickImage.FileName;
+                add_photo_button.ImageSource = ImageSource.FromStream(() => stream);
             }
         }
         private async void Back_to_reg2(object sender, EventArgs e)

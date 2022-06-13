@@ -9,10 +9,9 @@
                 <Button BackgroundColor="#00FBC1BC" x:Name="back_button" ImageSource="undo.png" WidthRequest="30" HeightRequest="60" />
                 <Image Source="step_3.png" WidthRequest="85" HeightRequest="60"/>
             </StackLayout>
-            <Button BackgroundColor="#00FBC1BC" ImageSource="add_photo.png"  Clicked="Add_photo" WidthRequest="90" HeightRequest="90" Margin="0, -5, 0, 0" ></Button>
-            <Image x:Name="imgFile" WidthRequest="200"></Image>
-            <Label x:Name="FileName"></Label>
-            
+            <Button  Margin="125, -5, 125, 0" x:Name="add_photo_button" CornerRadius="70" BackgroundColor="#00FBC1BC" ImageSource="add_photo.png"  Scale="1" Clicked="Add_photo" WidthRequest="140" HeightRequest="140"  >
+            </Button>
+
 
             <StackLayout Orientation="Vertical" Padding="10">
                 <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="ИМЯ" TextColor="#5517A2" FontSize="14"/>
