@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="metoo.EventMembers">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#FFF26A" Orientation="Vertical" VerticalOptions="FillAndExpand" Spacing="10" Padding="5">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Spacing="15" Padding="5">
+                <Image Source="undo.png" HeightRequest="60" WidthRequest="30"/>
+                <Label Text="ВСЕ УЧАСТНИКИ" FontSize="30"/> <!--пока лайбл позже отрисую картинку-->
+            </StackLayout>
+
+            <StackLayout>
+                <ListView ItemsSource="{Binding}" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <StackLayout BackgroundColor="#D0BC7C" Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="50" Padding="5" Spacing="15">
+
+                                        <Image Source="alice.png" HeightRequest="75" WidthRequest="75"/>
+                                        <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="NAME" TextColor="#5517A2" FontSize="19" /> <!--имя участника-->
+                                        <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="AGE" TextColor="#5517A2" FontSize="19" /> <!--возраст участника-->
+
+                                    </StackLayout>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
