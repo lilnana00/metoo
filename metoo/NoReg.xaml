@@ -10,8 +10,8 @@
             </StackLayout>
 
             <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center" Padding="5">
-                <Label Text="Для получения доступа к этому раздела, нужно войти или зарегстрироваться!"
-                HorizontalTextAlignment="Center" FontSize="30" TextColor="#5517A2"/>
+                <Label FontFamily="Comfortaa" Text="Для получения доступа к этому разделу нужно войти или зарегстрироваться!"
+                HorizontalTextAlignment="Center" FontSize="29" TextColor="#5517A2"/>
             </StackLayout>
 
             <StackLayout Orientation="Vertical" VerticalOptions="End" Spacing="25">

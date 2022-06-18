@@ -18,7 +18,7 @@ namespace metoo
             InitializeComponent();
             calendar.Clicked += Calendar;
             events.Clicked += Events;
-            chats.Clicked += Chats;
+            //chats.Clicked += Chats;
             user.Clicked += LK;
         }
         private async void Calendar(object sender, EventArgs e)

@@ -65,7 +65,7 @@
                 <FlexLayout BackgroundColor="White" Direction="Row" AlignContent="Center" JustifyContent="SpaceAround" HeightRequest="50" FlexLayout.AlignSelf="End">
                     <Button x:Name="calendar" ImageSource="calendar.png" HeightRequest="50" WidthRequest="50" Style="{StaticResource Key=menu_button}"/>
                     <Button x:Name="events" ImageSource="events.png" HeightRequest="50" WidthRequest="50" Style="{StaticResource Key=menu_button}" />
-                    <Button x:Name="chats" ImageSource="chat.png" HeightRequest="50" WidthRequest="50" Style="{StaticResource Key=menu_button}" />
+                    <!--<Button x:Name="chats" ImageSource="chat.png" HeightRequest="50" WidthRequest="50" Style="{StaticResource Key=menu_button}" />-->
                     <Button x:Name="user" ImageSource="user.png" HeightRequest="50" WidthRequest="50" Style="{StaticResource Key=menu_button}" />
                 </FlexLayout>
                  
