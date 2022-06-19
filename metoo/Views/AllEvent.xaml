@@ -9,7 +9,7 @@
     </ContentPage.Resources>
     
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#FFF26A" Orientation="Vertical" VerticalOptions="FillAndExpand" Spacing="10">
+        <StackLayout BackgroundColor="#FFF26A" Orientation="Vertical" VerticalOptions="FillAndExpand">
 
             <Picker FontFamily="Comfortaa" x:Name="picker" SelectedIndexChanged="picker_SelectedIndexChanged" Title="Выберите ключевое слово для поиска">
                 <Picker.Items>
@@ -63,14 +63,10 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                
-               <AbsoluteLayout>
-                <Button x:Name="addevent" ImageSource="add_event_butt.png" BackgroundColor="#00FBC1BC"
-                        WidthRequest="75" HeightRequest="75" 
-                        AbsoluteLayout.LayoutBounds="0.95, 1.5"
-                        AbsoluteLayout.LayoutFlags="PositionProportional"
-                        Clicked="CreateEventAsync" />
-                </AbsoluteLayout> 
+
+
+            <Button x:Name="addevent" Margin="5,0" BackgroundColor="#B176FD" HeightRequest="35" Text="Добавить Событие" FontFamily="Comfortaa" Clicked="CreateEventAsync" />
+               
                 
                 <FlexLayout BackgroundColor="White" Direction="Row" AlignContent="Center" JustifyContent="SpaceAround" HeightRequest="50" FlexLayout.AlignSelf="End">
                     <Button x:Name="calendar" ImageSource="calendar.png" HeightRequest="50" WidthRequest="50" Style="{StaticResource Key=menu_button}"/>

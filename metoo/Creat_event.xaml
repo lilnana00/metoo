@@ -7,7 +7,7 @@
             
             <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Spacing="15">
                 <Button  x:Name="back_button" BackgroundColor="#00FBC1BC" ImageSource="undo.png" WidthRequest="30" HeightRequest="60"/>
-                <Image Source="create_event.png" WidthRequest="200" HeightRequest="60"/> <!--проверить разрешение пикчи-->
+                <Image Source="create_event.png" WidthRequest="250" HeightRequest="60"/> <!--проверить разрешение пикчи-->
             </StackLayout>
 
             <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="10">
