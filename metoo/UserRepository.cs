@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace metoo
 {
-    public partial class UserReprository : ContentPage
+    public class UserReprository
     {
 
         SQLiteConnection database;
@@ -15,7 +15,6 @@ namespace metoo
             database = new SQLiteConnection(databasePath);
             database.CreateTable<User>();
             database.CreateTable<UserEvents>();
-            InitializeComponent();
         }
         public int Count()
         {
@@ -59,14 +58,10 @@ namespace metoo
         {
             return database.Insert(item);
         }
-        public IEnumerable<UserEvents> GetEvents(int ID)
-        {
-            return database.Query<UserEvents>("select * from UsersToEvents where UserID=?", ID);
-        }
         public int DeleteEvent(int UserID, int EventID)
         {
             return database.Execute("delete from UsersToEvents where UserID=? and EventID=?", UserID, EventID);
-        } 
+        }
         public UserEvents GetEvent(int UserID, int EventID)
         {
             List<UserEvents> q = database.Query<UserEvents>("select * from UsersToEvents where UserID=? and EventID=?", UserID, EventID);
@@ -76,13 +71,13 @@ namespace metoo
             }
             else return null;
         }
-        public int GetEventsCount(int UserID)
+        public List<UserEvents> GetEvents(int UserID)
         {
-            return database.Query<UserEvents>("select * from UsersToEvents where UserID=?", UserID).Count();
+            return database.Query<UserEvents>("select * from UsersToEvents where UserID=?", UserID);
         }
-        public int GetUsersCount(int EventID)
+        public List<UserEvents> GetUsers(int EventID)
         {
-            return database.Query<UserEvents>("select * from UsersToEvents where EventID=?", EventID).Count();
+            return database.Query<UserEvents>("select * from UsersToEvents where EventID=?", EventID);
         }
     }
 }

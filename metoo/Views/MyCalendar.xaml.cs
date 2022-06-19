@@ -38,7 +38,7 @@ namespace metoo
                                   where UsersToEvents.EventID == Events.ID
                                   where Users.ID == Events.CreatorID
                                   where (DateTime.Now - Events.DT).Days <= 1
-                                  select new EventInfo(Events.ID, Users.Name, Users.Age, Events.EventName,
+                                  select new EventInfo(Events.ID, Users.ID, Events.EventName,
                                                        Events.DT.ToString(@"dd\.MM\.yyyy HH:mm"), Events.Details, Events.Tags);
             base.OnAppearing();
         }

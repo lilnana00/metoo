@@ -34,8 +34,8 @@
     <Compile Update="NoReg.xaml.cs">
       <DependentUpon>NoReg.xaml</DependentUpon>
     </Compile>
-    <Compile Update="UserReprository.xaml.cs">
-      <DependentUpon>UserReprository.xaml</DependentUpon>
+    <Compile Update="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\AllChat.xaml.cs">
       <DependentUpon>%(Filename)</DependentUpon>
@@ -85,7 +85,7 @@
     <EmbeddedResource Update="Reg3.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Vhod.xaml">
+    <EmbeddedResource Update="Login.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

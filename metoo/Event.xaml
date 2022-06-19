@@ -30,14 +30,14 @@
                             
              </StackLayout>
 
-            <FlexLayout Direction="Row" JustifyContent="SpaceBetween" HeightRequest="50" Padding="10,10,20,10">
-                <Button x:Name="MembersButton" FontFamily="Comfortaa" FontAttributes="Bold" Text="189 тоже!" TextColor="#6A29BB" BackgroundColor="#C4C4C4" WidthRequest="140" HeightRequest="40"/>
+            <FlexLayout x:Name ="buttons" Direction="Row" JustifyContent="SpaceBetween" HeightRequest="50" Padding="10,10,20,10">
+                <Button x:Name="MembersButton" Clicked="ShowEventMembers" FontFamily="Comfortaa" FontAttributes="Bold" TextColor="#6A29BB" BackgroundColor="#C4C4C4" WidthRequest="140" HeightRequest="40"/>
                 <Button Clicked="JoinToEvent" ImageSource="join_butt.png" BackgroundColor="Black" WidthRequest="60" HeightRequest="60"/>
             </FlexLayout>
 
             <!--<StackLayout Orientation="Horizontal" >
                 <BoxView BackgroundColor="Gray" WidthRequest="140" HeightRequest="80" CornerRadius="8"/>
-                <Button ImageSource="" WidthRequest="132" HeightRequest="127"/>
+                <Button ImageSource="" WidthRSequest="132" HeightRequest="127"/>
             </StackLayout>-->
             
             <FlexLayout Direction="Row" Padding="5,5,0,0">
@@ -71,7 +71,7 @@
               </ListView.ItemTemplate>
              </ListView>
 
-            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+            <StackLayout x:Name="createComm" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                 <Image Source="alice.png" WidthRequest="50" HeightRequest="50"/>
                 <Entry x:Name="comm" FontFamily="Comfortaa" Placeholder="ВАШ КОММЕНТАРИЙ" PlaceholderColor="#BC99D7" Margin="10,0,0,0"/>
                 <Button Clicked="SendComment" ImageSource="send_butt.png" BackgroundColor="#00FBC1BC"/>

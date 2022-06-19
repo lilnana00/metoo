@@ -63,7 +63,7 @@ namespace metoo
             user.Photo = PhotoBytes;
             user.Age = int.Parse(Age.Text);
             App.Database.SaveItem(user);
-            this.Navigation.PushAsync(new Vhod());
+            this.Navigation.PushAsync(new Login());
         }
 
         private void AgeChanged(object sender, TextChangedEventArgs e)

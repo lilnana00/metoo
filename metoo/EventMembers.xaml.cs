@@ -14,7 +14,12 @@ namespace metoo
     {
         public EventMembers()
         {
+            NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
+        }
+        private async void Back(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
         }
     }
 }

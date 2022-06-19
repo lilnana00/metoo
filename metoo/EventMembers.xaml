@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="#FFF26A" Orientation="Vertical" VerticalOptions="FillAndExpand" Spacing="10" Padding="5">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Spacing="15" Padding="5">
-                <Image Source="undo.png" HeightRequest="60" WidthRequest="30"/>
+                <Button Clicked="Back" ImageSource="undo.png"  WidthRequest="30" HeightRequest="60" BackgroundColor="#FFF26A"/> 
                 <Image Source="all_members.png" HeightRequest="60" WidthRequest="275"/> <!--пока лайбл позже отрисую картинку-->
             </StackLayout>
 
@@ -18,8 +18,8 @@
                                     <StackLayout BackgroundColor="#D0BC7C" Orientation="Horizontal" HorizontalOptions="StartAndExpand" VerticalOptions="FillAndExpand" HeightRequest="80" Padding="5" Spacing="15">
 
                                         <Image Source="alice.png" HeightRequest="75" WidthRequest="75"/>
-                                        <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="NAME" TextColor="#5517A2" FontSize="19" /> <!--имя участника-->
-                                        <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="AGE" TextColor="#5517A2" FontSize="19" /> <!--возраст участника-->
+                                        <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="{Binding Name}" TextColor="#5517A2" FontSize="19" /> <!--имя участника-->
+                                        <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="{Binding Age}" TextColor="#5517A2" FontSize="19" /> <!--возраст участника-->
 
                                     </StackLayout>
                                 </ViewCell.View>

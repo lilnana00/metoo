@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace metoo
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Vhod : ContentPage
+    public partial class Login : ContentPage
     {
-        public Vhod()
+        public Login()
         {
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();

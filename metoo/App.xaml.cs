@@ -8,12 +8,13 @@ namespace metoo
 {
     public partial class App : Application
     {
+        public static User user;
 
         public const string DATABASE_NAME = "Users.db";
         public const string DATABASE_NAME2 = "Events.db";
         public const string DATABASE_NAME3 = "Comments.db";
         public static UserReprository database;
-        public static EventReprositoryi database2;
+        public static EventReprository database2;
         public static CommentReprository database3;
 
         public static UserReprository Database
@@ -25,17 +26,26 @@ namespace metoo
                     database = new UserReprository(
                         Path.Combine(
                             Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), DATABASE_NAME));
+                    User admin = new User
+                    {
+                        Email = "admin",
+                        Password = "admin",
+                        Name = "admin",
+                        Age = 12345
+                    };
+                    database.SaveItem(admin);
                 }
+                //database.DeleteAll();
                 return database;
             }
         }
-        public static EventReprositoryi Database2
+        public static EventReprository Database2
         {
             get
             {
                 if (database2 == null)
                 {
-                    database2 = new EventReprositoryi(
+                    database2 = new EventReprository(
                         Path.Combine(
                             Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), DATABASE_NAME2));
                 }
@@ -43,7 +53,6 @@ namespace metoo
                 return database2;
             }
         }
-
         public static CommentReprository Database3
         {
             get
@@ -54,21 +63,15 @@ namespace metoo
                         Path.Combine(
                             Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), DATABASE_NAME3));
                 }
+                //database3.DeleteAll();
                 return database3;
             }
         }
 
-
-
-        public static User user;
-
         public App()
         {
             InitializeComponent();
-
-             
-             MainPage = new NavigationPage(new MainPage());
-            
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

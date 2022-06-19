@@ -38,13 +38,13 @@ namespace metoo
         {
             if (word == "СОБЫТИЕ")
             {
-                if (((amount % 10) >= 5) || ((amount % 10) == 0)) { word = "СОБЫТИЙ"; }
+                if ((((amount % 100) > 10) & ((amount % 100) < 15)) || ((amount % 10) >= 5) || ((amount % 10) == 0)) { word = "СОБЫТИЙ"; }
                 else if (((amount % 10) >= 2) && ((amount % 10) < 5)) { word = "СОБЫТИЯ";}
                 else { word = "СОБЫТИЕ";}
             }
             else
             {
-                if (((amount % 10) >= 5) || ((amount % 10) == 0)){ word = "КОММЕНТАРИЕВ";}
+                if ((((amount % 100) > 10) & ((amount % 100) < 15)) || ((amount % 10) >= 5) || ((amount % 10) == 0)) { word = "КОММЕНТАРИЕВ";}
                 else if (((amount % 10) >= 2) && ((amount % 10) < 5)){ word = "КОММЕНТАРИЯ";}
                 else{ word = "КОММЕНТАРИЙ";}
             }
@@ -58,7 +58,7 @@ namespace metoo
                 Stream ms = new MemoryStream(App.user.Photo);
                 avatar.Source = ImageSource.FromStream(() => ms);
             }
-            EventsCount.Text = App.Database.GetEventsCount(App.user.ID).ToString();
+            EventsCount.Text = App.Database.GetEvents(App.user.ID).Count().ToString();
             visited.Text = Padezh(Convert.ToInt32(EventsCount.Text), "СОБЫТИЕ");
             CreateCount.Text = App.Database2.GetCreatorCount(App.user.ID).ToString();
             added.Text = Padezh(Convert.ToInt32(CreateCount.Text), "СОБЫТИЕ");
