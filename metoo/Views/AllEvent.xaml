@@ -65,7 +65,7 @@
                 </ListView>
 
 
-            <Button x:Name="addevent" Margin="5,0" BackgroundColor="#B176FD" HeightRequest="35" Text="Добавить Событие" FontFamily="Comfortaa" Clicked="CreateEventAsync" />
+            <Button x:Name="addevent" Margin="5,0" BackgroundColor="#B176FD" HeightRequest="40" FontSize="15" Text="Добавить Событие" FontFamily="Comfortaa" Clicked="CreateEventAsync" />
                
                 
                 <FlexLayout BackgroundColor="White" Direction="Row" AlignContent="Center" JustifyContent="SpaceAround" HeightRequest="50" FlexLayout.AlignSelf="End">
