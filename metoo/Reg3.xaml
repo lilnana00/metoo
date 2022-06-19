@@ -9,7 +9,7 @@
                 <Button BackgroundColor="#00FBC1BC" x:Name="back_button" ImageSource="undo.png" WidthRequest="30" HeightRequest="60" />
                 <Image Source="step_3.png" WidthRequest="85" HeightRequest="60"/>
             </StackLayout>
-            <ImageButton Aspect="AspectFill"  Margin="0, -30, 0, -65" x:Name="add_photo_button" CornerRadius="115" VerticalOptions ="Center"  HorizontalOptions ="Center"  BackgroundColor="#00FBC1BC" Source="add_photo.png"  Clicked="Add_photo" WidthRequest="230" HeightRequest="230" Scale="0.9" >
+            <ImageButton Aspect="AspectFill" x:Name="add_photo_button" CornerRadius="180" VerticalOptions ="Center"  HorizontalOptions ="Center"  BackgroundColor="#00FBC1BC" Source="add_photo.png"  Clicked="Add_photo" WidthRequest="200" HeightRequest="200">
             </ImageButton>
             <StackLayout Orientation="Vertical" Padding="10">
                 <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="ИМЯ" TextColor="#5517A2" FontSize="14"/>

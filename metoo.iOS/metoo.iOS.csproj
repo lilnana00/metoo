@@ -164,9 +164,6 @@
     <BundleResource Include="Resources\Group102.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\add_photo.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\entry_butt.png" />
   </ItemGroup>
   <ItemGroup>
@@ -240,5 +237,8 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\about_app.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\add_photo.png" />
   </ItemGroup>
 </Project>

@@ -14,10 +14,20 @@
             <Picker FontFamily="Comfortaa" x:Name="picker" SelectedIndexChanged="picker_SelectedIndexChanged" Title="Выберите ключевое слово для поиска">
                 <Picker.Items>
                     <x:String>Все теги</x:String>
+                    <x:String>Культура</x:String>
                     <x:String>Кино</x:String>
-                    <x:String>Прогулка</x:String>
-                    <x:String>Концерт</x:String>
-                    <x:String>Парк развлечений</x:String>
+                    <x:String>Фестиваль</x:String>
+                    <x:String>Творчество</x:String>
+                    <x:String>Кафе</x:String>
+                    <x:String>Бизнес</x:String>
+                    <x:String>Бар</x:String>
+                    <x:String>Танцы</x:String>
+                    <x:String>Природа</x:String>
+                    <x:String>Путешествия</x:String>
+                    <x:String>Кэмпинг</x:String>
+                    <x:String>Спорт</x:String>
+                    <x:String>Шоппинг</x:String>
+                    <x:String>Другое</x:String>
                 </Picker.Items>
             </Picker>
             
