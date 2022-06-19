@@ -6,11 +6,11 @@ using Xamarin.Forms;
 
 namespace metoo
 {
-    public class UserReprository
+    public class UserRepository
     {
 
         SQLiteConnection database;
-        public UserReprository(string databasePath)
+        public UserRepository(string databasePath)
         {
             database = new SQLiteConnection(databasePath);
             database.CreateTable<User>();
@@ -58,9 +58,9 @@ namespace metoo
         {
             return database.Insert(item);
         }
-        public int DeleteEvent(int UserID, int EventID)
+        public int DeleteEvent(int EventID)
         {
-            return database.Execute("delete from UsersToEvents where UserID=? and EventID=?", UserID, EventID);
+            return database.Execute("delete from UsersToEvents where EventID=?", EventID);
         }
         public UserEvents GetEvent(int UserID, int EventID)
         {

@@ -58,7 +58,7 @@ namespace metoo
                 Stream ms = new MemoryStream(App.user.Photo);
                 avatar.Source = ImageSource.FromStream(() => ms);
             }
-            EventsCount.Text = App.Database.GetEvents(App.user.ID).Count().ToString();
+            EventsCount.Text = App.Database.GetEvents(App.user.ID).Count.ToString();
             visited.Text = Padezh(Convert.ToInt32(EventsCount.Text), "СОБЫТИЕ");
             CreateCount.Text = App.Database2.GetCreatorCount(App.user.ID).ToString();
             added.Text = Padezh(Convert.ToInt32(CreateCount.Text), "СОБЫТИЕ");

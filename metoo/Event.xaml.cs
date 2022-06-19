@@ -12,31 +12,11 @@ namespace metoo
     public partial class Event : ContentPage
     {
         public int EventID;
-        public int CreatorID;
         public Event()
         {
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
             back_button.Clicked += Back;
-            if (App.user != null && (App.user.ID == 1 || App.user.ID == CreatorID))
-            {
-                Button delete = new Button
-                {
-                    Text = "УДАЛИТЬ",
-                    FontFamily = "Comfortaa",
-                    FontAttributes = (FontAttributes)1,
-                    TextColor = Color.FromHex("#6A29BB"),
-                    BackgroundColor = Color.FromHex("#C4C4C4"),
-                    WidthRequest = 140,
-                    HeightRequest = 40
-                };
-                buttons.Children.RemoveAt(1);
-                buttons.Children.Add(delete);
-            }
-            if (App.user == null)
-            {
-                createComm.IsVisible = false;
-            }
         }
 
         private void SendComment(object sender, EventArgs e)
@@ -91,6 +71,26 @@ namespace metoo
 
         protected override void OnAppearing()
         {
+            if (App.user != null && (App.user.ID == 1 || App.user.ID == App.Database2.GetItem(EventID).CreatorID))
+            {
+                Button delete = new Button
+                {
+                    Text = "УДАЛИТЬ",
+                    FontFamily = "Comfortaa",
+                    FontAttributes = (FontAttributes)1,
+                    TextColor = Color.FromHex("#6A29BB"),
+                    BackgroundColor = Color.FromHex("#C4C4C4"),
+                    WidthRequest = 140,
+                    HeightRequest = 40,
+                };
+                delete.Clicked += Delete;
+                buttons.Children.RemoveAt(1);
+                buttons.Children.Add(delete);
+            }
+            if (App.user == null)
+            {
+                createComm.IsVisible = false;
+            }
             Update();
             base.OnAppearing();
         }
@@ -112,6 +112,15 @@ namespace metoo
         private async void Back(object sender, EventArgs e)
         {
             await Navigation.PopAsync();
+        }
+        private async void Delete(object sender, EventArgs e)
+        {   
+            if (await DisplayAlert("Внимание", "Вы уверены, что хотите удалить событие?", "Да", "Нет"))
+            {
+                App.Database.DeleteEvent(EventID);
+                App.Database2.DeleteItem(EventID);
+                await Navigation.PopAsync();
+            }
         }
     }
 }

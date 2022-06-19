@@ -4,10 +4,10 @@ using SQLite;
 
 namespace metoo
 {
-    public class EventReprository
+    public class EventRepository
     {
         SQLiteConnection database2;
-        public EventReprository(string databasePath)
+        public EventRepository(string databasePath)
         {
             database2 = new SQLiteConnection(databasePath);
             database2.CreateTable<EventTable>();

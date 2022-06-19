@@ -13,17 +13,17 @@ namespace metoo
         public const string DATABASE_NAME = "Users.db";
         public const string DATABASE_NAME2 = "Events.db";
         public const string DATABASE_NAME3 = "Comments.db";
-        public static UserReprository database;
-        public static EventReprository database2;
-        public static CommentReprository database3;
+        public static UserRepository database;
+        public static EventRepository database2;
+        public static CommentRepository database3;
 
-        public static UserReprository Database
+        public static UserRepository Database
         {
             get
             {
                 if (database == null)
                 {
-                    database = new UserReprository(
+                    database = new UserRepository(
                         Path.Combine(
                             Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), DATABASE_NAME));
                     User admin = new User
@@ -39,13 +39,13 @@ namespace metoo
                 return database;
             }
         }
-        public static EventReprository Database2
+        public static EventRepository Database2
         {
             get
             {
                 if (database2 == null)
                 {
-                    database2 = new EventReprository(
+                    database2 = new EventRepository(
                         Path.Combine(
                             Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), DATABASE_NAME2));
                 }
@@ -53,13 +53,13 @@ namespace metoo
                 return database2;
             }
         }
-        public static CommentReprository Database3
+        public static CommentRepository Database3
         {
             get
             {
                 if (database3 == null)
                 {
-                    database3 = new CommentReprository(
+                    database3 = new CommentRepository(
                         Path.Combine(
                             Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), DATABASE_NAME3));
                 }

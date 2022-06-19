@@ -4,10 +4,10 @@ using SQLite;
 
 namespace metoo
 {
-    public class CommentReprository
+    public class CommentRepository
     {
         SQLiteConnection database3;
-        public CommentReprository(string databasePath)
+        public CommentRepository(string databasePath)
         {
             database3 = new SQLiteConnection(databasePath);
             database3.CreateTable<Comment>();

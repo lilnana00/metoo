@@ -45,38 +45,36 @@
             </FlexLayout>
             
             <StackLayout>
-                <ListView x:Name="list"  ItemsSource="{Binding}" HasUnevenRows="True"  >
-              <ListView.ItemTemplate>
-                <DataTemplate>
-                  <ViewCell>
-                    <ViewCell.View>
-                      <StackLayout Padding="5">
-                            <StackLayout BackgroundColor="#D0BC7C" Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="5">
+                <ListView x:Name="list" ItemsSource="{Binding}" HasUnevenRows="True"  >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <StackLayout Padding="5">
+                                        <StackLayout BackgroundColor="#D0BC7C" Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="5">
 
-                                <StackLayout  Orientation="Vertical" VerticalOptions="Center" WidthRequest="110" Padding="5">
-                                    <Image Source="alice.png" HeightRequest="75" WidthRequest="75"/>
-                                    <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="{Binding CommentCreator}" TextColor="#5517A2" FontSize="20" HorizontalTextAlignment="Center"/>
-                                </StackLayout>
+                                            <StackLayout  Orientation="Vertical" VerticalOptions="Center" WidthRequest="110" Padding="5">
+                                                <Image Source="alice.png" HeightRequest="75" WidthRequest="75"/>
+                                                <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="{Binding CommentCreator}" TextColor="#5517A2" FontSize="20" HorizontalTextAlignment="Center"/>
+                                            </StackLayout>
 
-                                <StackLayout Orientation="Vertical" VerticalOptions="Start" Padding="5" Spacing="15">
-                                    <Label FontFamily="Comfortaa"  Text="{Binding Text}" TextColor="#5517A2" FontSize="20" LineBreakMode="CharacterWrap"/>
-                                    <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="{Binding DateTime}" TextColor="#5517A2" FontSize="15"/>
-                                </StackLayout>
+                                            <StackLayout Orientation="Vertical" VerticalOptions="Start" Padding="5" Spacing="15">
+                                                <Label FontFamily="Comfortaa" Text="{Binding Text}" TextColor="#5517A2" FontSize="20" LineBreakMode="CharacterWrap"/>
+                                                <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="{Binding DateTime}" TextColor="#5517A2" FontSize="15"/>
+                                            </StackLayout>
 
-                            </StackLayout>
-                      </StackLayout>
-                    </ViewCell.View>
-                  </ViewCell>
-                </DataTemplate>
-              </ListView.ItemTemplate>
-             </ListView>
-
-            <StackLayout x:Name="createComm" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                <Image Source="alice.png" WidthRequest="50" HeightRequest="50"/>
-                <Entry x:Name="comm" FontFamily="Comfortaa" Placeholder="ВАШ КОММЕНТАРИЙ" PlaceholderColor="#BC99D7" Margin="10,0,0,0"/>
-                <Button Clicked="SendComment" ImageSource="send_butt.png" BackgroundColor="#00FBC1BC"/>
-            </StackLayout>
-                
+                                        </StackLayout>
+                                    </StackLayout>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <StackLayout x:Name="createComm" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Image Source="alice.png" WidthRequest="50" HeightRequest="50"/>
+                    <Entry x:Name="comm" FontFamily="Comfortaa" Placeholder="ВАШ КОММЕНТАРИЙ" PlaceholderColor="#BC99D7" Margin="10,0,0,0"/>
+                    <Button Clicked="SendComment" ImageSource="send_butt.png" BackgroundColor="#00FBC1BC"/>
+                </StackLayout>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

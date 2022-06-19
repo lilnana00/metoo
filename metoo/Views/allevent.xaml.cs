@@ -28,7 +28,6 @@ namespace metoo
             {
                 BindingContext = e.Item as EventInfo,
                 EventID = ((EventInfo)e.Item).ID,
-                CreatorID = ((EventInfo)e.Item).CreatorID
             };
             await Navigation.PushAsync(event2);
         }
@@ -48,7 +47,7 @@ namespace metoo
                                   from Events in App.Database2.GetItems()
                                   where Users.ID == Events.CreatorID
                                   where (DateTime.Now - Events.DT).Days <= 1
-                                  select new EventInfo(Events.ID, Users.ID, Events.EventName,
+                                  select new EventInfo(Events.ID, Users.Name, Users.Age, Events.EventName,
                                             Events.DT.ToString(@"dd\.MM\.yyyy HH:mm"), Events.Details, Events.Tags);
             base.OnAppearing();
         }
@@ -98,7 +97,7 @@ namespace metoo
                                       from Events in App.Database2.GetItems()
                                       where Users.ID == Events.CreatorID
                                       where (DateTime.Now - Events.DT).Days <= 1
-                                      select new EventInfo(Events.ID, Users.ID, Events.EventName,
+                                      select new EventInfo(Events.ID, Users.Name, Users.Age, Events.EventName,
                                                 Events.DT.ToString(@"dd\.MM\.yyyy HH:mm"), Events.Details, Events.Tags);
             }
             else
@@ -108,7 +107,7 @@ namespace metoo
                                       where Users.ID == Events.CreatorID
                                       where Events.Tags == picker.SelectedItem.ToString()
                                       where (DateTime.Now - Events.DT).Days <= 1
-                                      select new EventInfo(Events.ID, Users.ID, Events.EventName,
+                                      select new EventInfo(Events.ID, Users.Name, Users.Age, Events.EventName,
                                                 Events.DT.ToString(@"dd\.MM\.yyyy HH:mm"), Events.Details, Events.Tags);
             }
         }
