@@ -40,7 +40,7 @@ namespace metoo
             list.ItemsSource = from Comments in App.Database3.GetEventItems(EventID)
                                from Users in App.Database.GetItems()
                                where Users.ID == Comments.CreatorID
-                               select new { CommentCreator = Users.Name, Text = Comments.Text, DateTime = Comments.Datetime };
+                               select new { CommentCreator = Users.Name, Comments.Text, DateTime = Comments.Datetime };
             MembersButton.Text = App.Database.GetUsersCount(EventID).ToString()+" ТОЖЕ!";
         }
 

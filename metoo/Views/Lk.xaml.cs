@@ -1,9 +1,10 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -20,7 +21,7 @@ namespace metoo
             exitButton.Clicked += Exit;
             calendar.Clicked += Calendar;
             events.Clicked += Events;
-            chats.Clicked += Chats;
+            //chats.Clicked += Chats;
             user.Clicked += LK;
         }
         private async void Lk_edit(object sender, EventArgs e)
@@ -52,6 +53,11 @@ namespace metoo
         protected override void OnAppearing()
         {
             this.BindingContext = App.user;
+            if (App.user.Photo != null)
+            {
+                Stream ms = new MemoryStream(App.user.Photo);
+                avatar.Source = ImageSource.FromStream(() => ms);
+            }
             EventsCount.Text = App.Database.GetEventsCount(App.user.ID).ToString();
             visited.Text = Padezh(Convert.ToInt32(EventsCount.Text), "СОБЫТИЕ");
             CreateCount.Text = App.Database2.GetCreatorCount(App.user.ID).ToString();

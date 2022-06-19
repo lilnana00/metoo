@@ -14,13 +14,16 @@ namespace metoo
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Reg3 : ContentPage
     {
+        public byte[] PhotoBytes = null;
         public static byte[] ReadFully(Stream input)
         {
+            byte[] bytes;
             using (MemoryStream ms = new MemoryStream())
             {
                 input.CopyTo(ms);
-                return ms.ToArray();
+                bytes = ms.ToArray();
             }
+            return bytes;
         }
         public Reg3()
         {
@@ -38,10 +41,11 @@ namespace metoo
             if (pickImage != null)
             {
                 var stream = await pickImage.OpenReadAsync();
-                add_photo_button.Source = ImageSource.FromStream(() => stream);
-                string avatar = Convert.ToBase64String(ReadFully(stream));//фото, переведенное в строку
+                PhotoBytes = ReadFully(stream);
+                add_photo_button.Source = ImageSource.FromStream(() => new MemoryStream(PhotoBytes));
             }
         }
+
         private async void Back_to_reg2(object sender, EventArgs e)
         {
             await Navigation.PopAsync();
@@ -56,6 +60,7 @@ namespace metoo
             }
 
             var user = (User)BindingContext;
+            user.Photo = PhotoBytes;
             user.Age = int.Parse(Age.Text);
             App.Database.SaveItem(user);
             this.Navigation.PushAsync(new Vhod());
