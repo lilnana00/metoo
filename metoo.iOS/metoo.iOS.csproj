@@ -235,4 +235,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\edit_lk.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\all_members.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\about_app.png" />
+  </ItemGroup>
 </Project>

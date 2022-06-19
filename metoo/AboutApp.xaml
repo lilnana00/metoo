@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="metoo.AboutApp">
+    <ContentPage.Content>
+        <StackLayout Padding="5" BackgroundColor="#FFF26A">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Start" VerticalOptions="Center" Spacing="15">
+                <Button ImageSource="undo.png" BackgroundColor="#FFF26A" HeightRequest="60" WidthRequest="30"/>
+                <Image Source="about_app.png" HeightRequest="60" WidthRequest="250" />
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Spacing="20">
+                <Label Text="Авторы:" FontSize="30" TextColor="#5517A2" FontFamily="Comfortaa" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <Label Text="Кривкина Анна" FontSize="25" TextColor="#5517A2" FontFamily="Comfortaa" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <Label Text="Будянская Софья" FontSize="25" TextColor="#5517A2" FontFamily="Comfortaa" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <Label Text="Ершова Анастасия" FontSize="25" TextColor="#5517A2" FontFamily="Comfortaa" FontAttributes="Bold" HorizontalOptions="Center"/>
+            </StackLayout>
+
+            <Label Text="Сделано в ДВФУ" FontSize="25" TextColor="#5517A2" FontFamily="Comfortaa" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
