@@ -14,6 +14,7 @@ namespace metoo
     {
         public EventMembers()
         {
+            Application.Current.UserAppTheme = OSAppTheme.Light;
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }

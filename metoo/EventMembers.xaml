@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="#FFF26A" Orientation="Vertical" VerticalOptions="FillAndExpand" Spacing="10" Padding="5">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Spacing="15" Padding="5">
-                <Button Clicked="Back" ImageSource="undo.png"  WidthRequest="30" HeightRequest="60" BackgroundColor="#FFF26A"/>
+                <Button Clicked="Back" ImageSource="undo.png"  WidthRequest="30" HeightRequest="60" BackgroundColor="#00FBC1BC"/>
                 <Image Source="all_members.png" HeightRequest="60" WidthRequest="275"/>
             </StackLayout>
 

@@ -14,6 +14,7 @@ namespace metoo
     {
         public MyCalendar()
         {
+            Application.Current.UserAppTheme = OSAppTheme.Light;
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
             calendar.Clicked += Calendar;
@@ -39,7 +40,7 @@ namespace metoo
                                   where Users.ID == Events.CreatorID
                                   where (DateTime.Now - Events.DT).Days <= 1
                                   select new EventInfo(Events.ID, Users.Name, Users.Age, Events.EventName,
-                                                       Events.DT.ToString(@"dd\.MM\.yyyy HH:mm"), Events.Details, Events.Tags);
+                                                       Events.DT.ToString(@"dd\.MM\.yyyy HH:mm"), Events.Details, Events.Tags, Users.Photo);
             base.OnAppearing();
         }
 

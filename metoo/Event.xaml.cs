@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace metoo
     public partial class Event : ContentPage
     {
         public int EventID;
+        public int CreatorID;
         public Event()
         {
             NavigationPage.SetHasNavigationBar(this, false);
@@ -35,13 +37,24 @@ namespace metoo
                 Update();
             }
         }
+        private ImageSource GetSource(byte[] bytes)
+        {
+            ImageSource s;
+            if (bytes != null)
+            {
+                Stream ms = new MemoryStream(bytes);
+                s = ImageSource.FromStream(() => ms);
+            }
+            else s = ImageSource.FromFile("add_photo.png");
+            return s;
+        }
 
         private void Update()
         {
             list.ItemsSource = from Comments in App.Database3.GetEventItems(EventID)
                                from Users in App.Database.GetItems()
                                where Users.ID == Comments.CreatorID
-                               select new { CommentCreator = Users.Name, Comments.Text, DateTime = Comments.Datetime };
+                               select new CommentInfo(Comments.ID, Comments.CreatorID, Users.Name, Comments.Text, Comments.Datetime, GetSource(Users.Photo));
             MembersButton.Text = App.Database.GetUsers(EventID).Count().ToString()+" ТОЖЕ!";
         }
 
@@ -71,7 +84,9 @@ namespace metoo
 
         protected override void OnAppearing()
         {
-            if (App.user != null && (App.user.ID == 1 || App.user.ID == App.Database2.GetItem(EventID).CreatorID))
+            CreatorID = App.Database2.GetItem(EventID).CreatorID;
+
+            if (App.user != null && (App.user.ID == 1 || App.user.ID == CreatorID))
             {
                 Button delete = new Button
                 {
@@ -90,7 +105,10 @@ namespace metoo
             if (App.user == null)
             {
                 createComm.IsVisible = false;
+                frame.HeightRequest -= 40;
             }
+            avatar.Source = GetSource(App.Database.GetItem(CreatorID).Photo);
+            if (App.user != null) commAvatar.Source = GetSource(App.user.Photo);
             Update();
             base.OnAppearing();
         }
@@ -120,6 +138,19 @@ namespace metoo
                 App.Database.DeleteEvent(EventID);
                 App.Database2.DeleteItem(EventID);
                 await Navigation.PopAsync();
+            }
+        }
+
+        private async void DeleteComment(object sender, ItemTappedEventArgs e)
+        {
+            CommentInfo item = e.Item as CommentInfo;
+            if (App.user != null && (App.user.ID == 1 || App.user.ID == item.CreatorID))
+            {
+                if (await DisplayAlert("Внимание", "Вы уверены, что хотите удалить комментарий?", "Да", "Нет"))
+                {
+                    App.Database3.DeleteItem(item.ID);
+                    Update();
+                }
             }
         }
     }

@@ -12,6 +12,7 @@ namespace metoo
     {
         public MainPage()
         {
+            Application.Current.UserAppTheme = OSAppTheme.Light;
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
             vhod_button.Clicked += Go_to_vhod;

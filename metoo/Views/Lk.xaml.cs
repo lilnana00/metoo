@@ -15,6 +15,7 @@ namespace metoo
     {
         public Lk()
         {
+            Application.Current.UserAppTheme = OSAppTheme.Light;
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
             lkEdit.Clicked += Lk_edit;
@@ -67,7 +68,10 @@ namespace metoo
             base.OnAppearing();
         }
 
-        
+        private async void AboutApp(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AboutApp());
+        }
         private async void Calendar(object sender, EventArgs e)
         {
             if (App.user == null) await Navigation.PushAsync(new no_reg());

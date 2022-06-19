@@ -21,7 +21,9 @@
                                         <FlexLayout BackgroundColor="#D0BC7C" Direction="Row" AlignContent="Center" JustifyContent="SpaceEvenly" HeightRequest="150" Padding="3">
 
                                             <FlexLayout Direction="Column" AlignContent="Center" FlexLayout.Grow="1" Padding="5">
-                                                <Image Source="alice.png" HeightRequest="75" WidthRequest="75" />
+                                                <Frame Padding="0" IsClippedToBounds="True" CornerRadius="100" HeightRequest="75" WidthRequest="75" VerticalOptions="Center" HorizontalOptions="Center">
+                                                    <Image Source="{Binding Photo}" Aspect="AspectFill" VerticalOptions="Center"/>
+                                                </Frame>
                                                 <Label Text="{Binding CreatorName}" FontFamily="Comfortaa" TextColor="#5517A2" FontSize="20"/>
                                             </FlexLayout>
 

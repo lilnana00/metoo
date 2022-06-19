@@ -16,6 +16,7 @@ namespace metoo
     {
         public Reg2()
         {
+            Application.Current.UserAppTheme = OSAppTheme.Light;
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
             reg3_button.Clicked += Go_to_reg3;

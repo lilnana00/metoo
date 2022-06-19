@@ -8,7 +8,7 @@
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Spacing="15" Padding="5">
                 <ImageButton BackgroundColor="#00FBC1BC" x:Name="back_button" Source="undo.png"  WidthRequest="30" HeightRequest="60"/>
-                <Image Source="vhod.png" HorizontalOptions="Start"  WidthRequest="85" HeightRequest="60"></Image>
+                <Image Source="vhod.png" HorizontalOptions="Start" WidthRequest="85" HeightRequest="60"></Image>
             </StackLayout>
 
             <Image Source="logo.png" WidthRequest="180" HeightRequest="150" />

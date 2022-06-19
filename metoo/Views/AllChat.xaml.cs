@@ -14,6 +14,7 @@ namespace metoo
     {
         public AllChat()
         {
+            Application.Current.UserAppTheme = OSAppTheme.Light;
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
             calendar.Clicked += Calendar;

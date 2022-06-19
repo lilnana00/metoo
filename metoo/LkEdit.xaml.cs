@@ -27,6 +27,7 @@ namespace metoo
         }
             public LkEdit()
         {
+            Application.Current.UserAppTheme = OSAppTheme.Light;
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
         }

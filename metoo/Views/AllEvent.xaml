@@ -40,7 +40,9 @@
                                             <StackLayout BackgroundColor="#D0BC7C" Orientation="Horizontal" HorizontalOptions="FillAndExpand"  VerticalOptions="FillAndExpand"  Padding="5">
 
                                                 <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" WidthRequest="110" Padding="5">
-                                                    <Image Source="alice.png" HeightRequest="75" WidthRequest="75"/>
+                                                    <Frame Padding="0" IsClippedToBounds="True" CornerRadius="100" HeightRequest="75" WidthRequest="75" VerticalOptions="Center" HorizontalOptions="Center">
+                                                        <Image Source="{Binding Photo}" Aspect="AspectFill" VerticalOptions="Center"/>
+                                                    </Frame>
                                                     <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="{Binding CreatorName}" TextColor="#5517A2" FontSize="19" HorizontalTextAlignment="Center"/>
                                                 </StackLayout>
 

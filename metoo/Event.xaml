@@ -10,9 +10,11 @@
                 <Image Source="event.png" WidthRequest="169" HeightRequest="60"/>
            </StackLayout>
 
-             <StackLayout  Padding="5" Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+             <StackLayout Padding="5" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                 <StackLayout Orientation="Vertical" VerticalOptions="Start" WidthRequest="80" Padding="5">
-                    <Image Source="alice.png" HeightRequest="75" WidthRequest="75"/>
+                    <Frame x:Name="frame" Padding="0" IsClippedToBounds="True" CornerRadius="180" WidthRequest="75" HeightRequest="225" VerticalOptions="Center" >
+                        <Image x:Name="avatar" Aspect="AspectFill" VerticalOptions="Center" />
+                    </Frame>
                     <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="{Binding CreatorName}" TextColor="#5517A2" HorizontalTextAlignment="Center"/>
                     <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="{Binding CreatorAge}" TextColor="#5517A2" HorizontalTextAlignment="Center"/>
                 </StackLayout>
@@ -45,7 +47,7 @@
             </FlexLayout>
             
             <StackLayout>
-                <ListView x:Name="list" ItemsSource="{Binding}" HasUnevenRows="True"  >
+                <ListView ItemTapped="DeleteComment" x:Name="list" ItemsSource="{Binding}" HasUnevenRows="True"  >
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -54,7 +56,9 @@
                                         <StackLayout BackgroundColor="#D0BC7C" Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="5">
 
                                             <StackLayout  Orientation="Vertical" VerticalOptions="Center" WidthRequest="110" Padding="5">
-                                                <Image Source="alice.png" HeightRequest="75" WidthRequest="75"/>
+                                                <Frame Padding="0" IsClippedToBounds="True" CornerRadius="180" HeightRequest="75" WidthRequest="75" VerticalOptions="Center" HorizontalOptions="Center">
+                                                    <Image Source="{Binding CommentPhoto}" Aspect="AspectFill" VerticalOptions="Center" />
+                                                </Frame>
                                                 <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="{Binding CommentCreator}" TextColor="#5517A2" FontSize="20" HorizontalTextAlignment="Center"/>
                                             </StackLayout>
 
@@ -71,7 +75,10 @@
                     </ListView.ItemTemplate>
                 </ListView>
                 <StackLayout x:Name="createComm" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                    <Image Source="alice.png" WidthRequest="50" HeightRequest="50"/>
+                    <Frame Padding="0" IsClippedToBounds="True" CornerRadius="180" WidthRequest="75" VerticalOptions="Center" HorizontalOptions="Center">
+                        <Image x:Name ="commAvatar" Aspect="AspectFill" WidthRequest="50" HeightRequest="50" VerticalOptions="Center"/> 
+                    </Frame>
+                    
                     <Entry x:Name="comm" FontFamily="Comfortaa" Placeholder="ВАШ КОММЕНТАРИЙ" PlaceholderColor="#BC99D7" Margin="10,0,0,0"/>
                     <Button Clicked="SendComment" ImageSource="send_butt.png" BackgroundColor="#00FBC1BC"/>
                 </StackLayout>
