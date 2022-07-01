@@ -9,7 +9,7 @@
                 <Button BackgroundColor="#00FBC1BC" x:Name="back_button" ImageSource="undo.png" WidthRequest="30" HeightRequest="60" />
                 <Image Source="step_3.png" WidthRequest="85" HeightRequest="60"/>
             </StackLayout>
-            <ImageButton Aspect="AspectFill" x:Name="add_photo_button" CornerRadius="180" VerticalOptions ="Center"  HorizontalOptions ="Center" BackgroundColor="#00FBC1BC" Source="add_photo.png" Clicked="Add_photo" WidthRequest="200" HeightRequest="200">
+            <ImageButton Aspect="AspectFill" x:Name="add_photo_button" CornerRadius="180" VerticalOptions ="Center"  HorizontalOptions ="Center" BackgroundColor="#00FBC1BC" Source="add_photo.png" Clicked="Add_photo" WidthRequest="160" HeightRequest="160">
             </ImageButton>
             <StackLayout Orientation="Vertical" Padding="10">
                 <Label FontFamily="Comfortaa" FontAttributes="Bold" Text="ИМЯ" TextColor="#5517A2" FontSize="14"/>
@@ -19,7 +19,7 @@
                 <Label FontFamily="Comfortaa" FontAttributes="Bold" x:Name="isOk" TextColor="#5517A2" HorizontalTextAlignment="Center" FontSize="14"></Label>
             </StackLayout>
 
-            <Button BackgroundColor="#00FBC1BC" WidthRequest="360" HeightRequest="63" ImageSource="cont.png" Margin="0, 20, 0, 0" Clicked="SaveUser" />
+            <Button BackgroundColor="#00FBC1BC" WidthRequest="360" HeightRequest="63" ImageSource="cont.png" Margin="0, 0, 0, 0" Clicked="SaveUser" />
 
         </StackLayout>
     </ContentPage.Content>

@@ -59,7 +59,16 @@ namespace metoo
                 isOk.Text = "Заполните все поля";
                 return;
             }
-
+            if (int.Parse(Age.Text) < 16)
+            {
+                isOk.Text = "Приложение доступно только пользователем от 16 лет";
+                return;
+            }
+            if (int.Parse(Age.Text) > 120)
+            {
+                isOk.Text = "Пожалуйста, ведите свой настоящий возраст";
+                return;
+            }
             var user = (User)BindingContext;
             user.Photo = PhotoBytes;
             user.Age = int.Parse(Age.Text);

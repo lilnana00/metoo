@@ -29,7 +29,7 @@ namespace metoo
                 isOk.Text = "Пароли не совпадают";
                 return;
             }
-            if (!Regex.IsMatch(pass.Text, "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%*?&])[A-Za-z0-9@$!%*?&]{8,}$"))
+            if (!Regex.IsMatch(pass.Text, "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%*?&#.])[A-Za-z0-9@$!%*?&#.]{8,}$"))
             {
                 isOk.Text = "Некорректный пароль";
                 return;
