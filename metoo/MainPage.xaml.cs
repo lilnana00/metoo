@@ -26,17 +26,17 @@ namespace metoo
         }
         private async void Go_to_reg(object sender, EventArgs e)
         {
-            User user = new User();
-            Reg regPage = new Reg();
-            regPage.BindingContext = user;
-            await Navigation.PushAsync(regPage);
+            //User user = new User();
+            //Reg regPage = new Reg();
+            //regPage.BindingContext = user;
+            await Navigation.PushAsync(new Reg());
         }
         private async void Go_to_vhod1(object sender, EventArgs e)
         {
-            EventTable eventTable = new EventTable();
-            AllEvent allEvent = new AllEvent();
-            allEvent.BindingContext = eventTable;
-            await Navigation.PushAsync(allEvent);
+            //EventTable eventTable = new EventTable();
+            //AllEvent allEvent = new AllEvent();
+            //allEvent.BindingContext = eventTable;
+            await Navigation.PushAsync(new AllEvent());
         }
     }
 }
